@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'desctop_home_page.dart';
+import 'mobile_home_page.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -10,6 +13,20 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var size = MediaQuery.of(context).size;
+
+    return Scaffold(
+        body: Container(
+      width: size.width,
+      height: size.height,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                size.width<400? const MobileHomePage() : const DesctopHomePage(),
+              ],
+            ),
+          ),
+        ),
+    );
   }
 }
