@@ -1,3 +1,5 @@
+import 'package:boqiy_qahramonlar/core/app_colors.dart';
+import 'package:boqiy_qahramonlar/pages/main/mobile_appbar_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'desctop_home_page.dart';
@@ -16,17 +18,26 @@ class _MainPageState extends State<MainPage> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-        body: Container(
-      width: size.width,
-      height: size.height,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                size.width<400? const MobileHomePage() : const DesctopHomePage(),
-              ],
-            ),
+      appBar: size.width < 400
+          ? AppBar(
+              title: MobileAppbarWidget(),
+              backgroundColor: AppColors.appbar,
+            )
+          : AppBar(),
+      body: Container(
+        width: size.width,
+        height: size.height,
+        color: AppColors.background,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              size.width < 400
+                  ?  MobileHomePage()
+                  :  DesctopHomePage(),
+            ],
           ),
         ),
+      ),
     );
   }
 }
