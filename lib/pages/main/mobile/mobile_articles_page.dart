@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/app_colors.dart';
+import '../../../core/app_colors.dart';
 
 class MobileArticlesPage extends StatefulWidget {
   const MobileArticlesPage({super.key});
@@ -75,7 +75,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                     _articleName[index],
                     style: GoogleFonts.notoSansHebrew(
                       fontWeight: FontWeight.w400,
-                      color: isActive ? AppColors.brown : AppColors.indigoBlue,
+                      color: isActive ? AppColors.brown : AppColors.black,
                       fontSize: 14.sp,
                     ),
                   ),
@@ -87,7 +87,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
         SizedBox(height: 40.h),
         SizedBox(
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 70.w),
+            padding: EdgeInsets.symmetric(horizontal: 70.w),
             child: ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -95,7 +95,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
               itemBuilder: (context, index) {
                 final article = articles[index];
                 return Padding(
-                  padding:  EdgeInsets.only(bottom: 50.h),
+                  padding: EdgeInsets.only(bottom: 50.h),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -112,16 +112,17 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(width: double.infinity,
-                          height: 140.h,
+                          Container(
+                            width: double.infinity,
+                            height: 140.h,
                             decoration: BoxDecoration(
                               color: Colors.blueGrey.shade100,
 
-                              //TODO BU QISMINI RASM QUYILGANDDAN KEYIN OCHILADI
-                             // image: DecorationImage(image: AssetImage("${article['image']}"))
+                              // TODO: Rasm qo'yilgandan keyin bu qismni ochish kerak
+                              // image: DecorationImage(image: AssetImage("${article['image']}"))
                             ),
                           ),
-                          SizedBox(height: 16.h,),
+                          SizedBox(height: 16.h),
                           Text(
                             "${article['category']}",
                             style: TextStyle(
@@ -130,8 +131,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(height: 4.h,),
-
+                          SizedBox(height: 4.h),
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,7 +150,6 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                           Text(
                             "${article['description']}",
                             maxLines: 7,
-
 
                             overflow: TextOverflow.ellipsis,
 
@@ -179,7 +178,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                                     style: TextStyle(
                                       fontSize: 10.sp,
                                       fontWeight: FontWeight.w600,
-                                      height: 1.2
+                                      height: 1.2,
                                     ),
                                   ),
                                   Text(
@@ -187,7 +186,7 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
                                     style: TextStyle(
                                       fontSize: 10.sp,
                                       color: Colors.grey.shade500,
-                                      height: 1.2
+                                      height: 1.2,
                                     ),
                                   ),
                                 ],
@@ -211,20 +210,21 @@ class _MobileArticlesPageState extends State<MobileArticlesPage> {
             borderRadius: BorderRadius.circular(3),
           ),
           child: Center(
-          child: Padding(
-            padding:  EdgeInsets.symmetric(vertical: 10.h),
-            child: Text("KO'PROQ",          style: GoogleFonts.cinzel(
-              fontSize: 15.sp,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              // height: 1.2,
-            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 10.h),
+              child: Text(
+                "KO'PROQ",
+                style: GoogleFonts.cinzel(
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  // height: 1.2,
+                ),
+              ),
             ),
           ),
-        ),),
-        SizedBox(height: 20.h,)
-
-
+        ),
+        SizedBox(height: 20.h),
       ],
     );
   }

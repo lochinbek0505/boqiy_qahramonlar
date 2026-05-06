@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final width = View.of(context).physicalSize.width /
+        View.of(context).devicePixelRatio;
     return ScreenUtilInit(
-      designSize: Size(384, 805),
-      minTextAdapt: true,
+        designSize: width > 500 ? const Size(1854, 961) : const Size(384, 805),
+
+        minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(

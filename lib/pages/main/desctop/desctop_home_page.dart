@@ -10,6 +10,10 @@ class DesctopHomePage extends StatefulWidget {
 class _DesctopHomePageState extends State<DesctopHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        
+      ],
+    );
   }
 }

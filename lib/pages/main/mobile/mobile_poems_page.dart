@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/app_colors.dart';
+import '../../../core/app_colors.dart';
 
 class MobilePoemsPage extends StatefulWidget {
   const MobilePoemsPage({super.key});
@@ -40,7 +40,9 @@ Ayt kim yashagandir shubha xatosiz,
 Men ham dunyo uchun baxtimni berdim.''',
     },
 
-  ];  @override
+  ];
+
+  @override
   Widget build(BuildContext context) {
     return  Column(
       children: [
