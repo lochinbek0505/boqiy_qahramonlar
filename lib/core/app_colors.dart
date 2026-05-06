@@ -9,6 +9,8 @@ class AppColors {
   static const midnightBlue =Color(0xff0E375D);
   static const steelBlue =Color(0xff325171);
   static const darkBlue =Color(0xff002E56);
+  static const indigoBlue =Color(0xff2B4886);
+
   static const gray =Color(0xffB6BDC8);
 
 

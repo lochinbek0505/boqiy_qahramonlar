@@ -14,7 +14,7 @@ class _MobileAppbarWidgetState extends State<MobileAppbarWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-       CircleAvatar(radius: 20.w,backgroundColor: Colors.black,),
+       CircleAvatar(radius: 20.r,backgroundColor: Colors.black,),
        SizedBox(width: 12.w,),
        Column(
          crossAxisAlignment: CrossAxisAlignment.start,

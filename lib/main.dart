@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(380, 7000),
+      designSize: Size(384, 805),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
