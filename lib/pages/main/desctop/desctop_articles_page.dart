@@ -1,3 +1,5 @@
+import 'package:boqiy_qahramonlar/pages/main/desctop/widgets/more_button.dart';
+import 'package:boqiy_qahramonlar/pages/main/desctop/widgets/page_title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,14 +14,22 @@ class DesctopArticlesPage extends StatefulWidget {
 }
 
 class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
-  final List<String> _articleName = ["Tarix", "Siyosat", "O'zlik", "Erkin","O'zlik","Haqlik","Yo'qlik"];
+  final List<String> _articleName = [
+    "Tarix",
+    "Siyosat",
+    "O'zlik",
+    "Erkin",
+    "O'zlik",
+    "Haqlik",
+    "Yo'qlik",
+  ];
   final List<Map<String, String>> _articles = [
     {
       'image': 'assets/images/article1.png',
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author1.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
@@ -29,7 +39,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author1.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
@@ -39,7 +49,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author1.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
@@ -49,7 +59,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author1.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
@@ -59,7 +69,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author1.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
@@ -70,39 +80,32 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
       'category': 'Tarix',
       'title': 'Millat tarixi',
       'description':
-      'How do you create compelling presentations that wow your colleagues and impress your managers?',
+          'How do you create compelling presentations that wow your colleagues and impress your managers?',
       'authorImage': 'assets/images/author2.png',
       'authorName': 'Turon Beka',
       'date': '20 Jan 2022',
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         SizedBox(height: 60.h),
-        Text(
-          "MAQOLALAR",
-          style: GoogleFonts.cinzel(
-            fontSize: 44.sp,
-            fontWeight: FontWeight.bold,
-            color: AppColors.midnightBlue,
-            height: 1.3,
-          ),
-        ),
+        PageTitleText(title: "Maqolalar"),
         SizedBox(height: 50.h),
         Padding(
-          padding:  EdgeInsets.only(left: 70.w),
+          padding: EdgeInsets.only(left: 70.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(_articleName.length, (index) {
               bool isActive = index == 0;
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                padding: EdgeInsets.only(right: 16.w),
                 child: Container(
-                  width: 150.w,
-                  height: 50.w,
+                  width: 130.w,
+                  height: 40.w,
                   decoration: BoxDecoration(
                     color: Colors.transparent,
                     border: Border.all(
@@ -117,7 +120,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                       style: GoogleFonts.notoSansHebrew(
                         fontWeight: FontWeight.w500,
                         color: isActive ? AppColors.brown : AppColors.black,
-                        fontSize: 24.sp,
+                        fontSize: 22.sp,
                       ),
                     ),
                   ),
@@ -133,10 +136,10 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
             child: GridView.builder(
               physics: NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,       // Ustunlar soni
-                mainAxisSpacing: 5.h,     // Vertikal masofa
-                crossAxisSpacing: 60.w,    // Gorizontal masofa
-                childAspectRatio: 5/7,     // Elementning eniga bo'yi nisbati
+                crossAxisCount: 3, // Ustunlar soni
+                mainAxisSpacing: 5.h, // Vertikal masofa
+                crossAxisSpacing: 60.w, // Gorizontal masofa
+                childAspectRatio: 5 / 7, // Elementning eniga bo'yi nisbati
               ),
               shrinkWrap: true,
               itemCount: _articles.length,
@@ -145,6 +148,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                 return Padding(
                   padding: EdgeInsets.only(bottom: 55.h),
                   child: Container(
+                    height: 631.h,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
@@ -156,13 +160,13 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                       ],
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(22.w),
+                      padding: EdgeInsets.all(24.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
                             width: double.infinity,
-                            height: 300.w,
+                            height: 240.w,
                             decoration: BoxDecoration(
                               color: Colors.blueGrey.shade100,
 
@@ -174,7 +178,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                           Text(
                             "${article['category']}",
                             style: TextStyle(
-                              fontSize: 15.sp,
+                              fontSize: 14.sp,
                               color: AppColors.brown,
                               fontWeight: FontWeight.w500,
                             ),
@@ -186,8 +190,9 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                             children: [
                               Text(
                                 "${article['title']}",
+                                maxLines: 1,
                                 style: TextStyle(
-                                  fontSize: 22.sp,
+                                  fontSize: 24.sp,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -197,12 +202,12 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                           SizedBox(height: 16.h),
                           Text(
                             "${article['description']}",
-                            maxLines: 7,
+                            maxLines: 3,
 
                             overflow: TextOverflow.ellipsis,
 
                             style: TextStyle(
-                              fontSize: 17.5.sp,
+                              fontSize: 16.sp,
 
                               color: Colors.grey.shade600,
                             ),
@@ -224,14 +229,14 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                                   Text(
                                     "${article['authorName']}",
                                     style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 14.sp,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
                                     "${article['date']}",
                                     style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 14.sp,
                                       color: Colors.grey.shade600,
                                     ),
                                   ),
@@ -249,29 +254,10 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
           ),
         ),
         SizedBox(height: 24.h),
-        Container(
-          width: 340.w,
-          decoration: BoxDecoration(
-            color: AppColors.steelBlue,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 18.h),
-              child: Text(
-                "KO'PROQ",
-                style: GoogleFonts.cinzel(
-                  fontSize: 28.sp,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  // height: 1.2,
-                ),
-              ),
-            ),
-          ),
-        ),
+        MoreButton(),
         SizedBox(height: 40.h),
       ],
-    );;
+    );
+    ;
   }
 }

@@ -9,6 +9,7 @@ class MobilePoemsPage extends StatefulWidget {
 
   @override
   State<MobilePoemsPage> createState() => _MobilePoemsPageState();
+
 }
 
 class _MobilePoemsPageState extends State<MobilePoemsPage> {
@@ -39,12 +40,11 @@ Bilaman ko'nglinga ko'p azob berdim.
 Ayt kim yashagandir shubha xatosiz,
 Men ham dunyo uchun baxtimni berdim.''',
     },
-
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         SizedBox(height: 40.h),
         Text(
@@ -59,7 +59,7 @@ Men ham dunyo uchun baxtimni berdim.''',
         SizedBox(height: 40.h),
         SizedBox(
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 70.w),
+            padding: EdgeInsets.symmetric(horizontal: 70.w),
             child: ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -67,46 +67,45 @@ Men ham dunyo uchun baxtimni berdim.''',
               itemBuilder: (context, index) {
                 final poem = _poems[index];
                 return Padding(
-                  padding:  EdgeInsets.only(bottom: 100.h),
+                  padding: EdgeInsets.only(bottom: 100.h),
                   child: Stack(
                     children: [
                       Positioned(
-                        top:0,
+                        top: 0,
                         left: 0,
 
                         child: Container(
-                          width:60.w,
+                          width: 60.w,
                           height: 60.h,
                           decoration: BoxDecoration(
                             border: Border(
-                              top: BorderSide(
-                                color: AppColors.brown,width: 2
-                              ),
+                              top: BorderSide(color: AppColors.brown, width: 2),
                               left: BorderSide(
-                                  color: AppColors.brown,width: 2
+                                color: AppColors.brown,
+                                width: 2,
                               ),
-
-                            )
+                            ),
                           ),
                         ),
                       ),
                       Positioned(
-                        bottom:0,
+                        bottom: 0,
                         right: 0,
 
                         child: Container(
-                          width:60.w,
+                          width: 60.w,
                           height: 60.h,
                           decoration: BoxDecoration(
-                              border: Border(
-                                right: BorderSide(
-                                    color: AppColors.gray,width: 2
-                                ),
-                                bottom: BorderSide(
-                                    color: AppColors.gray,width: 2
-                                ),
-
-                              )
+                            border: Border(
+                              right: BorderSide(
+                                color: AppColors.gray,
+                                width: 2,
+                              ),
+                              bottom: BorderSide(
+                                color: AppColors.gray,
+                                width: 2,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -130,17 +129,17 @@ Men ham dunyo uchun baxtimni berdim.''',
                               style: GoogleFonts.copse(
                                 fontSize: 12.sp,
                                 color: AppColors.brown,
-                                fontWeight: FontWeight.w400
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                             SizedBox(height: 16.h),
                             Text(
-                            "${poem['content']}",
+                              "${poem['content']}",
                               style: GoogleFonts.crimsonPro(
                                 fontSize: 13.sp,
                                 color: Colors.black,
                                 height: 1.2,
-                                fontWeight: FontWeight.w400
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                           ],
@@ -161,17 +160,20 @@ Men ham dunyo uchun baxtimni berdim.''',
           ),
           child: Center(
             child: Padding(
-              padding:  EdgeInsets.symmetric(vertical: 10.h),
-              child: Text("KO'PROQ",          style: GoogleFonts.cinzel(
-                fontSize: 15.sp,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                // height: 1.2,
-              ),
+              padding: EdgeInsets.symmetric(vertical: 10.h),
+              child: Text(
+                "KO'PROQ",
+                style: GoogleFonts.cinzel(
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  // height: 1.2,
+                ),
               ),
             ),
-          ),),
-        SizedBox(height: 20.h,)
+          ),
+        ),
+        SizedBox(height: 20.h),
       ],
     );
   }

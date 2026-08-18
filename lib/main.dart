@@ -9,19 +9,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final width = View.of(context).physicalSize.width /
-        View.of(context).devicePixelRatio;
-    return ScreenUtilInit(
-        designSize: width > 500 ? const Size(1854, 961) : const Size(384, 805),
 
-        minTextAdapt: true,
+    return ScreenUtilInit(
+      designSize: const Size(1512, 982),
+
+      minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
-          title: 'Flutter Demo',
+          title: 'Boqiy Qahramonlar',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             // This is the theme of your application.
@@ -43,8 +41,7 @@ class MyApp extends StatelessWidget {
           ),
           home: MainPage(),
         );
-      }
+      },
     );
   }
 }
-

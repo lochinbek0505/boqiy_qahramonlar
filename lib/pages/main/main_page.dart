@@ -31,7 +31,13 @@ class _MainPageState extends State<MainPage> {
               title: MobileAppbarWidget(),
               backgroundColor: AppColors.appbar,
             )
-          : AppBar(title: DesctopAppbarWidget(),backgroundColor: AppColors.appbar,toolbarHeight: 90.sp,),
+          : AppBar(
+              title: DesctopAppbarWidget(),
+              scrolledUnderElevation: 0.0,
+              surfaceTintColor: Colors.transparent,
+              backgroundColor: AppColors.appbar,
+              toolbarHeight: 90.sp,
+            ),
       body: Container(
         width: size.width,
         height: size.height,
