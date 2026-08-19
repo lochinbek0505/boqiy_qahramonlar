@@ -97,6 +97,7 @@ class _ReadArticlePageState extends State<ReadArticlePage> {
           ? AppBar(
               title: const MobileAppbarWidget(),
               backgroundColor: AppColors.appbar,
+              automaticallyImplyLeading: false,
             )
           : AppBar(
               title: const DesctopAppbarWidget(),
@@ -104,6 +105,7 @@ class _ReadArticlePageState extends State<ReadArticlePage> {
               surfaceTintColor: Colors.transparent,
               backgroundColor: AppColors.appbar,
               toolbarHeight: 90.sp,
+              automaticallyImplyLeading: false,
             ),
       backgroundColor: AppColors.background,
       body: Row(

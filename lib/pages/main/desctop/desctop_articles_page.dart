@@ -1,3 +1,4 @@
+import 'package:boqiy_qahramonlar/pages/main/desctop/read_article_page.dart';
 import 'package:boqiy_qahramonlar/pages/main/desctop/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/main/desctop/widgets/page_title_text.dart';
 import 'package:flutter/material.dart';
@@ -145,106 +146,111 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
               itemCount: _articles.length,
               itemBuilder: (context, index) {
                 final article = _articles[index];
-                return Padding(
-                  padding: EdgeInsets.only(bottom: 55.h),
-                  child: Container(
-                    height: 631.h,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.08),
-                          blurRadius: 5,
-                          offset: Offset(0, 6),
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(24.w),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 240.w,
-                            decoration: BoxDecoration(
-                              color: Colors.blueGrey.shade100,
-
-                              // TODO: Rasm qo'yilgandan keyin bu qismni ochish kerak
-                              // image: DecorationImage(image: AssetImage("${article['image']}"))
-                            ),
-                          ),
-                          SizedBox(height: 30.h),
-                          Text(
-                            "${article['category']}",
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: AppColors.brown,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          SizedBox(height: 16.h),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "${article['title']}",
-                                maxLines: 1,
-                                style: TextStyle(
-                                  fontSize: 22.sp,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Icon(Icons.arrow_outward, size: 16.sp),
-                            ],
-                          ),
-                          SizedBox(height: 16.h),
-                          Text(
-                            "${article['description']}",
-                            maxLines: 3,
-
-                            overflow: TextOverflow.ellipsis,
-
-                            style: TextStyle(
-                              fontSize: 15.sp,
-
-                              color: Colors.grey.shade600,
-                            ),
-                          ),
-                          SizedBox(height: 12.h),
-                          Spacer(),
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 25.r,
-                                backgroundImage: AssetImage(
-                                  "${article['authorImage']}",
-                                ),
-                              ),
-                              SizedBox(width: 12.w),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "${article['authorName']}",
-                                    style: TextStyle(
-                                      fontSize: 13.sp,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    "${article['date']}",
-                                    style: TextStyle(
-                                      fontSize: 13.sp,
-                                      color: Colors.grey.shade600,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (b)=>ReadArticlePage()));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 55.h),
+                    child: Container(
+                      height: 631.h,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.08),
+                            blurRadius: 5,
+                            offset: Offset(0, 6),
                           ),
                         ],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(24.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: double.infinity,
+                              height: 240.w,
+                              decoration: BoxDecoration(
+                                color: Colors.blueGrey.shade100,
+                  
+                                // TODO: Rasm qo'yilgandan keyin bu qismni ochish kerak
+                                // image: DecorationImage(image: AssetImage("${article['image']}"))
+                              ),
+                            ),
+                            SizedBox(height: 30.h),
+                            Text(
+                              "${article['category']}",
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: AppColors.brown,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(height: 16.h),
+                  
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "${article['title']}",
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 22.sp,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Icon(Icons.arrow_outward, size: 16.sp),
+                              ],
+                            ),
+                            SizedBox(height: 16.h),
+                            Text(
+                              "${article['description']}",
+                              maxLines: 3,
+                  
+                              overflow: TextOverflow.ellipsis,
+                  
+                              style: TextStyle(
+                                fontSize: 15.sp,
+                  
+                                color: Colors.grey.shade600,
+                              ),
+                            ),
+                            SizedBox(height: 12.h),
+                            Spacer(),
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25.r,
+                                  backgroundImage: AssetImage(
+                                    "${article['authorImage']}",
+                                  ),
+                                ),
+                                SizedBox(width: 12.w),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "${article['authorName']}",
+                                      style: TextStyle(
+                                        fontSize: 13.sp,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    Text(
+                                      "${article['date']}",
+                                      style: TextStyle(
+                                        fontSize: 13.sp,
+                                        color: Colors.grey.shade600,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
