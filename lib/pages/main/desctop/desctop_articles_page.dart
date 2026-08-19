@@ -104,8 +104,8 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
               return Padding(
                 padding: EdgeInsets.only(right: 16.w),
                 child: Container(
-                  width: 130.w,
-                  height: 40.w,
+                  width: 120.w,
+                  height: 35.w,
                   decoration: BoxDecoration(
                     color: Colors.transparent,
                     border: Border.all(
@@ -120,7 +120,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                       style: GoogleFonts.notoSansHebrew(
                         fontWeight: FontWeight.w500,
                         color: isActive ? AppColors.brown : AppColors.black,
-                        fontSize: 22.sp,
+                        fontSize: 19.sp,
                       ),
                     ),
                   ),
@@ -192,7 +192,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                                 "${article['title']}",
                                 maxLines: 1,
                                 style: TextStyle(
-                                  fontSize: 24.sp,
+                                  fontSize: 22.sp,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -207,7 +207,7 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                             overflow: TextOverflow.ellipsis,
 
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 15.sp,
 
                               color: Colors.grey.shade600,
                             ),
@@ -229,14 +229,14 @@ class _DesctopArticlesPageState extends State<DesctopArticlesPage> {
                                   Text(
                                     "${article['authorName']}",
                                     style: TextStyle(
-                                      fontSize: 14.sp,
+                                      fontSize: 13.sp,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
                                     "${article['date']}",
                                     style: TextStyle(
-                                      fontSize: 14.sp,
+                                      fontSize: 13.sp,
                                       color: Colors.grey.shade600,
                                     ),
                                   ),

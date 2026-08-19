@@ -112,7 +112,7 @@ class _DesctopPersonsPageState extends State<DesctopPersonsPage> {
                           heroe['name'],
                           textAlign: TextAlign.center,
                           style: GoogleFonts.cinzel(
-                            fontSize: 25.sp,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.darkBlue,
                           ),
@@ -133,7 +133,7 @@ class _DesctopPersonsPageState extends State<DesctopPersonsPage> {
                           child: Text(
                             heroe['years'],
                             style: GoogleFonts.roboto(
-                              fontSize: 15.sp,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w600,
                               color: AppColors.brown,
                             ),
@@ -147,7 +147,7 @@ class _DesctopPersonsPageState extends State<DesctopPersonsPage> {
                           overflow: TextOverflow.ellipsis,
                           maxLines: 6,
                           style: GoogleFonts.crimsonText(
-                            fontSize: 16.sp,
+                            fontSize: 15.sp,
                             color: Colors.transparent,
                             height: 1.5,
                             shadows: [
@@ -168,7 +168,7 @@ class _DesctopPersonsPageState extends State<DesctopPersonsPage> {
                           children: [
                             SizedBox(width: 20),
                             Text(
-                              "Davomini o'qish",
+                              "Davomi",
                               style: GoogleFonts.roboto(
                                 fontSize: 17.sp,
                                 color: AppColors.brown,

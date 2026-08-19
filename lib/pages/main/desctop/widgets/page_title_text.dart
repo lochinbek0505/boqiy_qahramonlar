@@ -14,7 +14,7 @@ class PageTitleText extends StatelessWidget {
     return Text(
       title,
       style: GoogleFonts.cinzel(
-        fontSize: 40.sp,
+        fontSize: 38.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.midnightBlue,
       ),

@@ -10,11 +10,11 @@ class MoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 220.w,
-      height: 80.h,
+      width: 200.w,
+      height: 70.h,
       decoration: BoxDecoration(
         color: AppColors.steelBlue,
-        borderRadius: BorderRadius.circular(5.r),
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: Center(
         child: Padding(
@@ -22,7 +22,7 @@ class MoreButton extends StatelessWidget {
           child: Text(
             "KO'PROQ",
             style: GoogleFonts.cinzel(
-              fontSize: 24.sp,
+              fontSize: 20.sp,
               fontWeight: FontWeight.w700,
               color: Colors.white,
               // height: 1.2,

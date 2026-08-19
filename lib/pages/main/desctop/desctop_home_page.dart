@@ -31,7 +31,7 @@ class _DesctopHomePageState extends State<DesctopHomePage> {
                   Text(
                     "Boqiy Qahramonlar: Tarix  ,\nShonli O'tmish va Bugun siymolari",
                     style: GoogleFonts.cinzel(
-                      fontSize: 43.sp,
+                      fontSize: 40.sp,
                       fontWeight: FontWeight.bold,
                       color: AppColors.brown,
                     ),
@@ -42,7 +42,7 @@ class _DesctopHomePageState extends State<DesctopHomePage> {
                     "O‘zlikni tanish — bu bobolarning\nismini bilish emas, ularning qalbida\nyonib turgan iymon va g‘oya bilan\nyashashingdir. Qahramon bo‘lish\nesa shu ikkovi uchun har neni qilmog‘ingdir.",
 
                     style: GoogleFonts.inter(
-                      fontSize: 33.sp,
+                      fontSize: 30.sp,
                       fontWeight: FontWeight.w500,
                       color: AppColors.midnightBlue,
                     ),
