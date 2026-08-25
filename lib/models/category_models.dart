@@ -1,14 +1,14 @@
-class DataList {
+class CategoryModel {
   num? id;
   String? name;
 
-  DataList({
+  CategoryModel({
     this.id, this.name
   });
 
-  DataList copyWith({
+  CategoryModel copyWith({
     num? id, String? name
-  }) => DataList(id: id ?? this.id, name: name ?? this.name);
+  }) => CategoryModel(id: id ?? this.id, name: name ?? this.name);
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{
@@ -18,38 +18,8 @@ class DataList {
     return map;
   }
 
-  DataList.fromJson(dynamic json) {
+  CategoryModel.fromJson(dynamic json) {
     id = json["id"];
     name = json["name"];
-  }
-}
-
-class CategoryModels {
-  List<DataList>? dataListList;
-
-  CategoryModels({
-    this.dataListList
-  });
-
-  CategoryModels copyWith({
-    List<DataList>? dataListList
-  }) => CategoryModels(dataListList: dataListList ?? this.dataListList);
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{
-    };
-    if (dataListList != null) {
-      map["dataList"] = dataListList?.map((v) => v.toJson()).toList();
-    }
-    return map;
-  }
-
-  CategoryModels.fromJson(dynamic json) {
-    if (json != null) {
-      dataListList = [];
-      json.forEach((v) {
-        dataListList?.add(DataList.fromJson(v));
-      });
-    }
   }
 }

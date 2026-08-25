@@ -7,7 +7,9 @@ import '../core/app_colors.dart';
 import 'desctop_appbar_widget.dart';
 
 class ReadPoemPage extends StatefulWidget {
-  const ReadPoemPage({super.key});
+  num id;
+
+  ReadPoemPage({super.key, required this.id});
 
   @override
   State<ReadPoemPage> createState() => _ReadPoemPageState();

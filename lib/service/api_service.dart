@@ -29,11 +29,11 @@ class ApiService {
     );
   }
 
-  Future<List<CategoryModels>> getCategories() async {
+  Future<List<CategoryModel>> getCategories() async {
     try {
       var response = await _dio.get("category");
       return (response.data as List)
-          .map((x) => CategoryModels.fromJson(x))
+          .map((x) => CategoryModel.fromJson(x))
           .toList();
     } catch (e) {
       return [];
@@ -89,7 +89,7 @@ class ApiService {
   }) async {
     try {
       var response = await _dio.get(
-        "poems/getEditor",
+        "poems",
         queryParameters: {
           if (author != null) 'author': author,
           if (tag != null) 'tag': tag,
@@ -129,7 +129,7 @@ class ApiService {
   }) async {
     try {
       var response = await _dio.get(
-        "history/getEditor",
+        "history",
         queryParameters: {
           if (author != null) 'author': author,
           if (tag != null) 'tag': tag,
@@ -162,10 +162,10 @@ class ApiService {
     }
   }
 
-  Future<CategoryModels?> getCategoryById(int id) async {
+  Future<CategoryModel?> getCategoryById(int id) async {
     try {
       var response = await _dio.get("category/$id");
-      return CategoryModels.fromJson(response.data);
+      return CategoryModel.fromJson(response.data);
     } catch (e) {
       return null;
     }

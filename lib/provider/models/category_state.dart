@@ -1,21 +1,13 @@
-import 'package:boqiy_qahramonlar/models/category_models.dart';
 
+import 'package:boqiy_qahramonlar/models/category_models.dart';
 class CategoryState {
   final bool isLoading;
   final String? error;
-  final List<CategoryModels> categories;
+  final List<CategoryModel> categories;
 
-  CategoryState({
-    this.isLoading = false,
-    this.error,
-    this.categories = const [],
-  });
+  CategoryState({this.isLoading = false, this.error, this.categories = const []});
 
-  CategoryState copyWith({
-    bool? isLoading,
-    String? error,
-    List<CategoryModels>? categories,
-  }) {
+  CategoryState copyWith({bool? isLoading, String? error, List<CategoryModel>? categories}) {
     return CategoryState(
       isLoading: isLoading ?? this.isLoading,
       error: error,

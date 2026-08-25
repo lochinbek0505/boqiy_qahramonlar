@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../service/api_service.dart';
 import 'models/article_state.dart';
 
@@ -14,10 +13,21 @@ class ArticleNotifier extends StateNotifier<ArticleState> {
 
   final ApiService _apiService = ApiService();
 
-  Future<void> fetchArticles() async {
+  // Parametrlar qo'shildi
+  Future<void> fetchArticles({
+    String? author,
+    String? category,
+    String? tag,
+    String? sort,
+  }) async {
     state = state.copyWith(isLoading: true, clearError: true);
     try {
-      final articleList = await _apiService.getArticles();
+      final articleList = await _apiService.getArticles(
+        author: author,
+        category: category,
+        tag: tag,
+        sort: sort,
+      );
       state = state.copyWith(isLoading: false, articles: articleList);
     } catch (e) {
       state = state.copyWith(
@@ -48,7 +58,7 @@ class ArticleNotifier extends StateNotifier<ArticleState> {
     } catch (e) {
       state = state.copyWith(
         isLoading: false,
-        error: "Ko'rishlar sonini oshirishda xatolik yuz berdi!", // Matn to'g'irlandi
+        error: "Ko'rishlar sonini oshirishda xatolik yuz berdi!",
       );
     }
   }

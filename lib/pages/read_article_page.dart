@@ -7,7 +7,9 @@ import '../core/app_colors.dart';
 import 'desctop_appbar_widget.dart';
 
 class ReadArticlePage extends StatefulWidget {
-  const ReadArticlePage({super.key});
+  num id;
+
+  ReadArticlePage({super.key, required this.id});
 
   @override
   State<ReadArticlePage> createState() => _ReadArticlePageState();
@@ -92,14 +94,14 @@ class _ReadArticlePageState extends State<ReadArticlePage> {
     var article = _articles[0];
 
     return Scaffold(
-      appBar:  AppBar(
-              title:  DesctopAppbarWidget(onMenuTap: (int p1) {  }, onOpenDrawer: () {  },),
-              scrolledUnderElevation: 0.0,
-              surfaceTintColor: Colors.transparent,
-              backgroundColor: AppColors.appbar,
-              toolbarHeight: 90.sp,
-              automaticallyImplyLeading: false,
-            ),
+      appBar: AppBar(
+        title: DesctopAppbarWidget(onMenuTap: (int p1) {}, onOpenDrawer: () {}),
+        scrolledUnderElevation: 0.0,
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: AppColors.appbar,
+        toolbarHeight: 90.sp,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: AppColors.background,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,6 +3,7 @@ import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/app_colors.dart';
@@ -62,7 +63,7 @@ class DesctopPersonsPage extends StatelessWidget {
               final hero = heroes[index];
               return GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (builder) => ReadPersonPage()));
+                  context.go('/historys/${hero['id']}');
                 },
                 child: Container(
                   decoration: BoxDecoration(

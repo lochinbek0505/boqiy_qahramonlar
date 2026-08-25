@@ -7,7 +7,9 @@ import '../../core/app_colors.dart';
 import 'desctop_appbar_widget.dart';
 
 class ReadPersonPage extends StatefulWidget {
-  const ReadPersonPage({super.key});
+  num id;
+
+  ReadPersonPage({super.key, required this.id});
 
   @override
   State<ReadPersonPage> createState() => _ReadPersonPageState();
@@ -30,19 +32,19 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
       'name': 'SULTON SANJAR',
       'years': '1118-1157',
       'description':
-      "Saljuqiylar davlatining so'nggi buyuk sultoni. Uning davrida Movarounnahr va Xuroson saljuqiylar ta'sirida bo'lgan.",
+          "Saljuqiylar davlatining so'nggi buyuk sultoni. Uning davrida Movarounnahr va Xuroson saljuqiylar ta'sirida bo'lgan.",
     },
     {
       'name': 'JALOLIDDIN MANGUBERDI',
       'years': '1199-1231',
       'description':
-      "Xorazmshohlar davlatining so'nggi hukmdori, mo'g'ullar bosqiniga qarshi kurashgan buyuk sarkarda.",
+          "Xorazmshohlar davlatining so'nggi hukmdori, mo'g'ullar bosqiniga qarshi kurashgan buyuk sarkarda.",
     },
     {
       'name': 'AMIR TEMUR',
       'years': '1336-1405',
       'description':
-      "Buyuk sarkarda, Temuriylar imperiyasi asoschisi. O'z davrining eng qudratli davlatini barpo etgan.",
+          "Buyuk sarkarda, Temuriylar imperiyasi asoschisi. O'z davrining eng qudratli davlatini barpo etgan.",
     },
   ];
 
@@ -51,8 +53,8 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar:AppBar(
-        title:  DesctopAppbarWidget(onMenuTap: (int p1) {  }, onOpenDrawer: () {  },),
+      appBar: AppBar(
+        title: DesctopAppbarWidget(onMenuTap: (int p1) {}, onOpenDrawer: () {}),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
         backgroundColor: AppColors.appbar,
@@ -108,7 +110,10 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
 
                     // Yashagan yoki hukmronlik yillari
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 16.w,
+                        vertical: 8.h,
+                      ),
                       decoration: BoxDecoration(
                         border: Border.all(color: AppColors.brown, width: 1.5),
                         borderRadius: BorderRadius.circular(6.r),
@@ -128,7 +133,8 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20.r),
                       child: Image.asset(
-                        "assets/images/alparslon.png", // Rasm nomini o'zingizga moslang
+                        "assets/images/alparslon.png",
+                        // Rasm nomini o'zingizga moslang
                         width: double.infinity,
                         height: 550.h,
                         fit: BoxFit.cover,
@@ -139,8 +145,8 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
                     // Asosiy Matn (Biografiya)
                     Text(
                       "(forscha: آلپ ارسلان) (20-yanvar 1029-yil — noyabr 1075-yil) — Saljuqiylarlarning ikkinchi sultoni (1063-1072), mohir sarkarda. Uning asl ismi Muhammad ibn Dovud.\n\n"
-                          "Alp Arslon davrida Saljuqiylar davlati o'zining eng qudratli cho'qqilaridan biriga chiqdi. Uning eng mashhur g'alabalaridan biri 1071-yilda Vizantiya imperiyasiga qarshi bo'lib o'tgan Malazgirt jangi hisoblanadi. Bu jangdagi g'alaba Anadolu (hozirgi Turkiya) hududining turkiy xalqlar tomonidan o'zlashtirilishiga asosiy eshikni ochib berdi.\n\n"
-                          "Sulton o'zining adolatliligi, jasorati va islom dini rivojiga qo'shgan hissasi bilan tarixda nom qoldirgan. Uning davrida ilm-fan, madaniyat va me'morchilik yuqori darajada rivoj topdi. Vazir Nizomulmulk kabi yetuk davlat arboblari bilan birgalikda davlatni boshqarish tizimini mukammallashtirdi.",
+                      "Alp Arslon davrida Saljuqiylar davlati o'zining eng qudratli cho'qqilaridan biriga chiqdi. Uning eng mashhur g'alabalaridan biri 1071-yilda Vizantiya imperiyasiga qarshi bo'lib o'tgan Malazgirt jangi hisoblanadi. Bu jangdagi g'alaba Anadolu (hozirgi Turkiya) hududining turkiy xalqlar tomonidan o'zlashtirilishiga asosiy eshikni ochib berdi.\n\n"
+                      "Sulton o'zining adolatliligi, jasorati va islom dini rivojiga qo'shgan hissasi bilan tarixda nom qoldirgan. Uning davrida ilm-fan, madaniyat va me'morchilik yuqori darajada rivoj topdi. Vazir Nizomulmulk kabi yetuk davlat arboblari bilan birgalikda davlatni boshqarish tizimini mukammallashtirdi.",
                       style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         color: Colors.black87,
@@ -187,7 +193,10 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
                               ),
                             ],
                           ),
-                          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 30.h),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 24.w,
+                            vertical: 30.h,
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -202,9 +211,15 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
                               ),
                               SizedBox(height: 16.h),
                               Container(
-                                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 16.w,
+                                  vertical: 6.h,
+                                ),
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.brown, width: 1.2),
+                                  border: Border.all(
+                                    color: AppColors.brown,
+                                    width: 1.2,
+                                  ),
                                   borderRadius: BorderRadius.circular(4.r),
                                 ),
                                 child: Text(

@@ -1,10 +1,47 @@
 import 'package:boqiy_qahramonlar/pages/main_page.dart';
+import 'package:boqiy_qahramonlar/pages/read_article_page.dart';
+import 'package:boqiy_qahramonlar/pages/read_persons_page.dart';
+import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
+
+
+final GoRouter _router = GoRouter(
+  routes: <RouteBase>[
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const MainPage();
+      },
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'article/:id',
+          builder: (BuildContext context, GoRouterState state) {
+            return  ReadArticlePage(id: int.parse(state.pathParameters['id']!));
+          },
+        ),
+        GoRoute(
+          path: 'poems/:id',
+          builder: (BuildContext context, GoRouterState state) {
+            return  ReadPoemPage(id: int.parse(state.pathParameters['id']!));
+          },
+        ),
+        GoRoute(
+          path: 'historys/:id',
+          builder: (BuildContext context, GoRouterState state) {
+            return  ReadPersonPage(id: int.parse(state.pathParameters['id']!));
+          },
+        ),
+      ],
+    ),
+  ],
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,7 +55,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           title: 'Boqiy Qahramonlar',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
@@ -39,7 +76,7 @@ class MyApp extends StatelessWidget {
             // tested with just a hot reload.
             colorScheme: .fromSeed(seedColor: Colors.deepPurple),
           ),
-          home: MainPage(),
+          routerConfig: _router,
         );
       },
     );
