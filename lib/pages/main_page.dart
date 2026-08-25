@@ -5,9 +5,11 @@ import 'package:boqiy_qahramonlar/pages/desctop_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_poems_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart'; // Font qo'shildi
 
 import 'desctop_home_page.dart';
+import 'footer_widget.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -17,30 +19,16 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  // Har bir bo'limga skroll qilish uchun kalitlar (keys)
-  final GlobalKey _homeKey = GlobalKey(); // Asosiy sahifa uchun yangi kalit
-  final GlobalKey _articlesKey = GlobalKey();
-  final GlobalKey _poemsKey = GlobalKey();
-  final GlobalKey _personsKey = GlobalKey();
-
   void _scrollToIndex(int index) {
-    GlobalKey targetKey;
     if (index == 0) {
-      targetKey = _homeKey;
+      context.replace('/');
     } else if (index == 1) {
-      targetKey = _articlesKey;
+      context.replace('/article');
     } else if (index == 2) {
-      targetKey = _poemsKey;
+      context.replace('/poems');
     } else {
-      targetKey = _personsKey;
+      context.replace('/historys');
     }
-
-    // Ekran o'sha joyga skroll bo'ladi
-    Scrollable.ensureVisible(
-      targetKey.currentContext!,
-      duration: const Duration(milliseconds: 600),
-      curve: Curves.easeInOut,
-    );
   }
 
   // Drawer elementlarini chizish uchun yordamchi metod
@@ -72,58 +60,63 @@ class _MainPageState extends State<MainPage> {
       // Mobil versiya uchun yon tomondan chiquvchi menyu
       endDrawer: isMobile
           ? Drawer(
-        backgroundColor: const Color(0xFFFDFCF6), // Appbar rangiga moslashdi
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: AppColors.background,
-                border: Border(
-                  bottom: BorderSide(color: AppColors.brown.withOpacity(0.3), width: 1),
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              backgroundColor: const Color(
+                0xFFFDFCF6,
+              ), // Appbar rangiga moslashdi
+              child: ListView(
+                padding: EdgeInsets.zero,
                 children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundColor: Colors.black,
-                    child: Image.asset("assets/logo.png", fit: BoxFit.fill),
-                  ),
-                  SizedBox(height: 10.h),
-                  Text(
-                    "MENYU",
-                    style: GoogleFonts.cinzel(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.black,
+                  DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: AppColors.background,
+                      border: Border(
+                        bottom: BorderSide(
+                          color: AppColors.brown.withOpacity(0.3),
+                          width: 1,
+                        ),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.black,
+                          child: Image.asset(
+                            "assets/logo.png",
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        SizedBox(height: 10.h),
+                        Text(
+                          "MENYU",
+                          style: GoogleFonts.cinzel(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.black,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  _buildDrawerItem("ASOSIY", 0),
+                  _buildDrawerItem("MAQOLALAR", 1),
+                  _buildDrawerItem("SHE'RLAR", 2),
+                  _buildDrawerItem("SHAXSLAR", 3),
                 ],
               ),
-            ),
-            _buildDrawerItem("ASOSIY", 0),
-            _buildDrawerItem("MAQOLALAR", 1),
-            _buildDrawerItem("SHE'RLAR", 2),
-            _buildDrawerItem("SHAXSLAR", 3),
-          ],
-        ),
-      )
+            )
           : null,
       appBar: AppBar(
         title: DesctopAppbarWidget(
-          onMenuTap: _scrollToIndex,
-          onOpenDrawer: () {
-            // Scaffold-ning Drawer-ni ochish komandasi
-            Scaffold.of(context).openEndDrawer();
-          },
+
         ),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
         backgroundColor: AppColors.appbar,
         toolbarHeight: 90.sp,
-        automaticallyImplyLeading: false, // Default back/menu buttonni olib tashlash
+        automaticallyImplyLeading: false,
+        // Default back/menu buttonni olib tashlash
         titleSpacing: 0,
       ),
       body: SizedBox(
@@ -133,10 +126,11 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             children: [
               // Barcha qismlarga o'z kaliti (key) berildi
-              Container(key: _homeKey, child: const DesctopHomePage()),
-              Container(key: _articlesKey, child: const DesctopArticlesPage()),
-              Container(key: _poemsKey, child: const DesctopPoemsPage()),
-              Container(key: _personsKey, child: const DesctopPersonsPage()),
+              const DesctopHomePage(),
+              const DesctopArticlesPage(),
+              const DesctopPoemsPage(),
+              const DesctopPersonsPage(),
+              const FooterWidget()
             ],
           ),
         ),

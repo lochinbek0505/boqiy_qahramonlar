@@ -1,4 +1,3 @@
-import 'package:boqiy_qahramonlar/pages/read_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +26,8 @@ class DesctopPersonsPage extends StatelessWidget {
       {
         'name': 'ALP ARSLON',
         'years': '1063-1072',
-        'description': "(forscha: آلپ ارسلان)(20-yanvar 1029-yil — noyabr 1075-yil) — Saljuqiylarlarning ikkinchi sultoni...",
+        'description':
+            "(forscha: آلپ ارسلان)(20-yanvar 1029-yil — noyabr 1075-yil) — Saljuqiylarlarning ikkinchi sultoni...",
       },
       {
         'name': 'ALP ARSLON',
@@ -55,7 +55,9 @@ class DesctopPersonsPage extends StatelessWidget {
               crossAxisCount: getCrossAxisCount(),
               mainAxisSpacing: isMobile ? 20 : 40.h,
               crossAxisSpacing: isMobile ? 20 : 30.w,
-              childAspectRatio: isMobile ? 1.0 : 0.75, // Mos ravishda to'g'rilandi
+              childAspectRatio: isMobile
+                  ? 1.0
+                  : 0.75, // Mos ravishda to'g'rilandi
             ),
             shrinkWrap: true,
             itemCount: heroes.length,
@@ -78,8 +80,8 @@ class DesctopPersonsPage extends StatelessWidget {
                     ],
                   ),
                   padding: EdgeInsets.symmetric(
-                      horizontal: isMobile ? 16 : 24.w,
-                      vertical: isMobile ? 16 : 30.h
+                    horizontal: isMobile ? 16 : 24.w,
+                    vertical: isMobile ? 16 : 30.h,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -95,9 +97,15 @@ class DesctopPersonsPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16.h),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16.w,
+                          vertical: 6.h,
+                        ),
                         decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.brown, width: 1.2),
+                          border: Border.all(
+                            color: AppColors.brown,
+                            width: 1.2,
+                          ),
                           borderRadius: BorderRadius.circular(4.r),
                         ),
                         child: Text(
@@ -150,7 +158,12 @@ class DesctopPersonsPage extends StatelessWidget {
           ),
         ),
         SizedBox(height: isMobile ? 30 : 50.h),
-        const MoreButton(),
+        GestureDetector(
+          onTap: () {
+            context.go('/historys');
+          },
+          child: MoreButton(),
+        ),
         SizedBox(height: isMobile ? 40 : 80.h),
       ],
     );

@@ -52,7 +52,7 @@ Lekin sevgim yashar to qiyomat.''';
 
     return Scaffold(
       appBar: AppBar(
-        title: DesctopAppbarWidget(onMenuTap: (int p1) {}, onOpenDrawer: () {}),
+        title: DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
         backgroundColor: AppColors.appbar,

@@ -1,4 +1,7 @@
+import 'package:boqiy_qahramonlar/pages/articles_page.dart';
 import 'package:boqiy_qahramonlar/pages/main_page.dart';
+import 'package:boqiy_qahramonlar/pages/peoms_page.dart';
+import 'package:boqiy_qahramonlar/pages/persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_article_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
@@ -17,9 +20,15 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const MainPage();
+        return  MainPage();
       },
       routes: <RouteBase>[
+        GoRoute(
+          path: 'article',
+          builder: (BuildContext context, GoRouterState state) {
+            return  ArticlesPage();
+          },
+        ),
         GoRoute(
           path: 'article/:id',
           builder: (BuildContext context, GoRouterState state) {
@@ -33,9 +42,21 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
+          path: 'poems',
+          builder: (BuildContext context, GoRouterState state) {
+            return  PoemsPage();
+          },
+        ),
+        GoRoute(
           path: 'historys/:id',
           builder: (BuildContext context, GoRouterState state) {
             return  ReadPersonPage(id: int.parse(state.pathParameters['id']!));
+          },
+        ),
+        GoRoute(
+          path: 'historys',
+          builder: (BuildContext context, GoRouterState state) {
+            return  PersonsPage();
           },
         ),
       ],
@@ -59,21 +80,7 @@ class MyApp extends StatelessWidget {
           title: 'Boqiy Qahramonlar',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            // This is the theme of your application.
-            //
-            // TRY THIS: Try running your application with "flutter run". You'll see
-            // the application has a purple toolbar. Then, without quitting the app,
-            // try changing the seedColor in the colorScheme below to Colors.green
-            // and then invoke "hot reload" (save your changes or press the "hot
-            // reload" button in a Flutter-supported IDE, or press "r" if you used
-            // the command line to start the app).
-            //
-            // Notice that the counter didn't reset back to zero; the application
-            // state is not lost during the reload. To reset the state, use hot
-            // restart instead.
-            //
-            // This works for code too, not just values: Most code changes can be
-            // tested with just a hot reload.
+
             colorScheme: .fromSeed(seedColor: Colors.deepPurple),
           ),
           routerConfig: _router,

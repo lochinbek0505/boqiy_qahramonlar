@@ -217,7 +217,11 @@ class DesctopPoemsPage extends ConsumerWidget {
               ),
             ),
             SizedBox(height: isMobile ? 20.h : 40.h),
-            const MoreButton(),
+             GestureDetector(
+                 onTap: (){
+                   context.go('/poems');
+                 },
+                 child: MoreButton()),
             SizedBox(height: isMobile ? 30.h : 60.h),
           ],
       ],

@@ -1,4 +1,3 @@
-import 'package:boqiy_qahramonlar/pages/read_article_page.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
 import 'package:boqiy_qahramonlar/provider/category_provider.dart';
@@ -99,12 +98,13 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                         _selectedCategoryIndex = index;
                       });
 
-                      // Agar filterni serverga so'rov yuborish (API) orqali amalga oshirmoqchi bo'lsangiz:
-                      // if (index == 0) {
-                      //   ref.read(articleProvider.notifier).fetchArticles();
-                      // } else {
-                      //   ref.read(articleProvider.notifier).fetchArticles(category: tabCategories[index]);
-                      // }
+                      if (index == 0) {
+                        ref.read(articleProvider.notifier).fetchArticles();
+                      } else {
+                        ref
+                            .read(articleProvider.notifier)
+                            .fetchArticles(category: tabCategories[index]);
+                      }
                     },
                     child: Padding(
                       padding: EdgeInsets.only(right: 16.w),
@@ -378,7 +378,12 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
             ),
           ),
           SizedBox(height: isMobile ? 30.h : 40.h),
-          const MoreButton(),
+          GestureDetector(
+            onTap: () {
+              context.go('/article');
+            },
+            child: MoreButton(),
+          ),
           SizedBox(height: isMobile ? 30.h : 40.h),
         ],
       ],
