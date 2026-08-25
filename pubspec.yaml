@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^8.2.1
   flutter_screenutil: ^5.9.3
+  flutter_launcher_icons: ^0.14.4
+  dio: ^5.11.0
 
 dev_dependencies:
   flutter_test:
@@ -65,9 +67,15 @@ flutter:
    - assets/icons/
    - assets/
    - assets/images/
-   - assets/logo/
   #   - images/a_dot_ham.jpeg
 
+flutter_launcher_icons:
+  web:
+    generate: true
+    image_path: "assets/logo.png"
+    background_color: "#FFFFFF"
+    theme_color: "#0B3D91"
+  image_path: "assets/logo.png"
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

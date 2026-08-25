@@ -1,10 +1,9 @@
-import 'package:boqiy_qahramonlar/pages/main/desctop/widgets/most_read_card.dart';
+import 'package:boqiy_qahramonlar/pages/widgets/most_read_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/app_colors.dart';
-import '../mobile/mobile_appbar_widget.dart';
+import '../core/app_colors.dart';
 import 'desctop_appbar_widget.dart';
 
 class ReadArticlePage extends StatefulWidget {
@@ -93,14 +92,8 @@ class _ReadArticlePageState extends State<ReadArticlePage> {
     var article = _articles[0];
 
     return Scaffold(
-      appBar: size.width < 500
-          ? AppBar(
-              title: const MobileAppbarWidget(),
-              backgroundColor: AppColors.appbar,
-              automaticallyImplyLeading: false,
-            )
-          : AppBar(
-              title: const DesctopAppbarWidget(),
+      appBar:  AppBar(
+              title:  DesctopAppbarWidget(onMenuTap: (int p1) {  }, onOpenDrawer: () {  },),
               scrolledUnderElevation: 0.0,
               surfaceTintColor: Colors.transparent,
               backgroundColor: AppColors.appbar,
