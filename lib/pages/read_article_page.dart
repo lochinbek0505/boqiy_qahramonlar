@@ -477,7 +477,10 @@ class _ReadArticlePageState extends ConsumerState<ReadArticlePage> {
         left: isMobile ? 20.w : 0,
         bottom: isMobile ? 30.h : 0,
       ),
-      child: MostReadCard(list: mostReadTitles),
+      child: MostReadCard(
+        list: mostReadTitles,
+        onItemTap: (index) => context.go('/article/${articleState.mostReadArticles[index].id}'),
+      ),
     );
 
     return Scaffold(

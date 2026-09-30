@@ -6,8 +6,9 @@ import '../../../../core/app_colors.dart';
 
 class MostReadCard extends StatelessWidget {
   final List<String> list; // StatelessWidget ichida o'zgaruvchilar 'final' bo'lishi shart
+  final ValueChanged<int>? onItemTap; // Bosilgan element indeksi
 
-  const MostReadCard({super.key, required this.list});
+  const MostReadCard({super.key, required this.list, this.onItemTap});
 
   @override
   Widget build(BuildContext context) {
@@ -49,15 +50,23 @@ class MostReadCard extends StatelessWidget {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 14.h), // Matnlar atrofida bo'shliq
-                      child: Text(
-                        list[index],
-                        style: GoogleFonts.inter(
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w500,
-                          color: palette.textSecondary, // Qora emas, to'q kulrang o'qishga qulayroq
-                          height: 1.5, // Qatorlar orasidagi masofa
+                    InkWell(
+                      onTap: onItemTap == null ? null : () => onItemTap!(index),
+                      borderRadius: BorderRadius.circular(8.r),
+                      hoverColor: AppColors.brown.withValues(alpha: 0.06),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 14.h), // Matnlar atrofida bo'shliq
+                        child: SizedBox(
+                          width: double.infinity, // Butun qator bosiladigan bo'lsin
+                          child: Text(
+                            list[index],
+                            style: GoogleFonts.inter(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                              color: palette.textSecondary, // Qora emas, to'q kulrang o'qishga qulayroq
+                              height: 1.5, // Qatorlar orasidagi masofa
+                            ),
+                          ),
                         ),
                       ),
                     ),

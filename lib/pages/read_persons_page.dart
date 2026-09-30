@@ -401,7 +401,10 @@ class _ReadPersonPageState extends ConsumerState<ReadPersonPage> {
         left: isMobile ? 20.w : 0,
         bottom: isMobile ? 30.h : 0,
       ),
-      child: MostReadCard(list: mostReadTitles),
+      child: MostReadCard(
+        list: mostReadTitles,
+        onItemTap: (index) => context.go('/historys/${historyState.mostReadHistories[index].id}'),
+      ),
     );
 
     return Scaffold(

@@ -438,7 +438,10 @@ class _ReadPoemPageState extends ConsumerState<ReadPoemPage> {
         left: isMobile ? 20.w : 0,
         bottom: isMobile ? 30.h : 0,
       ),
-      child: MostReadCard(list: mostReadTitles),
+      child: MostReadCard(
+        list: mostReadTitles,
+        onItemTap: (index) => context.go('/poems/${poemState.mostReadPoems[index].id}'),
+      ),
     );
 
     return Scaffold(

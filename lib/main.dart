@@ -16,48 +16,69 @@ void main() {
   runApp(ProviderScope(child: MyApp()));
 }
 
+// Sahifalar orasidagi o'tish animatsiyasi: yumshoq paydo bo'lish (fade)
+// va pastdan biroz yuqoriga siljish.
+CustomTransitionPage<void> _fadePage(GoRouterState state, Widget child) {
+  return CustomTransitionPage<void>(
+    key: state.pageKey,
+    child: child,
+    transitionDuration: const Duration(milliseconds: 350),
+    reverseTransitionDuration: const Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      final curved = CurvedAnimation(parent: animation, curve: Curves.easeOutCubic);
+      return FadeTransition(
+        opacity: curved,
+        child: SlideTransition(
+          position: Tween<Offset>(begin: const Offset(0, 0.03), end: Offset.zero).animate(curved),
+          child: child,
+        ),
+      );
+    },
+  );
+}
+
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
-      builder: (BuildContext context, GoRouterState state) {
-        return MainPage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return _fadePage(state, MainPage());
       },
       routes: <RouteBase>[
         GoRoute(
           path: 'article',
-          builder: (BuildContext context, GoRouterState state) {
-            return ArticlesPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, ArticlesPage());
           },
         ),
         GoRoute(
           path: 'article/:id',
-          builder: (BuildContext context, GoRouterState state) {
-            return ReadArticlePage(id: int.parse(state.pathParameters['id']!));
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, ReadArticlePage(id: int.parse(state.pathParameters['id']!)));
           },
         ),
         GoRoute(
           path: 'poems/:id',
-          builder: (BuildContext context, GoRouterState state) {
-            return ReadPoemPage(id: int.parse(state.pathParameters['id']!));
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, ReadPoemPage(id: int.parse(state.pathParameters['id']!)));
           },
         ),
         GoRoute(
           path: 'poems',
-          builder: (BuildContext context, GoRouterState state) {
-            return PoemsPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, PoemsPage());
           },
         ),
         GoRoute(
           path: 'historys/:id',
-          builder: (BuildContext context, GoRouterState state) {
-            return ReadPersonPage(id: int.parse(state.pathParameters['id']!));
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, ReadPersonPage(id: int.parse(state.pathParameters['id']!)));
           },
         ),
         GoRoute(
           path: 'historys',
-          builder: (BuildContext context, GoRouterState state) {
-            return PersonsPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, PersonsPage());
           },
         ),
       ],
