@@ -60,7 +60,7 @@ class _DesctopAppbarWidgetState extends ConsumerState<DesctopAppbarWidget> {
                 Text(
                   "BOQIY",
                   style: GoogleFonts.cinzel(
-                    fontSize: isMobile ? 16 : 26.sp,
+                    fontSize: isMobile ? 16 : 24.sp,
                     fontWeight: FontWeight.bold,
                     color: palette.textPrimary,
                   ),
@@ -68,7 +68,7 @@ class _DesctopAppbarWidgetState extends ConsumerState<DesctopAppbarWidget> {
                 Text(
                   "QAHRAMONLAR",
                   style: GoogleFonts.cinzel(
-                    fontSize: isMobile ? 12 : 20.sp,
+                    fontSize: isMobile ? 12 : 16.sp,
                     fontWeight: FontWeight.bold,
                     color: palette.textPrimary,
                     height: 1.2,

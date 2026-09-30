@@ -429,15 +429,18 @@ class _ReadPersonPageState extends ConsumerState<ReadPersonPage> {
               // aks holda Row balandligi ekran balandligi bilan cheklanib,
               // "Ko'p o'qilganlar" ro'yxati uzun bo'lganda pastki qism
               // (jumladan Footer) kesilib qolardi.
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              // Footer Row'dan tashqarida — shunda u yon panel ostida ham
+              // sahifaning to'liq kengligini egallaydi.
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [mainContent, const FooterWidget()],
-                    ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(child: mainContent),
+                      sidebar,
+                    ],
                   ),
-                  sidebar,
+                  const FooterWidget(),
                 ],
               ),
             ),
