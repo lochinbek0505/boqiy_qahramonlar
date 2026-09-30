@@ -1,3 +1,4 @@
+import 'package:boqiy_qahramonlar/core/app_theme.dart';
 import 'package:boqiy_qahramonlar/pages/articles_page.dart';
 import 'package:boqiy_qahramonlar/pages/main_page.dart';
 import 'package:boqiy_qahramonlar/pages/peoms_page.dart';
@@ -5,6 +6,7 @@ import 'package:boqiy_qahramonlar/pages/persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_article_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
+import 'package:boqiy_qahramonlar/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -63,11 +65,13 @@ final GoRouter _router = GoRouter(
   ],
 );
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider);
+
     return ScreenUtilInit(
       designSize: const Size(1512, 982),
 
@@ -77,9 +81,9 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           title: 'Boqiy Qahramonlar',
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-          ),
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
+          themeMode: themeMode,
           routerConfig: _router,
         );
       },

@@ -1,9 +1,5 @@
 import 'package:boqiy_qahramonlar/core/utils.dart';
 import 'package:boqiy_qahramonlar/pages/footer_widget.dart';
-import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
-import 'package:boqiy_qahramonlar/pages/widgets/most_read_card.dart';
-import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
-// import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart'; // Buni olib tashladik
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,41 +7,39 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/app_colors.dart';
-import '../provider/article_provider.dart';
-import '../provider/category_provider.dart';
+import '../core/breakpoints.dart';
 import '../provider/poems_provider.dart';
 import 'desctop_appbar_widget.dart';
 
 class PoemsPage extends ConsumerStatefulWidget {
-  PoemsPage({super.key});
+  const PoemsPage({super.key});
 
   @override
   ConsumerState<PoemsPage> createState() => _PoemsPageState();
 }
 
 class _PoemsPageState extends ConsumerState<PoemsPage> {
-  int _selectedCategoryIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     final poemState = ref.watch(poemsProvider);
 
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: palette.background,
       appBar: AppBar(
         title: const DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.appbar,
+        backgroundColor: palette.appbarBg,
         toolbarHeight: 90.h,
         automaticallyImplyLeading: false,
       ),
@@ -70,7 +64,7 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                             "Bosh sahifa",
                             style: GoogleFonts.inter(
                               fontSize: isMobile ? 12.sp : 14.sp,
-                              color: Colors.grey.shade500,
+                              color: palette.textSecondary,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -78,7 +72,7 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.w),
-                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: Colors.grey.shade400),
+                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: palette.textMuted),
                       ),
                       Text(
                         "She'rlar",
@@ -96,7 +90,7 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                     style: GoogleFonts.notoSansHebrew(
                       fontSize: isMobile ? 28.sp : 42.sp,
                       fontWeight: FontWeight.w700,
-                      color: Colors.black87,
+                      color: palette.textPrimary,
                       letterSpacing: -0.5,
                     ),
                   ),
@@ -150,8 +144,8 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                                 height: isMobile ? 40.h : 80.h,
                                 decoration: BoxDecoration(
                                   border: Border(
-                                    right: BorderSide(color: Colors.grey.shade400, width: 2.w),
-                                    bottom: BorderSide(color: Colors.grey.shade400, width: 2.w),
+                                    right: BorderSide(color: palette.textMuted, width: 2.w),
+                                    bottom: BorderSide(color: palette.textMuted, width: 2.w),
                                   ),
                                 ),
                               ),
@@ -168,7 +162,7 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                                     style: GoogleFonts.copse(
                                       fontSize: isMobile ? 20.sp : 24.sp,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.darkBlue,
+                                      color: palette.heading,
                                       height: 1.3,
                                     ),
                                   ),
@@ -190,7 +184,7 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                                       overflow: TextOverflow.fade,
                                       style: GoogleFonts.crimsonPro(
                                         fontSize: isMobile ? 14.sp : 16.sp,
-                                        color: Colors.black87,
+                                        color: palette.textPrimary,
                                         height: 1.6,
                                         fontStyle: FontStyle.italic,
                                       ),
@@ -214,13 +208,13 @@ class _PoemsPageState extends ConsumerState<PoemsPage> {
                                       ),
                                       Row(
                                         children: [
-                                          Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                          Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                           SizedBox(width: 4.w),
-                                          Text("${poem.viewCount ?? 0}", style: TextStyle(fontSize: isMobile ? 11.sp : 13.sp, color: Colors.grey.shade600)),
+                                          Text("${poem.viewCount ?? 0}", style: TextStyle(fontSize: isMobile ? 11.sp : 13.sp, color: palette.textSecondary)),
                                           SizedBox(width: 12.w),
-                                          Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                          Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                           SizedBox(width: 4.w),
-                                          Text("${poem.readTime ?? 0} daq", style: TextStyle(fontSize: isMobile ? 11.sp : 13.sp, color: Colors.grey.shade600)),
+                                          Text("${poem.readTime ?? 0} daq", style: TextStyle(fontSize: isMobile ? 11.sp : 13.sp, color: palette.textSecondary)),
                                         ],
                                       ),
                                     ],

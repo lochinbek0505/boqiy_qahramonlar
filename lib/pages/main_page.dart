@@ -1,4 +1,5 @@
 import 'package:boqiy_qahramonlar/core/app_colors.dart';
+import 'package:boqiy_qahramonlar/core/breakpoints.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_appbar_widget.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_articles_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_persons_page.dart';
@@ -47,7 +48,7 @@ class _MainPageState extends State<MainPage> {
         style: GoogleFonts.cinzel(
           fontSize: 18,
           fontWeight: FontWeight.bold,
-          color: AppColors.black,
+          color: context.palette.textPrimary,
         ),
       ),
       onTap: () {
@@ -60,25 +61,24 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    bool isMobile = size.width < 800; // Ekran kengligi bo'yicha tekshiruv
+    bool isMobile = size.width < Breakpoints.tablet; // Ekran kengligi bo'yicha tekshiruv
+    final palette = context.palette;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: palette.background,
       // Mobil versiya uchun yon tomondan chiquvchi menyu
       endDrawer: isMobile
           ? Drawer(
-              backgroundColor: const Color(
-                0xFFFDFCF6,
-              ), // Appbar rangiga moslashdi
+              backgroundColor: palette.appbarBg,
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
                   DrawerHeader(
                     decoration: BoxDecoration(
-                      color: AppColors.background,
+                      color: palette.background,
                       border: Border(
                         bottom: BorderSide(
-                          color: AppColors.brown.withOpacity(0.3),
+                          color: AppColors.brown.withValues(alpha: 0.3),
                           width: 1,
                         ),
                       ),
@@ -100,7 +100,7 @@ class _MainPageState extends State<MainPage> {
                           style: GoogleFonts.cinzel(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.black,
+                            color: palette.textPrimary,
                           ),
                         ),
                       ],
@@ -118,7 +118,7 @@ class _MainPageState extends State<MainPage> {
         title: const DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.appbar,
+        backgroundColor: palette.appbarBg,
         toolbarHeight: 90.sp,
         automaticallyImplyLeading: false,
         // Default back/menu buttonni olib tashlash

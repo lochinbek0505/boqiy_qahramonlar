@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import '../core/app_colors.dart';
+import '../core/breakpoints.dart';
+import '../provider/theme_provider.dart';
 
 // Barcha menyu va navigatsiya mantiqi bitta joyda
 void navigateToPage(BuildContext context, int index) {
@@ -17,22 +20,28 @@ void navigateToPage(BuildContext context, int index) {
   }
 }
 
-class DesctopAppbarWidget extends StatefulWidget {
+class DesctopAppbarWidget extends ConsumerStatefulWidget {
   const DesctopAppbarWidget({super.key});
 
   @override
-  State<DesctopAppbarWidget> createState() => _DesctopAppbarWidgetState();
+  ConsumerState<DesctopAppbarWidget> createState() =>
+      _DesctopAppbarWidgetState();
 }
 
-class _DesctopAppbarWidgetState extends State<DesctopAppbarWidget> {
+class _DesctopAppbarWidgetState extends ConsumerState<DesctopAppbarWidget> {
   final List<String> _list = ["ASOSIY", "MAQOLALAR", "SHE'RLAR", "SHAXSLAR"];
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = MediaQuery.of(context).size.width < 800; // Breakpoint
+    final palette = context.palette;
+    // Eslatma: bu breakpoint ilovadagi eng "og'ir" qator (logo + 4 ta menyu
+    // + qidiruv maydoni), shuning uchun u Breakpoints.tablet (1000) ga
+    // moslashtirilgan — aks holda 800-1000px oralig'ida menyu qatori
+    // sig'may (RenderFlex overflow) qolardi.
+    bool isMobile = MediaQuery.of(context).size.width < Breakpoints.tablet;
 
     return Container(
-      color: const Color(0xFFFDFCF6),
+      color: palette.appbarBg,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: isMobile ? 16 : 8.w),
         child: Row(
@@ -53,7 +62,7 @@ class _DesctopAppbarWidgetState extends State<DesctopAppbarWidget> {
                   style: GoogleFonts.cinzel(
                     fontSize: isMobile ? 16 : 26.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.black,
+                    color: palette.textPrimary,
                   ),
                 ),
                 Text(
@@ -61,7 +70,7 @@ class _DesctopAppbarWidgetState extends State<DesctopAppbarWidget> {
                   style: GoogleFonts.cinzel(
                     fontSize: isMobile ? 12 : 20.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.black,
+                    color: palette.textPrimary,
                     height: 1.2,
                   ),
                 ),
@@ -69,79 +78,104 @@ class _DesctopAppbarWidgetState extends State<DesctopAppbarWidget> {
             ),
             const Spacer(),
 
+            // Tungi/kunduzgi rejim almashtirgichi (har doim ko'rinadi)
+            IconButton(
+              tooltip: "Mavzuni almashtirish",
+              icon: Icon(
+                Theme.of(context).brightness == Brightness.dark
+                    ? Icons.light_mode_outlined
+                    : Icons.dark_mode_outlined,
+                color: palette.textPrimary,
+                size: isMobile ? 24 : 26.sp,
+              ),
+              onPressed: () => ref.read(themeModeProvider.notifier).toggle(),
+            ),
+
             // Mobil bo'lsa Drawer ikonkasi
             if (isMobile)
               IconButton(
-                icon: const Icon(Icons.menu, color: Colors.black, size: 30),
+                icon: Icon(Icons.menu, color: palette.textPrimary, size: 30),
                 onPressed: () {
                   // To'g'ridan-to'g'ri shu yerdan drawerni ochish
                   Scaffold.of(context).openEndDrawer();
                 },
               )
             // Desktop bo'lsa Menyular va Qidiruv chiqadi
-            else ...[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(_list.length, (index) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15.w),
-                    child: InkWell(
-                      onTap: () => navigateToPage(context, index),
-                      hoverColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      child: Text(
-                        _list[index],
-                        style: GoogleFonts.cinzel(
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.black,
-                          height: 1.2,
+            else
+              // Flexible + FittedBox(scaleDown): nav+qidiruv qatori
+              // hech qachon ortiqcha joy egallab RenderFlex overflow
+              // bermaydi — tor joyda butun qator bir xilda kichrayadi,
+              // keng joyda esa tabiiy o'lchamida chiqadi.
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerRight,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ...List.generate(_list.length, (index) {
+                        return Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.w),
+                          child: InkWell(
+                            onTap: () => navigateToPage(context, index),
+                            hoverColor: Colors.transparent,
+                            splashColor: Colors.transparent,
+                            child: Text(
+                              _list[index],
+                              style: GoogleFonts.cinzel(
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.bold,
+                                color: palette.textPrimary,
+                                height: 1.2,
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                      SizedBox(width: 30.w),
+                      SizedBox(
+                        width: 220.w,
+                        height: 45.h,
+                        child: TextField(
+                          textAlignVertical: TextAlignVertical.center,
+                          expands: false,
+                          maxLines: 1,
+                          minLines: 1,
+                          style: GoogleFonts.cinzel(
+                            color: palette.textPrimary,
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          decoration: InputDecoration(
+                            hintText: "qidirish",
+                            hintStyle: GoogleFonts.cinzel(
+                              color: palette.textSecondary,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 15.w, right: 10.w),
+                              child: Icon(Icons.search, color: palette.textPrimary, size: 20.sp),
+                            ),
+                            filled: true,
+                            fillColor: Colors.transparent,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100.r),
+                              borderSide: BorderSide(color: palette.textPrimary, width: 1),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100.r),
+                              borderSide: BorderSide(color: palette.textPrimary, width: 1.3),
+                            ),
+                            contentPadding: EdgeInsets.symmetric(vertical: 0.h),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                }),
-              ),
-              SizedBox(width: 30.w),
-              SizedBox(
-                width: 220.w,
-                height: 45.h,
-                child: TextField(
-                  textAlignVertical: TextAlignVertical.center,
-                  expands: false,
-                  maxLines: 1,
-                  minLines: 1,
-                  style: GoogleFonts.cinzel(
-                    color: Colors.black,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  decoration: InputDecoration(
-                    hintText: "qidirish",
-                    hintStyle: GoogleFonts.cinzel(
-                      color: Colors.black,
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    prefixIcon: Padding(
-                      padding: EdgeInsets.only(left: 15.w, right: 10.w),
-                      child: Icon(Icons.search, color: Colors.black, size: 20.sp),
-                    ),
-                    filled: true,
-                    fillColor: Colors.transparent,
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(100.r),
-                      borderSide: const BorderSide(color: Colors.black, width: 1),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(100.r),
-                      borderSide: const BorderSide(color: Colors.black, width: 1.3),
-                    ),
-                    contentPadding: EdgeInsets.symmetric(vertical: 0.h),
+                    ],
                   ),
                 ),
               ),
-            ]
           ],
         ),
       ),
@@ -161,7 +195,7 @@ class MobileMenuDrawer extends StatelessWidget {
         style: GoogleFonts.cinzel(
           fontSize: 18,
           fontWeight: FontWeight.bold,
-          color: AppColors.black,
+          color: context.palette.textPrimary,
         ),
       ),
       onTap: () {
@@ -173,17 +207,18 @@ class MobileMenuDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = context.palette;
     return Drawer(
-      backgroundColor: const Color(0xFFFDFCF6),
+      backgroundColor: palette.appbarBg,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: AppColors.background,
+              color: palette.background,
               border: Border(
                 bottom: BorderSide(
-                  color: AppColors.brown.withOpacity(0.3),
+                  color: AppColors.brown.withValues(alpha: 0.3),
                   width: 1,
                 ),
               ),
@@ -191,11 +226,11 @@ class MobileMenuDrawer extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 35,
                   backgroundColor: Colors.black,
-                  child: Image.asset(
-                    "assets/logo.png",
+                  child: Image(
+                    image: AssetImage("assets/logo.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -205,7 +240,7 @@ class MobileMenuDrawer extends StatelessWidget {
                   style: GoogleFonts.cinzel(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.black,
+                    color: palette.textPrimary,
                   ),
                 ),
               ],

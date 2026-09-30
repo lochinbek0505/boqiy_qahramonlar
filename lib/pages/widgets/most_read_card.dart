@@ -11,16 +11,17 @@ class MostReadCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = context.palette;
     return SizedBox(
       width: 340.w, // Kengligi biroz moslashtirildi
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: palette.cardBg,
           borderRadius: BorderRadius.circular(16.r), // Asosiy sahifadagi kartalar bilan bir xil
-          border: Border.all(color: Colors.grey.shade100, width: 1), // Yupqa chegara
+          border: Border.all(color: palette.divider, width: 1), // Yupqa chegara
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04), // Yumshoq va zamonaviy soya
+              color: Colors.black.withValues(alpha: 0.04), // Yumshoq va zamonaviy soya
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),
@@ -37,7 +38,7 @@ class MostReadCard extends StatelessWidget {
                 style: GoogleFonts.inter(
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w800,
-                  color: Colors.black,
+                  color: palette.textPrimary,
                   letterSpacing: 0.5,
                 ),
               ),
@@ -55,7 +56,7 @@ class MostReadCard extends StatelessWidget {
                         style: GoogleFonts.inter(
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w500,
-                          color: Colors.grey.shade800, // Qora emas, to'q kulrang o'qishga qulayroq
+                          color: palette.textSecondary, // Qora emas, to'q kulrang o'qishga qulayroq
                           height: 1.5, // Qatorlar orasidagi masofa
                         ),
                       ),
@@ -64,7 +65,7 @@ class MostReadCard extends StatelessWidget {
                     // Eng oxirgi elementdan tashqari hammasining tagiga chiziq tortamiz
                     if (index < list.length - 1)
                       Divider(
-                        color: Colors.grey.shade200,
+                        color: palette.divider,
                         thickness: 1,
                         height: 1,
                       ),

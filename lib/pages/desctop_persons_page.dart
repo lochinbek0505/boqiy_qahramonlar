@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/app_colors.dart';
+import '../../core/breakpoints.dart';
 import '../../core/utils.dart';
 
 class DesctopPersonsPage extends ConsumerWidget {
@@ -16,14 +17,15 @@ class DesctopPersonsPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     final historyState = ref.watch(historyProvider);
 
     // Kenglikka qarab ustunlar sonini belgilash
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
@@ -58,11 +60,11 @@ class DesctopPersonsPage extends ConsumerWidget {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: palette.cardBg,
                       borderRadius: BorderRadius.circular(12.r),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.06),
+                          color: Colors.black.withValues(alpha: 0.06),
                           blurRadius: 15,
                           offset: const Offset(0, 8),
                         ),
@@ -81,7 +83,7 @@ class DesctopPersonsPage extends ConsumerWidget {
                           style: GoogleFonts.cinzel(
                             fontSize: isMobile ? 18 : 22.sp,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.darkBlue,
+                            color: palette.heading,
                           ),
                         ),
                         SizedBox(height: 16.h),
@@ -115,7 +117,7 @@ class DesctopPersonsPage extends ConsumerWidget {
                             maxLines: 5,
                             style: GoogleFonts.crimsonText(
                               fontSize: isMobile ? 14 : 16.sp,
-                              color: Colors.grey.shade800,
+                              color: palette.textSecondary,
                               height: 1.5,
                             ),
                           ),

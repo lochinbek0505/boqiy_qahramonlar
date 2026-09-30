@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/app_colors.dart';
+import '../core/breakpoints.dart';
 import '../provider/article_provider.dart';
 
 class DesctopArticlesPage extends ConsumerStatefulWidget {
@@ -25,33 +26,30 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     final articleState = ref.watch(articleProvider);
     final categoryState = ref.watch(categoryProvider);
 
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
     double getAspectRatio() {
-      if (width > 1000) return 5 / 7;
-      if (width > 650) return 4 / 6.5;
+      if (width > Breakpoints.tablet) return 5 / 7;
+      if (width > Breakpoints.mobile) return 4 / 6.5;
       return 0.9;
     }
 
     // Kategoriyalarni API'dan (categoryProvider'dan) yig'ish
     List<String> tabCategories = ["Barchasi"];
 
-    // Eslatma: 'categories' degan joyni o'zingizning CategoryState ichidagi ro'yxat nomiga almashtiring
-    // (Masalan: categoryState.dataListList yoki categoryState.categoryList bo'lishi mumkin)
-    if (categoryState.categories != null) {
-      for (var cat in categoryState.categories!) {
-        if (cat.name != null && !tabCategories.contains(cat.name)) {
-          tabCategories.add(cat.name!);
-        }
+    for (var cat in categoryState.categories) {
+      if (cat.name != null && !tabCategories.contains(cat.name)) {
+        tabCategories.add(cat.name!);
       }
     }
 
@@ -129,7 +127,7 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                               fontWeight: FontWeight.w500,
                               color: isActive
                                   ? AppColors.brown
-                                  : AppColors.black,
+                                  : palette.textPrimary,
                               fontSize: isMobile ? 16.sp : 19.sp,
                             ),
                           ),
@@ -169,11 +167,11 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: palette.cardBg,
                       borderRadius: BorderRadius.circular(12.r),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.08),
+                          color: Colors.black.withValues(alpha: 0.08),
                           blurRadius: 5,
                           offset: const Offset(0, 6),
                         ),
@@ -188,7 +186,7 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                           width: double.infinity,
                           height: isMobile ? 200.h : 240.h,
                           decoration: BoxDecoration(
-                            color: Colors.blueGrey.shade100,
+                            color: palette.placeholder,
                             borderRadius: BorderRadius.circular(8.r),
                             image: article.bannerUrl != null
                                 ? DecorationImage(
@@ -250,7 +248,7 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: isMobile ? 13.sp : 15.sp,
-                            color: Colors.grey.shade600,
+                            color: palette.textSecondary,
                             height: 1.4,
                           ),
                         ),
@@ -317,7 +315,7 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                                               "",
                                           style: TextStyle(
                                             fontSize: isMobile ? 11.sp : 12.sp,
-                                            color: Colors.grey.shade600,
+                                            color: palette.textSecondary,
                                           ),
                                         ),
                                       ],
@@ -337,14 +335,14 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                                     Icon(
                                       Icons.visibility_outlined,
                                       size: isMobile ? 14.sp : 16.sp,
-                                      color: Colors.grey.shade600,
+                                      color: palette.textSecondary,
                                     ),
                                     SizedBox(width: 4.w),
                                     Text(
                                       "${article.viewCount ?? 0} ta",
                                       style: TextStyle(
                                         fontSize: isMobile ? 11.sp : 12.sp,
-                                        color: Colors.grey.shade600,
+                                        color: palette.textSecondary,
                                       ),
                                     ),
                                   ],
@@ -356,14 +354,14 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                                     Icon(
                                       Icons.access_time,
                                       size: isMobile ? 14.sp : 16.sp,
-                                      color: Colors.grey.shade600,
+                                      color: palette.textSecondary,
                                     ),
                                     SizedBox(width: 4.w),
                                     Text(
                                       "${article.readTime ?? 0} daq",
                                       style: TextStyle(
                                         fontSize: isMobile ? 11.sp : 12.sp,
-                                        color: Colors.grey.shade600,
+                                        color: palette.textSecondary,
                                       ),
                                     ),
                                   ],

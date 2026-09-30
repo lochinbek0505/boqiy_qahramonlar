@@ -1,5 +1,4 @@
 import 'package:boqiy_qahramonlar/pages/footer_widget.dart';
-import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 // import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart'; // Buni olib tashladik
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/app_colors.dart';
+import '../core/breakpoints.dart';
 import '../provider/article_provider.dart';
 import '../provider/category_provider.dart';
 import 'desctop_appbar_widget.dart';
@@ -25,31 +25,30 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     final articleState = ref.watch(articleProvider);
     final categoryState = ref.watch(categoryProvider);
 
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
     double getAspectRatio() {
-      if (width > 1000) return 5 / 7;
-      if (width > 650) return 4 / 6.5;
+      if (width > Breakpoints.tablet) return 5 / 7;
+      if (width > Breakpoints.mobile) return 4 / 6.5;
       return 0.85;
     }
 
     // Kategoriyalarni yig'ish
     List<String> tabCategories = ["Barchasi"];
 
-    if (categoryState.categories != null) {
-      for (var cat in categoryState.categories!) {
-        if (cat.name != null && !tabCategories.contains(cat.name)) {
-          tabCategories.add(cat.name!);
-        }
+    for (var cat in categoryState.categories) {
+      if (cat.name != null && !tabCategories.contains(cat.name)) {
+        tabCategories.add(cat.name!);
       }
     }
 
@@ -64,12 +63,12 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
     }).toList();
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: palette.background,
       appBar: AppBar(
         title: const DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.appbar,
+        backgroundColor: palette.appbarBg,
         toolbarHeight: 90.h,
         automaticallyImplyLeading: false,
       ),
@@ -94,7 +93,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                             "Bosh sahifa",
                             style: GoogleFonts.inter(
                               fontSize: 12.sp,
-                              color: Colors.grey.shade500,
+                              color: palette.textSecondary,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -102,7 +101,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.w),
-                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: Colors.grey.shade400),
+                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: palette.textMuted),
                       ),
                       Text(
                         "Maqolalar",
@@ -121,7 +120,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                     style: GoogleFonts.notoSansHebrew(
                       fontSize: isMobile ? 28.sp : 42.sp,
                       fontWeight: FontWeight.w700,
-                      color: Colors.black87,
+                      color: palette.textPrimary,
                       letterSpacing: -0.5,
                     ),
                   ),
@@ -182,7 +181,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                                     tabCategories[index],
                                     style: GoogleFonts.notoSansHebrew(
                                       fontWeight: FontWeight.w500,
-                                      color: isActive ? AppColors.brown : AppColors.black,
+                                      color: isActive ? AppColors.brown : palette.textPrimary,
                                       fontSize: isMobile ? 16.sp : 19.sp,
                                     ),
                                   ),
@@ -215,11 +214,11 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                       onTap: () => context.go('/article/${article.id}'),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: palette.cardBg,
                           borderRadius: BorderRadius.circular(12.r),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.08),
+                              color: Colors.black.withValues(alpha: 0.08),
                               blurRadius: 5,
                               offset: const Offset(0, 6),
                             ),
@@ -233,7 +232,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                               width: double.infinity,
                               height: isMobile ? 160.h : 220.h,
                               decoration: BoxDecoration(
-                                color: Colors.blueGrey.shade100,
+                                color: palette.placeholder,
                                 borderRadius: BorderRadius.circular(8.r),
                                 image: article.bannerUrl != null
                                     ? DecorationImage(
@@ -278,7 +277,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: isMobile ? 13.sp : 15.sp,
-                                color: Colors.grey.shade600,
+                                color: palette.textSecondary,
                                 height: 1.4,
                               ),
                             ),
@@ -326,7 +325,7 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                                               article.createAt?.substring(0, 10) ?? "",
                                               style: TextStyle(
                                                 fontSize: isMobile ? 11.sp : 12.sp,
-                                                color: Colors.grey.shade600,
+                                                color: palette.textSecondary,
                                               ),
                                             ),
                                           ],
@@ -340,22 +339,22 @@ class _ArticlesPageState extends ConsumerState<ArticlesPage> {
                                   children: [
                                     Row(
                                       children: [
-                                        Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                        Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                         SizedBox(width: 4.w),
                                         Text(
                                           "${article.viewCount ?? 0} ta",
-                                          style: TextStyle(fontSize: isMobile ? 11.sp : 12.sp, color: Colors.grey.shade600),
+                                          style: TextStyle(fontSize: isMobile ? 11.sp : 12.sp, color: palette.textSecondary),
                                         ),
                                       ],
                                     ),
                                     SizedBox(height: 4.h),
                                     Row(
                                       children: [
-                                        Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                        Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                         SizedBox(width: 4.w),
                                         Text(
                                           "${article.readTime ?? 0} daq",
-                                          style: TextStyle(fontSize: isMobile ? 11.sp : 12.sp, color: Colors.grey.shade600),
+                                          style: TextStyle(fontSize: isMobile ? 11.sp : 12.sp, color: palette.textSecondary),
                                         ),
                                       ],
                                     ),

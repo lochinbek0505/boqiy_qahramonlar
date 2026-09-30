@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/app_colors.dart';
+import '../core/breakpoints.dart';
 import '../core/utils.dart';
 // O'zingizdagi yo'llarni (path) to'g'irlab olasiz
 import '../provider/poems_provider.dart';
@@ -19,14 +19,15 @@ class DesctopPoemsPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     // Provider orqali state'ni o'qib olamiz
     final poemState = ref.watch(poemsProvider);
 
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
@@ -101,8 +102,8 @@ class DesctopPoemsPage extends ConsumerWidget {
                               height: isMobile ? 40.h : 80.h,
                               decoration: BoxDecoration(
                                 border: Border(
-                                  right: BorderSide(color: Colors.grey.shade400, width: 2.w),
-                                  bottom: BorderSide(color: Colors.grey.shade400, width: 2.w),
+                                  right: BorderSide(color: palette.textMuted, width: 2.w),
+                                  bottom: BorderSide(color: palette.textMuted, width: 2.w),
                                 ),
                               ),
                             ),
@@ -121,7 +122,7 @@ class DesctopPoemsPage extends ConsumerWidget {
                                   style: GoogleFonts.copse(
                                     fontSize: isMobile ? 20.sp : 24.sp,
                                     fontWeight: FontWeight.bold,
-                                    color: AppColors.darkBlue,
+                                    color: palette.heading,
                                     height: 1.3,
                                   ),
                                 ),
@@ -147,7 +148,7 @@ class DesctopPoemsPage extends ConsumerWidget {
                                     overflow: TextOverflow.fade,
                                     style: GoogleFonts.crimsonPro(
                                       fontSize: isMobile ? 14.sp : 16.sp,
-                                      color: Colors.black87,
+                                      color: palette.textPrimary,
                                       height: 1.6,
                                       fontStyle: FontStyle.italic,
                                     ),
@@ -182,26 +183,26 @@ class DesctopPoemsPage extends ConsumerWidget {
                                     Row(
                                       children: [
                                         // View count
-                                        Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                        Icon(Icons.visibility_outlined, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                         SizedBox(width: 4.w),
                                         Text(
                                           "${poem.viewCount ?? 0}",
                                           style: TextStyle(
                                             fontSize: isMobile ? 11.sp : 13.sp,
-                                            color: Colors.grey.shade600,
+                                            color: palette.textSecondary,
                                           ),
                                         ),
 
                                         SizedBox(width: 12.w),
 
                                         // Read time
-                                        Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: Colors.grey.shade600),
+                                        Icon(Icons.access_time, size: isMobile ? 14.sp : 16.sp, color: palette.textSecondary),
                                         SizedBox(width: 4.w),
                                         Text(
                                           "${poem.readTime ?? 0} daq",
                                           style: TextStyle(
                                             fontSize: isMobile ? 11.sp : 13.sp,
-                                            color: Colors.grey.shade600,
+                                            color: palette.textSecondary,
                                           ),
                                         ),
                                       ],

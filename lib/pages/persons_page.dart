@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/app_colors.dart';
+import '../core/breakpoints.dart';
 import 'desctop_appbar_widget.dart';
 
 class PersonsPage extends ConsumerStatefulWidget {
@@ -21,23 +22,24 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < Breakpoints.mobile;
+    final palette = context.palette;
 
     final historyState = ref.watch(historyProvider);
 
     int getCrossAxisCount() {
-      if (width > 1000) return 3;
-      if (width > 650) return 2;
+      if (width > Breakpoints.tablet) return 3;
+      if (width > Breakpoints.mobile) return 2;
       return 1;
     }
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: palette.background,
       appBar: AppBar(
         title: const DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.appbar,
+        backgroundColor: palette.appbarBg,
         toolbarHeight: 90.h,
         automaticallyImplyLeading: false,
       ),
@@ -62,7 +64,7 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                             "Bosh sahifa",
                             style: GoogleFonts.inter(
                               fontSize: isMobile ? 12.sp : 14.sp,
-                              color: Colors.grey.shade500,
+                              color: palette.textSecondary,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -70,7 +72,7 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.w),
-                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: Colors.grey.shade400),
+                        child: Icon(Icons.chevron_right, size: isMobile ? 16.sp : 18.sp, color: palette.textMuted),
                       ),
                       Text(
                         "Tarixiy Shaxslar",
@@ -88,7 +90,7 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                     style: GoogleFonts.notoSansHebrew(
                       fontSize: isMobile ? 28.sp : 42.sp,
                       fontWeight: FontWeight.w700,
-                      color: Colors.black87,
+                      color: palette.textPrimary,
                       letterSpacing: -0.5,
                     ),
                   ),
@@ -117,11 +119,11 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                       onTap: () => context.go('/historys/${hero.id}'),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: palette.cardBg,
                           borderRadius: BorderRadius.circular(12.r),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.06),
+                              color: Colors.black.withValues(alpha: 0.06),
                               blurRadius: 15,
                               offset: const Offset(0, 8),
                             ),
@@ -137,7 +139,7 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                               style: GoogleFonts.cinzel(
                                 fontSize: isMobile ? 18 : 22.sp,
                                 fontWeight: FontWeight.bold,
-                                color: AppColors.darkBlue,
+                                color: palette.heading,
                               ),
                             ),
                             SizedBox(height: 16.h),
@@ -165,7 +167,7 @@ class _PersonsPageState extends ConsumerState<PersonsPage> {
                                 maxLines: 5,
                                 style: GoogleFonts.crimsonText(
                                   fontSize: isMobile ? 14 : 16.sp,
-                                  color: Colors.grey.shade800,
+                                  color: palette.textSecondary,
                                   height: 1.5,
                                 ),
                               ),

@@ -7,7 +7,7 @@ import '../../../../core/app_colors.dart';
 class PageTitleText extends StatelessWidget {
   final String title;
 
-  PageTitleText({super.key, required this.title});
+  const PageTitleText({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class PageTitleText extends StatelessWidget {
       style: GoogleFonts.cinzel(
         fontSize: 38.sp,
         fontWeight: FontWeight.bold,
-        color: AppColors.midnightBlue,
+        color: context.palette.heading,
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/app_colors.dart';
+import '../../../core/breakpoints.dart';
 
 class FooterWidget extends StatelessWidget {
   final Function(int)? onMenuTap; // Menyularni bosganda skroll qilish uchun
@@ -11,7 +12,7 @@ class FooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = MediaQuery.of(context).size.width < 800;
+    bool isMobile = MediaQuery.of(context).size.width < Breakpoints.tablet;
 
     return Container(
       width: double.infinity,

@@ -1,4 +1,5 @@
 import 'package:boqiy_qahramonlar/core/app_colors.dart';
+import 'package:boqiy_qahramonlar/core/breakpoints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,10 +9,11 @@ class DesctopHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = MediaQuery.of(context).size.width < 800;
+    bool isMobile = MediaQuery.of(context).size.width < Breakpoints.tablet;
+    final palette = context.palette;
 
     return Container(
-      color: AppColors.background,
+      color: palette.background,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: isMobile ? 20.w : 80.w, // Ikkala holatda ham .w ishlatildi
@@ -21,7 +23,7 @@ class DesctopHomePage extends StatelessWidget {
           ? Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          _buildTextContent(isMobile),
+          _buildTextContent(isMobile, palette),
           SizedBox(height: 40.h),
           _buildImageContent(isMobile),
         ],
@@ -30,7 +32,7 @@ class DesctopHomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(flex: 6, child: _buildTextContent(isMobile)),
+          Expanded(flex: 6, child: _buildTextContent(isMobile, palette)),
           SizedBox(width: 40.w),
           Expanded(flex: 5, child: _buildImageContent(isMobile)),
         ],
@@ -38,7 +40,7 @@ class DesctopHomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildTextContent(bool isMobile) {
+  Widget _buildTextContent(bool isMobile, AppPalette palette) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       // Mobilda matnlar markazda, desktopda esa chapga taqalgan bo'ladi
@@ -61,7 +63,7 @@ class DesctopHomePage extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border(
               left: BorderSide(
-                color: AppColors.brown.withOpacity(0.8),
+                color: AppColors.brown.withValues(alpha: 0.8),
                 width: isMobile ? 3.w : 4.w,
               ),
             ),
@@ -72,7 +74,7 @@ class DesctopHomePage extends StatelessWidget {
             style: GoogleFonts.inter(
               fontSize: isMobile ? 14.sp : 24.sp, // .sp qo'shildi
               fontWeight: FontWeight.w500,
-              color: AppColors.midnightBlue,
+              color: palette.heading,
               height: 1.6,
               fontStyle: FontStyle.italic,
             ),
