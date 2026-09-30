@@ -3,6 +3,7 @@ import 'package:boqiy_qahramonlar/pages/desctop_appbar_widget.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_articles_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_poems_page.dart';
+import 'package:boqiy_qahramonlar/service/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -19,6 +20,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  @override
+  void initState() {
+    super.initState();
+    ApiService().increaseMainView();
+  }
+
   void _scrollToIndex(int index) {
     if (index == 0) {
       context.replace('/');
@@ -108,9 +115,7 @@ class _MainPageState extends State<MainPage> {
             )
           : null,
       appBar: AppBar(
-        title: DesctopAppbarWidget(
-
-        ),
+        title: const DesctopAppbarWidget(),
         scrolledUnderElevation: 0.0,
         surfaceTintColor: Colors.transparent,
         backgroundColor: AppColors.appbar,

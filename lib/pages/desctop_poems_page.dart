@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
@@ -8,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/app_colors.dart';
+import '../core/utils.dart';
 // O'zingizdagi yo'llarni (path) to'g'irlab olasiz
 import '../provider/poems_provider.dart';
 
@@ -60,7 +62,7 @@ class DesctopPoemsPage extends ConsumerWidget {
                   childAspectRatio: isMobile ? 1.0 : 0.9,
                 ),
                 shrinkWrap: true,
-                itemCount: poemState.poems.length,
+                itemCount: math.min(6, poemState.poems.length),
                 itemBuilder: (context, index) {
                   final poem = poemState.poems[index];
 
@@ -141,7 +143,7 @@ class DesctopPoemsPage extends ConsumerWidget {
                                 // She'r matni
                                 Expanded(
                                   child: Text(
-                                    poem.content ?? "",
+                                    QuillUtils.parseDeltaToPlainText(poem.content),
                                     overflow: TextOverflow.fade,
                                     style: GoogleFonts.crimsonPro(
                                       fontSize: isMobile ? 14.sp : 16.sp,

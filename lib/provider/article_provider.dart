@@ -37,6 +37,24 @@ class ArticleNotifier extends StateNotifier<ArticleState> {
     }
   }
 
+  Future<void> fetchAuthorArticles(String author) async {
+    try {
+      final articleList = await _apiService.getArticles(author: author);
+      state = state.copyWith(authorArticles: articleList);
+    } catch (e) {
+      // Xatolik bo'lsa indamaymiz, chunki bu qo'shimcha ro'yxat
+    }
+  }
+
+  Future<void> fetchMostReadArticles() async {
+    try {
+      final articleList = await _apiService.getArticles(sort: 'view_count');
+      state = state.copyWith(mostReadArticles: articleList);
+    } catch (e) {
+      // Xatolik bo'lsa indamaymiz
+    }
+  }
+
   Future<void> fetchArticleById(int id) async {
     state = state.copyWith(isLoading: true, clearError: true);
     try {

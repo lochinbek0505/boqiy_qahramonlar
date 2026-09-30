@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:boqiy_qahramonlar/pages/widgets/more_button.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/page_title_text.dart';
 import 'package:boqiy_qahramonlar/provider/category_provider.dart';
@@ -153,8 +154,9 @@ class _DesctopArticlesPageState extends ConsumerState<DesctopArticlesPage> {
                 childAspectRatio: getAspectRatio(),
               ),
               shrinkWrap: true,
-              itemCount: filteredArticles.length,
+              itemCount: math.min(6, filteredArticles.length),
               itemBuilder: (context, index) {
+
                 final article = filteredArticles[index];
 
                 String categoryName = article.categoriesList?.isNotEmpty == true

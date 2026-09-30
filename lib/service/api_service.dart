@@ -122,6 +122,16 @@ class ApiService {
     }
   }
 
+  Future<bool> increaseMainView() async {
+    try {
+      await _dio.post("statistics/visits/main-page");
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+
   Future<List<HistoryModel>> getHistories({
     String? author,
     String? tag,

@@ -14,16 +14,42 @@ class HistoryNotifier extends StateNotifier<HistoryState> {
 
   final ApiService _apiService = ApiService();
 
-  Future<void> fetchHistories() async {
+  Future<void> fetchHistories({
+    String? author,
+    String? tag,
+    String? sort,
+  }) async {
     state = state.copyWith(isLoading: true, clearError: true);
     try {
-      final historyList = await _apiService.getHistories();
+      final historyList = await _apiService.getHistories(
+        author: author,
+        tag: tag,
+        sort: sort,
+      );
       state = state.copyWith(isLoading: false, histories: historyList);
     } catch (e) {
       state = state.copyWith(
         isLoading: false,
         error: "Tarixiy voqealarni yuklashda xatolik yuz berdi!",
       );
+    }
+  }
+
+  Future<void> fetchAuthorHistories(String author) async {
+    try {
+      final historyList = await _apiService.getHistories(author: author);
+      state = state.copyWith(authorHistories: historyList);
+    } catch (e) {
+      //
+    }
+  }
+
+  Future<void> fetchMostReadHistories() async {
+    try {
+      final historyList = await _apiService.getHistories(sort: 'view_count');
+      state = state.copyWith(mostReadHistories: historyList);
+    } catch (e) {
+      //
     }
   }
 

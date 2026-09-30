@@ -1,21 +1,84 @@
+import 'dart:convert';
+import 'package:boqiy_qahramonlar/pages/footer_widget.dart';
 import 'package:boqiy_qahramonlar/pages/widgets/most_read_card.dart';
+import 'package:boqiy_qahramonlar/provider/history_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_quill/flutter_quill.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/app_colors.dart';
+import '../../core/utils.dart';
 import 'desctop_appbar_widget.dart';
 
-class ReadPersonPage extends StatefulWidget {
-  num id;
+class ReadPersonPage extends ConsumerStatefulWidget {
+  final int id;
 
-  ReadPersonPage({super.key, required this.id});
+  const ReadPersonPage({super.key, required this.id});
 
   @override
-  State<ReadPersonPage> createState() => _ReadPersonPageState();
+  ConsumerState<ReadPersonPage> createState() => _ReadPersonPageState();
 }
 
-class _ReadPersonPageState extends State<ReadPersonPage> {
+class _ReadPersonPageState extends ConsumerState<ReadPersonPage> {
+  QuillController? _quillController;
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchData();
+  }
+
+  @override
+  void didUpdateWidget(ReadPersonPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.id != widget.id) {
+      _fetchData();
+    }
+  }
+
+  void _fetchData() {
+    Future.microtask(() async {
+      await ref.read(historyProvider.notifier).fetchHistoryById(widget.id);
+      final history = ref.read(historyProvider).selectedHistory;
+      if (history != null) {
+        if (history.author?.name != null) {
+          ref.read(historyProvider.notifier).fetchAuthorHistories(history.author!.name!);
+        }
+        _initQuillController(history.content);
+      }
+      ref.read(historyProvider.notifier).fetchMostReadHistories();
+      ref.read(historyProvider.notifier).increaseHistoryView(widget.id);
+    });
+  }
+
+  void _initQuillController(String? content) {
+    if (content == null || content.isEmpty) {
+      _quillController = QuillController.basic();
+      return;
+    }
+    try {
+      final doc = Document.fromJson(jsonDecode(content));
+      setState(() {
+        _quillController = QuillController(
+          document: doc,
+          selection: const TextSelection.collapsed(offset: 0),
+          readOnly: true,
+        );
+      });
+    } catch (e) {
+      _quillController = QuillController.basic();
+    }
+  }
+
+  @override
+  void dispose() {
+    _quillController?.dispose();
+    super.dispose();
+  }
+
   // Yon panel (Sidebar) uchun eng ko'p o'qilgan shaxslar ro'yxati
   final List<String> popularPersons = [
     "1. Amir Temur",
@@ -26,31 +89,30 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
     "6. Alp Arslon",
   ];
 
-  // Boshqa shaxslar (Grid) uchun ma'lumotlar
-  final List<Map<String, dynamic>> _otherHeroes = [
-    {
-      'name': 'SULTON SANJAR',
-      'years': '1118-1157',
-      'description':
-          "Saljuqiylar davlatining so'nggi buyuk sultoni. Uning davrida Movarounnahr va Xuroson saljuqiylar ta'sirida bo'lgan.",
-    },
-    {
-      'name': 'JALOLIDDIN MANGUBERDI',
-      'years': '1199-1231',
-      'description':
-          "Xorazmshohlar davlatining so'nggi hukmdori, mo'g'ullar bosqiniga qarshi kurashgan buyuk sarkarda.",
-    },
-    {
-      'name': 'AMIR TEMUR',
-      'years': '1336-1405',
-      'description':
-          "Buyuk sarkarda, Temuriylar imperiyasi asoschisi. O'z davrining eng qudratli davlatini barpo etgan.",
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    final historyState = ref.watch(historyProvider);
+    final history = historyState.selectedHistory;
+
+    if (historyState.isLoading && history == null) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (historyState.error != null && history == null) {
+      return Scaffold(
+        body: Center(child: Text(historyState.error!)),
+      );
+    }
+
+    if (history == null) {
+      return const Scaffold(
+        body: Center(child: Text("Ma'lumot topilmadi")),
+      );
+    }
+
+    final mostReadTitles = historyState.mostReadHistories.map((e) => e.title ?? "").toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -68,210 +130,288 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
           // 1. ASOSIY MA'LUMOT QISMI (Chap tomon)
           Expanded(
             child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.h),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Breadcrumbs (Navigatsiya)
-                    Text(
-                      "Bosh sahifa  >  Shaxslar  >  Alp Arslon",
-                      style: GoogleFonts.inter(
-                        fontSize: 12.sp,
-                        color: Colors.grey.shade600,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    SizedBox(height: 24.h),
-
-                    // Kategoriya yoki Davlat nomi
-                    Text(
-                      "SALJUQIYLAR DAVLATI SULTONI",
-                      style: GoogleFonts.inter(
-                        fontSize: 13.sp,
-                        color: AppColors.brown,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.5,
-                      ),
-                    ),
-                    SizedBox(height: 16.h),
-
-                    // Shaxsning Ismi
-                    Text(
-                      "ALP ARSLON",
-                      style: GoogleFonts.cinzel(
-                        fontSize: 42.sp, // Shaxs ismi uchun yirik o'lcham
-                        color: AppColors.black,
-                        fontWeight: FontWeight.bold,
-                        height: 1.2,
-                      ),
-                    ),
-                    SizedBox(height: 12.h),
-
-                    // Yashagan yoki hukmronlik yillari
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 16.w,
-                        vertical: 8.h,
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.brown, width: 1.5),
-                        borderRadius: BorderRadius.circular(6.r),
-                      ),
-                      child: Text(
-                        "1029 — 1075 yillar",
-                        style: GoogleFonts.roboto(
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w700,
-                          color: AppColors.brown,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.h),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Breadcrumbs (Navigatsiya)
+                        Row(
+                          children: [
+                            InkWell(
+                              onTap: () => context.go('/'),
+                              child: Text(
+                                "Bosh sahifa",
+                                style: GoogleFonts.inter(
+                                  fontSize: 12.sp,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "  >  ",
+                              style: TextStyle(fontSize: 12.sp, color: Colors.grey.shade600),
+                            ),
+                            InkWell(
+                              onTap: () => context.go('/historys'),
+                              child: Text(
+                                "Shaxslar",
+                                style: GoogleFonts.inter(
+                                  fontSize: 12.sp,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "  >  ",
+                              style: TextStyle(fontSize: 11.sp, color: Colors.grey.shade600),
+                            ),
+                            Text(
+                              history.title ?? "",
+                              style: GoogleFonts.inter(
+                                fontSize: 12.sp,
+                                color: AppColors.brown, // Aktiv sahifa rangi
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ),
-                    SizedBox(height: 40.h),
+                        SizedBox(height: 24.h),
 
-                    // Asosiy Rasm (Portret)
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20.r),
-                      child: Image.asset(
-                        "assets/images/alparslon.png",
-                        // Rasm nomini o'zingizga moslang
-                        width: double.infinity,
-                        height: 550.h,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    SizedBox(height: 40.h),
-
-                    // Asosiy Matn (Biografiya)
-                    Text(
-                      "(forscha: آلپ ارسلان) (20-yanvar 1029-yil — noyabr 1075-yil) — Saljuqiylarlarning ikkinchi sultoni (1063-1072), mohir sarkarda. Uning asl ismi Muhammad ibn Dovud.\n\n"
-                      "Alp Arslon davrida Saljuqiylar davlati o'zining eng qudratli cho'qqilaridan biriga chiqdi. Uning eng mashhur g'alabalaridan biri 1071-yilda Vizantiya imperiyasiga qarshi bo'lib o'tgan Malazgirt jangi hisoblanadi. Bu jangdagi g'alaba Anadolu (hozirgi Turkiya) hududining turkiy xalqlar tomonidan o'zlashtirilishiga asosiy eshikni ochib berdi.\n\n"
-                      "Sulton o'zining adolatliligi, jasorati va islom dini rivojiga qo'shgan hissasi bilan tarixda nom qoldirgan. Uning davrida ilm-fan, madaniyat va me'morchilik yuqori darajada rivoj topdi. Vazir Nizomulmulk kabi yetuk davlat arboblari bilan birgalikda davlatni boshqarish tizimini mukammallashtirdi.",
-                      style: GoogleFonts.inter(
-                        fontSize: 18.sp,
-                        color: Colors.black87,
-                        height: 1.8,
-                      ),
-                    ),
-                    SizedBox(height: 60.h),
-
-                    // "Boshqa shaxslar" sarlavhasi
-                    Divider(color: Colors.grey.shade300, thickness: 1),
-                    SizedBox(height: 40.h),
-                    Text(
-                      "Boshqa tarixiy shaxslar",
-                      style: GoogleFonts.inter(
-                        fontSize: 26.sp,
-                        color: AppColors.black,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                    SizedBox(height: 40.h),
-
-                    // GridView qismi (Shaxslar uchun moslashtirilgan)
-                    GridView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3, // Yonma-yon 3 ta chiqadi
-                        mainAxisSpacing: 30.h,
-                        crossAxisSpacing: 30.w,
-                        childAspectRatio: 0.75, // Shaxslar kartasi nisbati
-                      ),
-                      shrinkWrap: true,
-                      itemCount: _otherHeroes.length,
-                      itemBuilder: (context, index) {
-                        final hero = _otherHeroes[index];
-                        return Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12.r),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.06),
-                                blurRadius: 15,
-                                offset: const Offset(0, 8),
-                              ),
-                            ],
+                        // Kategoriya yoki Davlat nomi
+                        Text(
+                          history.author?.name?.toUpperCase() ?? "TARIXIY SHAXS",
+                          style: GoogleFonts.inter(
+                            fontSize: 13.sp,
+                            color: AppColors.brown,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 1.5,
                           ),
+                        ),
+                        SizedBox(height: 16.h),
+
+                        // Shaxsning Ismi
+                        Text(
+                          history.title ?? "",
+                          style: GoogleFonts.cinzel(
+                            fontSize: 42.sp,
+                            color: AppColors.black,
+                            fontWeight: FontWeight.bold,
+                            height: 1.2,
+                          ),
+                        ),
+                        SizedBox(height: 12.h),
+
+                        // Yashagan yoki hukmronlik yillari
+                        Container(
                           padding: EdgeInsets.symmetric(
-                            horizontal: 24.w,
-                            vertical: 30.h,
+                            horizontal: 16.w,
+                            vertical: 8.h,
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                hero['name'],
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.cinzel(
-                                  fontSize: 20.sp,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.darkBlue,
-                                ),
-                              ),
-                              SizedBox(height: 16.h),
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 16.w,
-                                  vertical: 6.h,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: AppColors.brown,
-                                    width: 1.2,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: AppColors.brown, width: 1.5),
+                            borderRadius: BorderRadius.circular(6.r),
+                          ),
+                          child: Text(
+                            "${history.liveDate}",
+                            style: GoogleFonts.roboto(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.brown,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 40.h),
+
+                        // Asosiy Rasm (Portret)
+                        if (history.bannerUrl != null)
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20.r),
+                            child: Image.network(
+                              history.bannerUrl!,
+                              width: double.infinity,
+                              height: 550.h,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        SizedBox(height: 40.h),
+
+                        // Asosiy Matn (Biografiya)
+                        if (_quillController != null)
+                          QuillEditor.basic(
+                            controller: _quillController!,
+                            config:  QuillEditorConfig(
+                              showCursor: false,
+                              autoFocus: false,
+                              expands: false,
+                              padding: EdgeInsets.zero,
+                            ),
+                          )
+                        else
+                          const Center(child: CircularProgressIndicator()),
+                        SizedBox(height: 30.h),
+
+                        // Hashteglar (Yangi)
+                        if (history.hashTegsList != null && history.hashTegsList!.isNotEmpty)
+                          Wrap(
+                            spacing: 10.w,
+                            runSpacing: 10.h,
+                            children: history.hashTegsList!.map((tag) {
+                              return InkWell(
+                                onTap: () {
+                                  ref.read(historyProvider.notifier).fetchHistories(tag: tag.hashteg);
+                                  context.go('/historys');
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.brown.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(20.r),
                                   ),
-                                  borderRadius: BorderRadius.circular(4.r),
-                                ),
-                                child: Text(
-                                  hero['years'],
-                                  style: GoogleFonts.roboto(
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w700,
-                                    color: AppColors.brown,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 24.h),
-                              Expanded(
-                                child: Text(
-                                  hero['description'],
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 4,
-                                  style: GoogleFonts.crimsonText(
-                                    fontSize: 16.sp,
-                                    color: Colors.grey.shade800,
-                                    height: 1.5,
-                                  ),
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Batafsil",
-                                    style: GoogleFonts.roboto(
-                                      fontSize: 15.sp,
+                                  child: Text(
+                                    "#${tag.hashteg}",
+                                    style: GoogleFonts.inter(
+                                      fontSize: 14.sp,
                                       color: AppColors.brown,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
-                                  SizedBox(width: 8.w),
-                                  Icon(
-                                    Icons.arrow_forward_outlined,
-                                    size: 18.sp,
-                                    color: AppColors.brown,
-                                  ),
-                                ],
-                              ),
-                            ],
+                                ),
+                              );
+                            }).toList(),
                           ),
-                        );
-                      },
+                        SizedBox(height: 60.h),
+
+                        // "Boshqa shaxslar" sarlavhasi
+                        Divider(color: Colors.grey.shade300, thickness: 1),
+                        SizedBox(height: 40.h),
+                        Text(
+                          "Boshqa tarixiy shaxslar",
+                          style: GoogleFonts.inter(
+                            fontSize: 26.sp,
+                            color: AppColors.black,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        SizedBox(height: 40.h),
+                        // GridView qismi
+                        GridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 30.h,
+                            crossAxisSpacing: 30.w,
+                            childAspectRatio: 0.75,
+                          ),
+                          shrinkWrap: true,
+                          itemCount: historyState.authorHistories.length > 3 ? 3 : historyState.authorHistories.length,
+                          itemBuilder: (context, index) {
+                            final hero = historyState.authorHistories[index];
+                            return GestureDetector(
+                              onTap: () {
+                                context.go('/historys/${hero.id}');
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12.r),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.06),
+                                      blurRadius: 15,
+                                      offset: const Offset(0, 8),
+                                    ),
+                                  ],
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 24.w,
+                                  vertical: 30.h,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      hero.title ?? "",
+                                      textAlign: TextAlign.center,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.cinzel(
+                                        fontSize: 20.sp,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.darkBlue,
+                                      ),
+                                    ),
+                                    SizedBox(height: 16.h),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 16.w,
+                                        vertical: 6.h,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: AppColors.brown,
+                                          width: 1.2,
+                                        ),
+                                        borderRadius: BorderRadius.circular(4.r),
+                                      ),
+                                      child: Text(
+                                        "${hero.liveDate}",
+                                        style: GoogleFonts.roboto(
+                                          fontSize: 12.sp,
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColors.brown,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 24.h),
+                                    Expanded(
+                                      child: Text(
+                                        QuillUtils.parseDeltaToPlainText(hero.content),
+                                        textAlign: TextAlign.center,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 4,
+                                        style: GoogleFonts.crimsonText(
+                                          fontSize: 16.sp,
+                                          color: Colors.grey.shade800,
+                                          height: 1.5,
+                                        ),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Batafsil",
+                                          style: GoogleFonts.roboto(
+                                            fontSize: 15.sp,
+                                            color: AppColors.brown,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                        SizedBox(width: 8.w),
+                                        Icon(
+                                          Icons.arrow_forward_outlined,
+                                          size: 18.sp,
+                                          color: AppColors.brown,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 50.h),
+                      ],
                     ),
-                    SizedBox(height: 50.h),
-                  ],
-                ),
+                  ),
+                  const FooterWidget(),
+                ],
               ),
             ),
           ),
@@ -279,11 +419,11 @@ class _ReadPersonPageState extends State<ReadPersonPage> {
           // 2. YON PANEL (Sidebar - Most Read)
           Container(
             padding: EdgeInsets.only(top: 30.h, right: 30.w),
-            // MostReadCard ga shaxslar ro'yxatini beramiz
-            child: MostReadCard(list: popularPersons),
+            child: MostReadCard(list: mostReadTitles),
           ),
         ],
       ),
     );
   }
 }
+

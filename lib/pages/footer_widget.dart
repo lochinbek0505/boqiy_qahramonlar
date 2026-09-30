@@ -68,14 +68,7 @@ class FooterWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              if (!isMobile)
-                Text(
-                  "Yaratuvchi: Turon Beka",
-                  style: GoogleFonts.inter(
-                    fontSize: 14.sp,
-                    color: Colors.grey.shade500,
-                  ),
-                ),
+
             ],
           ),
         ],

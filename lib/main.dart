@@ -14,49 +14,48 @@ void main() {
   runApp(ProviderScope(child: MyApp()));
 }
 
-
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return  MainPage();
+        return MainPage();
       },
       routes: <RouteBase>[
         GoRoute(
           path: 'article',
           builder: (BuildContext context, GoRouterState state) {
-            return  ArticlesPage();
+            return ArticlesPage();
           },
         ),
         GoRoute(
           path: 'article/:id',
           builder: (BuildContext context, GoRouterState state) {
-            return  ReadArticlePage(id: int.parse(state.pathParameters['id']!));
+            return ReadArticlePage(id: int.parse(state.pathParameters['id']!));
           },
         ),
         GoRoute(
           path: 'poems/:id',
           builder: (BuildContext context, GoRouterState state) {
-            return  ReadPoemPage(id: int.parse(state.pathParameters['id']!));
+            return ReadPoemPage(id: int.parse(state.pathParameters['id']!));
           },
         ),
         GoRoute(
           path: 'poems',
           builder: (BuildContext context, GoRouterState state) {
-            return  PoemsPage();
+            return PoemsPage();
           },
         ),
         GoRoute(
           path: 'historys/:id',
           builder: (BuildContext context, GoRouterState state) {
-            return  ReadPersonPage(id: int.parse(state.pathParameters['id']!));
+            return ReadPersonPage(id: int.parse(state.pathParameters['id']!));
           },
         ),
         GoRoute(
           path: 'historys',
           builder: (BuildContext context, GoRouterState state) {
-            return  PersonsPage();
+            return PersonsPage();
           },
         ),
       ],
@@ -69,7 +68,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return ScreenUtilInit(
       designSize: const Size(1512, 982),
 
@@ -80,7 +78,6 @@ class MyApp extends StatelessWidget {
           title: 'Boqiy Qahramonlar',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-
             colorScheme: .fromSeed(seedColor: Colors.deepPurple),
           ),
           routerConfig: _router,

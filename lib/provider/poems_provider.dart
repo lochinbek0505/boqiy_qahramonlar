@@ -14,16 +14,42 @@ class PoemsNotifier extends StateNotifier<PoemsState> {
 
   final ApiService _apiService = ApiService();
 
-  Future<void> fetchPoems() async {
+  Future<void> fetchPoems({
+    String? author,
+    String? tag,
+    String? sort,
+  }) async {
     state = state.copyWith(isLoading: true, clearError: true);
     try {
-      final poemsList = await _apiService.getPoems();
+      final poemsList = await _apiService.getPoems(
+        author: author,
+        tag: tag,
+        sort: sort,
+      );
       state = state.copyWith(isLoading: false, poems: poemsList);
     } catch (e) {
       state = state.copyWith(
         isLoading: false,
         error: "She'rlarni yuklashda xatolik yuz berdi!",
       );
+    }
+  }
+
+  Future<void> fetchAuthorPoems(String author) async {
+    try {
+      final poemsList = await _apiService.getPoems(author: author);
+      state = state.copyWith(authorPoems: poemsList);
+    } catch (e) {
+      //
+    }
+  }
+
+  Future<void> fetchMostReadPoems() async {
+    try {
+      final poemsList = await _apiService.getPoems(sort: 'view_count');
+      state = state.copyWith(mostReadPoems: poemsList);
+    } catch (e) {
+      //
     }
   }
 
