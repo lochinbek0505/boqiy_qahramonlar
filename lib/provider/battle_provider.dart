@@ -10,7 +10,7 @@ final battleProvider = StateNotifierProvider<BattleNotifier, BattleState>((ref) 
   return BattleNotifier();
 });
 
-/// Backend hali `battles` endpointini bermasa ko'rsatiladigan namunalar
+/// Backend `battles` endpointi javob bermasa yoki bo'sh ro'yxat qaytarsa ko'rsatiladigan namunalar
 /// (assets/battles/*.json — war_startegy loyihasidagi janglar).
 const _sampleBattles = [
   'ankara',
@@ -39,7 +39,8 @@ class BattleNotifier extends StateNotifier<BattleState> {
   Future<void> _fetchBattles() async {
     state = state.copyWith(isLoading: true, clearError: true);
     final battles = await _apiService.getBattles();
-    if (battles != null) {
+    // Admin paneldan hali jang qo'shilmagan bo'lsa ham namunalar ko'rsatiladi
+    if (battles != null && battles.isNotEmpty) {
       state = state.copyWith(isLoading: false, battles: battles, isSample: false);
       return;
     }
