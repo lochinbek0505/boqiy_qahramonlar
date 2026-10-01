@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "id": "indus",
+  "commander": "Chingizxon",
+  "name": "Sind daryosi bo'yidagi jang",
+  "date": "1221-yil noyabr",
+  "tactic": "Yarim oy shaklida qamrab olish va tog' ortidan aylanma zarba",
+  "summary": "Chingizxon Xorazmshoh Jaloliddin Manguberdi qo'shinini Sind daryosiga siqib, qamrab olib yo'q qildi. Jaloliddin esa otini jarlikdan daryoga sakratib, qarshi qirg'oqqa suzib o'tdi va qutulib qoldi.",
+  "lesson": "Orqasida daryo bo'lgan qo'shin manevr qila olmaydi. Mo'g'ullar markazda chekinib turib, qanotlar va yashirin aylanma otryad bilan halqani yopdilar.",
+  "aftermath": "Xorazmshohlar davlati amalda barham topdi. Jaloliddin Hindistonga o'tib, keyin qaytib 1231-yilgacha mo'g'ullarga qarshi kurashni davom ettirdi va xalq qahramoniga aylandi.",
+  "sides": {
+    "a": {
+      "name": "Mo'g'ullar (Chingizxon)",
+      "color": "#1F4E9C"
+    },
+    "b": {
+      "name": "Xorazmshohlar (Jaloliddin)",
+      "color": "#B5541B"
+    }
+  },
+  "winner": "a",
+  "biome": "arid",
+  "modern": false,
+  "location": {
+    "lat": 32.96,
+    "lng": 71.55,
+    "zoom": 8.0,
+    "kmAcross": 15.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_the_Indus",
+  "facts": {
+    "place": "Sind (Hind) daryosi bo'yi, hozirgi Pokiston (aniq joyi munozarali)",
+    "result": "Mo'g'ullar g'alabasi; Jaloliddin daryodan suzib o'tib qutuldi",
+    "commandersA": "Chingizxon",
+    "commandersB": "Jaloliddin Manguberdi, Amin Malik",
+    "forcesA": "~50 000",
+    "forcesB": "~30 000",
+    "lossesA": "Noma'lum",
+    "lossesB": "Qo'shinning deyarli hammasi"
+  },
+  "terrain": [
+    {
+      "kind": "river",
+      "points": [
+        [
+          15,
+          0
+        ],
+        [
+          11,
+          30
+        ],
+        [
+          14,
+          60
+        ],
+        [
+          10,
+          100
+        ]
+      ],
+      "label": "Sind (Hind) daryosi",
+      "size": 7.0
+    },
+    {
+      "kind": "mountains",
+      "points": [
+        [
+          28,
+          97
+        ],
+        [
+          45,
+          93
+        ],
+        [
+          62,
+          96
+        ],
+        [
+          80,
+          93
+        ],
+        [
+          98,
+          96
+        ]
+      ],
+      "label": "Tog'lar"
+    },
+    {
+      "kind": "mountains",
+      "points": [
+        [
+          70,
+          4
+        ],
+        [
+          86,
+          6
+        ],
+        [
+          99,
+          3
+        ]
+      ]
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          90,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          5,
+          20
+        ]
+      ],
+      "label": "← Hindiston"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Orqada daryo",
+      "text": "Jaloliddin Sind daryosi qirg'og'ida saf tortdi: orqaga chekinish yo'li yo'q. Chingizxon qo'shini yarim oy shaklida yaqinlashdi.",
+      "notes": [
+        {
+          "pos": [
+            22,
+            88
+          ],
+          "text": "Orqada daryo — chekinish yo'q",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Jaloliddin hujumi",
+      "text": "Jaloliddin mardonavor hujum qilib, mo'g'ul markazini orqaga suradi. Mo'g'ul markazi ataylab chekinib, dushmanni o'ziga tortadi.",
+      "notes": [
+        {
+          "pos": [
+            52,
+            60
+          ],
+          "text": "Markaz ataylab chekinmoqda",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Yashirin aylanma otryad",
+      "text": "Chingizxon qanotlarni siqadi. Shu bilan birga, tanlab olingan otryad tog'lar ortidan aylanib o'tib, Jaloliddinning o'ng qanotiga yashirincha yaqinlashadi.",
+      "notes": [
+        {
+          "pos": [
+            58,
+            84
+          ],
+          "text": "Tog' ortidan yashirin yurish",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Halqa yopiladi",
+      "text": "O'ng qanot (Amin Malik) kutilmagan zarbadan tor-mor bo'ldi, chap qanot ham ezildi. Jaloliddin kichik guruh bilan daryo bo'yida qamalda qoldi.",
+      "notes": [
+        {
+          "pos": [
+            40,
+            80
+          ],
+          "text": "O'ng qanot tor-mor",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Daryodan sakrash",
+      "text": "Jaloliddin otini baland qirg'oqdan daryoga sakratib, qarshi qirg'oqqa suzib o'tdi. Rivoyatga ko'ra, Chingizxon o'g'illariga: «Otaning o'g'li shunday bo'lishi kerak», degan.",
+      "notes": [
+        {
+          "pos": [
+            8,
+            36
+          ],
+          "text": "Otda daryodan sakrab o'tdi",
+          "kind": "water"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Chingizxon",
+      "side": "a",
+      "type": "hq",
+      "count": 2000,
+      "kind": "ruler",
+      "positions": [
+        [
+          86,
+          50
+        ],
+        [
+          86,
+          50
+        ],
+        [
+          80,
+          50
+        ],
+        [
+          64,
+          50
+        ],
+        [
+          34,
+          44
+        ]
+      ]
+    },
+    {
+      "label": "Markaz",
+      "side": "a",
+      "type": "lightCavalry",
+      "count": 12000,
+      "positions": [
+        [
+          62,
+          50
+        ],
+        [
+          58,
+          50
+        ],
+        [
+          52,
+          50
+        ],
+        [
+          38,
+          52
+        ],
+        [
+          26,
+          52
+        ]
+      ],
+      "strength": [
+        1.0,
+        0.9,
+        0.9,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "label": "O'ng qanot",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 10000,
+      "positions": [
+        [
+          60,
+          24
+        ],
+        [
+          56,
+          20
+        ],
+        [
+          44,
+          20
+        ],
+        [
+          32,
+          28
+        ],
+        [
+          24,
+          36
+        ]
+      ]
+    },
+    {
+      "label": "Chap qanot",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 10000,
+      "positions": [
+        [
+          60,
+          76
+        ],
+        [
+          58,
+          80
+        ],
+        [
+          46,
+          78
+        ],
+        [
+          36,
+          72
+        ],
+        [
+          30,
+          66
+        ]
+      ]
+    },
+    {
+      "label": "Aylanma otryad",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 10000,
+      "note": "Manbalarda «10 ming bahodir» deb tilga olinadi.",
+      "positions": [
+        [
+          82,
+          84
+        ],
+        [
+          72,
+          88
+        ],
+        [
+          44,
+          88
+        ],
+        [
+          30,
+          82
+        ],
+        [
+          24,
+          76
+        ]
+      ],
+      "hiddenUntil": 3,
+      "via": {
+        "2": [
+          [
+            62,
+            95
+          ],
+          [
+            52,
+            95
+          ]
+        ]
+      }
+    },
+    {
+      "label": "Keshik (gvardiya)",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 6000,
+      "kind": "bodyguard",
+      "positions": [
+        [
+          78,
+          38
+        ],
+        [
+          78,
+          38
+        ],
+        [
+          74,
+          42
+        ],
+        [
+          52,
+          42
+        ],
+        [
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "label": "Jaloliddin Manguberdi",
+      "side": "b",
+      "type": "hq",
+      "count": 700,
+      "kind": "ruler",
+      "note": "Oxirida atigi bir necha yuz jangchi bilan qoldi.",
+      "positions": [
+        [
+          20,
+          50
+        ],
+        [
+          36,
+          50
+        ],
+        [
+          32,
+          50
+        ],
+        [
+          22,
+          50
+        ],
+        [
+          4,
+          46
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        0.3
+      ],
+      "via": {
+        "4": [
+          [
+            14,
+            47
+          ]
+        ]
+      }
+    },
+    {
+      "label": "Markaz",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 12000,
+      "positions": [
+        [
+          28,
+          50
+        ],
+        [
+          46,
+          50
+        ],
+        [
+          42,
+          50
+        ],
+        [
+          28,
+          54
+        ],
+        [
+          20,
+          54
+        ]
+      ],
+      "strength": [
+        1.0,
+        0.9,
+        0.7,
+        0.4,
+        0.1
+      ]
+    },
+    {
+      "label": "O'ng qanot (Amin Malik)",
+      "side": "b",
+      "type": "cavalry",
+      "count": 10000,
+      "positions": [
+        [
+          26,
+          70
+        ],
+        [
+          30,
+          72
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          24,
+          80
+        ],
+        [
+          20,
+          86
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.2,
+        0.05
+      ]
+    },
+    {
+      "label": "Chap qanot",
+      "side": "b",
+      "type": "cavalry",
+      "count": 7000,
+      "positions": [
+        [
+          26,
+          30
+        ],
+        [
+          30,
+          28
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          22,
+          32
+        ],
+        [
+          18,
+          36
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.7,
+        0.3,
+        0.1
+      ]
+    }
+  ]
+}

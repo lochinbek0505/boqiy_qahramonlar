@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "id": "kalka",
+  "commander": "Chingizxon (Jebe va Subutoy)",
+  "name": "Kalka daryosi jangi",
+  "date": "1223-yil 31-may",
+  "tactic": "Yolg'on chekinish — dushmanni cho'zib, bo'laklarga ajratib tor-mor qilish",
+  "summary": "Chingizxonning sarkardalari Jebe va Subutoy bir necha kun davomida chekinib, rus knyazlari va qipchoqlarning ittifoqchi qo'shinini cho'lga tortdilar. Kalka bo'yida to'satdan burilib, uni qismma-qism yanchib tashladilar.",
+  "lesson": "Yolg'on chekinish — Mo'g'ul taktikasining eng mashhur usuli. Ta'qib qilayotgan qo'shin cho'zilib, bo'linmalari bir-biridan uzilib qoladi va har biri alohida mag'lub etiladi. Yagona qo'mondonlikning yo'qligi ittifoqchilarni halok qildi.",
+  "aftermath": "Mo'g'ullar sharqqa qaytib ketdi, lekin 14 yildan so'ng Botuxon boshchiligida qaytib, 1237–1240-yillarda rus knyazliklarini bosib oldi.",
+  "sides": {
+    "a": {
+      "name": "Mo'g'ullar",
+      "color": "#1F4E9C"
+    },
+    "b": {
+      "name": "Rus knyazlari va qipchoqlar",
+      "color": "#9A2A2A"
+    }
+  },
+  "winner": "a",
+  "biome": "steppe",
+  "modern": false,
+  "location": {
+    "lat": 47.4,
+    "lng": 37.6,
+    "zoom": 8.0,
+    "kmAcross": 20.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River",
+  "facts": {
+    "place": "Kalka daryosi, hozirgi Ukraina (Donetsk viloyati; aniq joyi munozarali)",
+    "result": "Mo'g'ullarning to'liq g'alabasi",
+    "commandersA": "Jebe, Subutoy",
+    "commandersB": "Mstislav Udaloy (Galich), Mstislav Romanovich (Kiyev), Mstislav Svyatoslavich (Chernigov), Daniil Romanovich, qipchoqlar",
+    "forcesA": "~20 000–23 000",
+    "forcesB": "~40 000–80 000 (baholar turlicha)",
+    "lossesA": "Nisbatan kam",
+    "lossesB": "Juda og'ir; bir necha knyaz halok bo'ldi"
+  },
+  "terrain": [
+    {
+      "kind": "river",
+      "points": [
+        [
+          68,
+          0
+        ],
+        [
+          65,
+          40
+        ],
+        [
+          69,
+          70
+        ],
+        [
+          66,
+          100
+        ]
+      ],
+      "label": "Kalka daryosi",
+      "size": 3.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          56,
+          24
+        ]
+      ],
+      "label": "Toshli tepalik"
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          84,
+          80
+        ]
+      ],
+      "size": 7.0
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          88,
+          14
+        ]
+      ],
+      "size": 5.0
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          8,
+          96
+        ]
+      ],
+      "label": "← Dnepr tomon"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Ittifoq",
+      "text": "Rus knyazlari va qipchoqlar katta qo'shin to'pladi. Mo'g'ul qo'shini sonda ancha kam edi.",
+      "notes": [
+        {
+          "pos": [
+            20,
+            18
+          ],
+          "text": "Yagona qo'mondon yo'q",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "Yolg'on chekinish",
+      "text": "Mo'g'ullar jangga kirmay, bir necha kun sharqqa chekindi. Ittifoqchilar ularni ta'qib qilib, cho'lda cho'zilib ketdi — oldingi va orqadagi bo'linmalar orasi uzildi.",
+      "notes": [
+        {
+          "pos": [
+            60,
+            34
+          ],
+          "text": "Bir necha kunlik yolg'on chekinish",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Kalka bo'yida burilish",
+      "text": "Qipchoqlar birinchi bo'lib Kalkadan o'tdi. Shu payt mo'g'ullar to'satdan burilib, ularga zarba berdi.",
+      "notes": [
+        {
+          "pos": [
+            76,
+            66
+          ],
+          "text": "Mo'g'ullar burilib zarba berdi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Tartibsizlik",
+      "text": "Qochgan qipchoqlar orqadan kelayotgan rus drujinalari safini buzib o'tdi. Mo'g'ullar qanotlardan kirib, bo'linmalarni birma-bir yanchdi.",
+      "notes": [
+        {
+          "pos": [
+            26,
+            66
+          ],
+          "text": "Qochganlar saflarni buzdi",
+          "kind": "betrayal"
+        }
+      ]
+    },
+    {
+      "title": "Qamal",
+      "text": "Kiyev knyazi Mstislav tepalikdagi mustahkamlangan lagerida qamaldan uch kun o'tib taslim bo'ldi. Qolganlar Dneprga qarab qochdi.",
+      "notes": [
+        {
+          "pos": [
+            56,
+            42
+          ],
+          "text": "Kiyev lageri taslim bo'ldi",
+          "kind": "capture"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Jebe",
+      "side": "a",
+      "type": "lightCavalry",
+      "count": 7000,
+      "positions": [
+        [
+          30,
+          40
+        ],
+        [
+          80,
+          40
+        ],
+        [
+          74,
+          44
+        ],
+        [
+          48,
+          44
+        ],
+        [
+          46,
+          26
+        ]
+      ]
+    },
+    {
+      "label": "Subutoy",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 7000,
+      "positions": [
+        [
+          32,
+          62
+        ],
+        [
+          82,
+          60
+        ],
+        [
+          74,
+          58
+        ],
+        [
+          48,
+          62
+        ],
+        [
+          66,
+          26
+        ]
+      ]
+    },
+    {
+      "label": "Kamonchilar",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 4000,
+      "note": "Ta'qibchilarni o'q bilan jalb qilib, chekinishni «jonli» ko'rsatgan orqa qo'riq.",
+      "positions": [
+        [
+          24,
+          50
+        ],
+        [
+          62,
+          52
+        ],
+        [
+          80,
+          50
+        ],
+        [
+          40,
+          80
+        ],
+        [
+          56,
+          36
+        ]
+      ]
+    },
+    {
+      "label": "Zaxira tumani",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 5000,
+      "positions": [
+        [
+          36,
+          50
+        ],
+        [
+          88,
+          50
+        ],
+        [
+          88,
+          50
+        ],
+        [
+          42,
+          16
+        ],
+        [
+          56,
+          12
+        ]
+      ],
+      "hiddenUntil": 3
+    },
+    {
+      "label": "Qipchoqlar",
+      "side": "b",
+      "type": "horseArcher",
+      "count": 15000,
+      "positions": [
+        [
+          14,
+          50
+        ],
+        [
+          56,
+          50
+        ],
+        [
+          70,
+          50
+        ],
+        [
+          30,
+          54
+        ],
+        [
+          8,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.4,
+        0.2
+      ]
+    },
+    {
+      "label": "Galich knyazi Mstislav",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 10000,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          10,
+          40
+        ],
+        [
+          48,
+          42
+        ],
+        [
+          56,
+          42
+        ],
+        [
+          38,
+          48
+        ],
+        [
+          6,
+          40
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "label": "Volin knyazi Daniil",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 5000,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          10,
+          62
+        ],
+        [
+          44,
+          60
+        ],
+        [
+          54,
+          60
+        ],
+        [
+          38,
+          62
+        ],
+        [
+          6,
+          66
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "label": "Chernigov drujinasi",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 8000,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          6,
+          52
+        ],
+        [
+          34,
+          52
+        ],
+        [
+          44,
+          54
+        ],
+        [
+          34,
+          56
+        ],
+        [
+          10,
+          50
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.4,
+        0.2
+      ]
+    },
+    {
+      "label": "Kiyev knyazi Mstislav",
+      "side": "b",
+      "type": "spearman",
+      "count": 10000,
+      "kind": "spearman",
+      "note": "Tepalikda aravalar bilan mustahkamlangan lager qurdi.",
+      "positions": [
+        [
+          4,
+          28
+        ],
+        [
+          38,
+          30
+        ],
+        [
+          56,
+          24
+        ],
+        [
+          56,
+          24
+        ],
+        [
+          56,
+          24
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        0.1
+      ],
+      "stances": {
+        "4": "surrender"
+      }
+    }
+  ]
+}

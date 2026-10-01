@@ -2,12 +2,12 @@ import 'package:boqiy_qahramonlar/core/app_colors.dart';
 import 'package:boqiy_qahramonlar/core/breakpoints.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_appbar_widget.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_articles_page.dart';
+import 'package:boqiy_qahramonlar/pages/desctop_battles_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/desctop_poems_page.dart';
 import 'package:boqiy_qahramonlar/service/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart'; // Font qo'shildi
 
 import 'desctop_home_page.dart';
@@ -27,17 +27,7 @@ class _MainPageState extends State<MainPage> {
     ApiService().increaseMainView();
   }
 
-  void _scrollToIndex(int index) {
-    if (index == 0) {
-      context.replace('/');
-    } else if (index == 1) {
-      context.replace('/article');
-    } else if (index == 2) {
-      context.replace('/poems');
-    } else {
-      context.replace('/historys');
-    }
-  }
+  void _scrollToIndex(int index) => navigateToPage(context, index);
 
   // Drawer elementlarini chizish uchun yordamchi metod
   Widget _buildDrawerItem(String title, int index) {
@@ -108,8 +98,9 @@ class _MainPageState extends State<MainPage> {
                   ),
                   _buildDrawerItem("ASOSIY", 0),
                   _buildDrawerItem("MAQOLALAR", 1),
-                  _buildDrawerItem("SHE'RLAR", 2),
-                  _buildDrawerItem("SHAXSLAR", 3),
+                  _buildDrawerItem("SHAXSLAR", 2),
+                  _buildDrawerItem("JANGLAR", 3),
+                  _buildDrawerItem("SHE'RLAR", 4),
                 ],
               ),
             )
@@ -131,11 +122,14 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             children: [
               // Barcha qismlarga o'z kaliti (key) berildi
-              const DesctopHomePage(),
-              const DesctopArticlesPage(),
-              const DesctopPoemsPage(),
-              const DesctopPersonsPage(),
-              const FooterWidget()
+              // RepaintBoundary: skroll qilinganda bo'limlar qayta chizilmaydi,
+              // tayyor qatlam faqat siljitiladi.
+              const RepaintBoundary(child: DesctopHomePage()),
+              const RepaintBoundary(child: DesctopArticlesPage()),
+              const RepaintBoundary(child: DesctopPersonsPage()),
+              const RepaintBoundary(child: DesctopBattlesPage()),
+              const RepaintBoundary(child: DesctopPoemsPage()),
+              const RepaintBoundary(child: FooterWidget())
             ],
           ),
         ),

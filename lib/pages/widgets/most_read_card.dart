@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/app_colors.dart';
 
 class MostReadCard extends StatelessWidget {
-  final List<String> list; // StatelessWidget ichida o'zgaruvchilar 'final' bo'lishi shart
+  final List<String> list;
   final ValueChanged<int>? onItemTap; // Bosilgan element indeksi
 
   const MostReadCard({super.key, required this.list, this.onItemTap});

@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "id": "austerlitz",
+  "commander": "Napoleon Bonapart",
+  "name": "Austerlits jangi («Uch imperator jangi»)",
+  "date": "1805-yil 2-dekabr",
+  "tactic": "Ataylab zaiflik ko'rsatish (o'lja) va markazni yorib o'tish",
+  "summary": "Napoleon Rossiya va Avstriya ittifoqchi qo'shinini tor-mor qildi. Uchinchi koalitsiya parchalandi, Avstriya sulh tuzishga majbur bo'ldi.",
+  "lesson": "Napoleon o'ng qanotini ataylab zaif qoldirib, dushmanni u yerga hujum qilishga undadi. Ittifoqchilar markazdagi Pratsen tepaligidan tushib ketgach, u aynan o'sha bo'shab qolgan markazga zarba berib, dushman qo'shinini ikkiga bo'ldi.",
+  "aftermath": "Presburg sulhi (1805-yil dekabr): Avstriya urushdan chiqdi, 1806-yilda Muqaddas Rim imperiyasi tugatildi. Napoleon Yevropadagi eng qudratli hukmdorga aylandi.",
+  "sides": {
+    "a": {
+      "name": "Fransuzlar (Napoleon)",
+      "color": "#1D3F8F"
+    },
+    "b": {
+      "name": "Rossiya va Avstriya",
+      "color": "#7A1F2B"
+    }
+  },
+  "winner": "a",
+  "biome": "frost",
+  "modern": false,
+  "location": {
+    "lat": 49.128,
+    "lng": 16.762,
+    "zoom": 11.0,
+    "kmAcross": 12.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_Austerlitz",
+  "facts": {
+    "place": "Austerlits (Slavkov u Brna) yaqini, hozirgi Chexiya",
+    "result": "Napoleonning hal qiluvchi g'alabasi; Presburg sulhi",
+    "commandersA": "Napoleon I; marshallar Sult, Davu, Lann, Myura, Bernadot",
+    "commandersB": "Imperatorlar Aleksandr I va Frans II; Kutuzov, Buksgevden",
+    "forcesA": "~73 000, ~140 to'p",
+    "forcesB": "~85 000, ~280 to'p",
+    "lossesA": "~9 000",
+    "lossesB": "~25 000–36 000 (o'lgan, yarador va asir)"
+  },
+  "terrain": [
+    {
+      "kind": "river",
+      "points": [
+        [
+          40,
+          6
+        ],
+        [
+          38,
+          40
+        ],
+        [
+          40,
+          65
+        ],
+        [
+          43,
+          100
+        ]
+      ],
+      "label": "Goldbax soyi",
+      "size": 2.5
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          62,
+          50
+        ]
+      ],
+      "label": "Pratsen tepaligi",
+      "size": 13.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          30,
+          18
+        ]
+      ],
+      "label": "Santon",
+      "size": 4.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          22,
+          42
+        ]
+      ],
+      "label": "Zuran tepaligi",
+      "size": 4.0
+    },
+    {
+      "kind": "lake",
+      "points": [
+        [
+          52,
+          88
+        ],
+        [
+          64,
+          85
+        ],
+        [
+          72,
+          90
+        ],
+        [
+          64,
+          96
+        ],
+        [
+          54,
+          94
+        ]
+      ],
+      "label": "Sachan ko'llari (muz)"
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          86,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          12,
+          70
+        ]
+      ],
+      "size": 5.0
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          45,
+          83
+        ]
+      ],
+      "label": "Telnits"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          45,
+          67
+        ]
+      ],
+      "label": "Sokolnits"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          92,
+          60
+        ]
+      ],
+      "label": "Austerlits"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          6,
+          14
+        ]
+      ],
+      "label": "← Brno"
+    }
+  ],
+  "phases": [
+    {
+      "title": "O'lja",
+      "text": "Napoleon ataylab Pratsen tepaligini bo'shatdi va o'ng (janubiy) qanotini juda zaif qoldirdi. Sult korpusi soy bo'yidagi pastlikda, tuman ichida yashiringan.",
+      "notes": [
+        {
+          "pos": [
+            30,
+            64
+          ],
+          "text": "Sult korpusi tumanda yashiringan",
+          "kind": "weather"
+        },
+        {
+          "pos": [
+            30,
+            86
+          ],
+          "text": "Ataylab zaif qanot",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Ittifoqchilar tuzoqqa tushadi",
+      "text": "Ittifoqchilar fransuz qo'shinini Venadan uzib qo'yish uchun janubga — Telnits va Sokolnitsga yirik kolonnalar tashladi. Davu korpusi Venadan tunu kun yurib yetib keldi va chiziqni ushlab turdi.",
+      "notes": [
+        {
+          "pos": [
+            22,
+            92
+          ],
+          "text": "Davu: ~2 kunda ~110 km yurish",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "«Austerlits quyoshi»",
+      "text": "Tuman tarqalgan zahoti Sult korpusi yashirin joyidan chiqib, bo'shab qolgan Pratsen tepaligiga hujum qildi va uni egalladi. Ittifoqchilar qo'shini ikkiga bo'lindi.",
+      "notes": [
+        {
+          "pos": [
+            66,
+            60
+          ],
+          "text": "Pratsen egallandi — markaz yorildi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Shimoldagi jang va gvardiya",
+      "text": "Shimolda Lann va Myura Bagration hamda Lixtenshteyn otliqlarini ushlab turdi. Rus gvardiyasining qarshi hujumi fransuz gvardiya otliqlari tomonidan qaytarildi.",
+      "notes": [
+        {
+          "pos": [
+            54,
+            36
+          ],
+          "text": "Gvardiyalar to'qnashuvi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Qopqon yopiladi",
+      "text": "Sult korpusi janubga burilib, ittifoqchilarning chap qanotini Davu bilan birgalikda qisqichga oldi. Chekinayotgan qo'shinlar muzlagan ko'llar orqali qochishga urindi.",
+      "notes": [
+        {
+          "pos": [
+            74,
+            82
+          ],
+          "text": "Muzlagan ko'llar orqali qochish",
+          "kind": "water"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Napoleon",
+      "side": "a",
+      "type": "hq",
+      "count": 500,
+      "note": "Zuran tepaligidan butun jang maydonini kuzatdi.",
+      "positions": [
+        [
+          22,
+          46
+        ],
+        [
+          22,
+          46
+        ],
+        [
+          22,
+          46
+        ],
+        [
+          34,
+          48
+        ],
+        [
+          50,
+          52
+        ]
+      ]
+    },
+    {
+      "label": "Sult: Vandam",
+      "side": "a",
+      "type": "musketeer",
+      "count": 9000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          32,
+          44
+        ],
+        [
+          32,
+          44
+        ],
+        [
+          56,
+          44
+        ],
+        [
+          60,
+          42
+        ],
+        [
+          66,
+          60
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.85,
+        0.8
+      ],
+      "hiddenUntil": 2
+    },
+    {
+      "label": "Sult: Sent-Iler",
+      "side": "a",
+      "type": "musketeer",
+      "count": 7500,
+      "kind": "musketeer",
+      "positions": [
+        [
+          32,
+          56
+        ],
+        [
+          32,
+          56
+        ],
+        [
+          58,
+          54
+        ],
+        [
+          62,
+          56
+        ],
+        [
+          60,
+          76
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.85,
+        0.8,
+        0.75
+      ],
+      "hiddenUntil": 2
+    },
+    {
+      "label": "Lann korpusi",
+      "side": "a",
+      "type": "musketeer",
+      "count": 13000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          32,
+          24
+        ],
+        [
+          32,
+          24
+        ],
+        [
+          38,
+          24
+        ],
+        [
+          54,
+          22
+        ],
+        [
+          64,
+          20
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.9,
+        0.85
+      ]
+    },
+    {
+      "label": "Myura otliqlari",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 7500,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          26,
+          32
+        ],
+        [
+          26,
+          32
+        ],
+        [
+          34,
+          32
+        ],
+        [
+          52,
+          30
+        ],
+        [
+          62,
+          32
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.9,
+        0.85
+      ]
+    },
+    {
+      "label": "Bernadot korpusi",
+      "side": "a",
+      "type": "musketeer",
+      "count": 11000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          24,
+          38
+        ],
+        [
+          24,
+          38
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          48,
+          38
+        ],
+        [
+          58,
+          40
+        ]
+      ]
+    },
+    {
+      "label": "Imperator gvardiyasi",
+      "side": "a",
+      "type": "lightCavalry",
+      "count": 5500,
+      "positions": [
+        [
+          16,
+          52
+        ],
+        [
+          16,
+          52
+        ],
+        [
+          20,
+          52
+        ],
+        [
+          46,
+          46
+        ],
+        [
+          54,
+          46
+        ]
+      ]
+    },
+    {
+      "label": "Davu korpusi",
+      "side": "a",
+      "type": "musketeer",
+      "count": 6500,
+      "kind": "musketeer",
+      "note": "Venadan majburiy yurish bilan kelib, o'ng qanotni saqlab qoldi.",
+      "positions": [
+        [
+          12,
+          96
+        ],
+        [
+          36,
+          80
+        ],
+        [
+          38,
+          78
+        ],
+        [
+          38,
+          76
+        ],
+        [
+          46,
+          84
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.85,
+        0.8,
+        0.8
+      ],
+      "appearAt": 1
+    },
+    {
+      "label": "Legran diviziyasi",
+      "side": "a",
+      "type": "musketeer",
+      "count": 6000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          40,
+          72
+        ],
+        [
+          36,
+          70
+        ],
+        [
+          35,
+          70
+        ],
+        [
+          37,
+          68
+        ],
+        [
+          44,
+          70
+        ]
+      ],
+      "strength": [
+        1.0,
+        0.8,
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "label": "Artilleriya",
+      "side": "a",
+      "type": "artillery",
+      "count": 3000,
+      "positions": [
+        [
+          28,
+          50
+        ],
+        [
+          28,
+          50
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          58,
+          48
+        ],
+        [
+          60,
+          66
+        ]
+      ]
+    },
+    {
+      "label": "Kutuzov va imperatorlar",
+      "side": "b",
+      "type": "hq",
+      "count": 500,
+      "kind": "ruler",
+      "positions": [
+        [
+          74,
+          50
+        ],
+        [
+          74,
+          50
+        ],
+        [
+          74,
+          50
+        ],
+        [
+          80,
+          52
+        ],
+        [
+          92,
+          54
+        ]
+      ]
+    },
+    {
+      "label": "1-kolonna (Doxturov)",
+      "side": "b",
+      "type": "musketeer",
+      "count": 13000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          58,
+          64
+        ],
+        [
+          47,
+          84
+        ],
+        [
+          45,
+          86
+        ],
+        [
+          49,
+          88
+        ],
+        [
+          58,
+          92
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "label": "2-kolonna (Lanjeron)",
+      "side": "b",
+      "type": "musketeer",
+      "count": 11000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          60,
+          58
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          46,
+          72
+        ],
+        [
+          50,
+          74
+        ],
+        [
+          54,
+          80
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "label": "3-kolonna",
+      "side": "b",
+      "type": "musketeer",
+      "count": 8000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          62,
+          54
+        ],
+        [
+          50,
+          62
+        ],
+        [
+          47,
+          62
+        ],
+        [
+          50,
+          64
+        ],
+        [
+          52,
+          68
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.4,
+        0.1
+      ]
+    },
+    {
+      "label": "4-kolonna (Kolovrat)",
+      "side": "b",
+      "type": "musketeer",
+      "count": 16000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          66,
+          46
+        ],
+        [
+          64,
+          46
+        ],
+        [
+          60,
+          48
+        ],
+        [
+          70,
+          52
+        ],
+        [
+          80,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.7,
+        0.4,
+        0.3
+      ]
+    },
+    {
+      "label": "Ittifoqchilar artilleriyasi",
+      "side": "b",
+      "type": "artillery",
+      "count": 4000,
+      "positions": [
+        [
+          70,
+          40
+        ],
+        [
+          70,
+          40
+        ],
+        [
+          66,
+          42
+        ],
+        [
+          76,
+          46
+        ],
+        [
+          86,
+          50
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.7,
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "label": "Bagration",
+      "side": "b",
+      "type": "musketeer",
+      "count": 13000,
+      "kind": "musketeer",
+      "positions": [
+        [
+          64,
+          16
+        ],
+        [
+          62,
+          16
+        ],
+        [
+          56,
+          18
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          76,
+          14
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "label": "Lixtenshteyn otliqlari",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 5000,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          68,
+          30
+        ],
+        [
+          64,
+          30
+        ],
+        [
+          58,
+          30
+        ],
+        [
+          66,
+          30
+        ],
+        [
+          76,
+          28
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "label": "Rus gvardiyasi",
+      "side": "b",
+      "type": "musketeer",
+      "count": 8500,
+      "kind": "musketeer",
+      "positions": [
+        [
+          80,
+          42
+        ],
+        [
+          78,
+          42
+        ],
+        [
+          72,
+          42
+        ],
+        [
+          64,
+          44
+        ],
+        [
+          82,
+          44
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.6,
+        0.4
+      ]
+    }
+  ]
+}

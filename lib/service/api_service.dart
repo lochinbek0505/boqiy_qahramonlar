@@ -1,7 +1,9 @@
 import 'package:boqiy_qahramonlar/models/category_models.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 import '../models/article_model.dart';
+import '../models/battle_model.dart';
 import '../models/hashteg_model.dart';
 import '../models/history_model.dart';
 import '../models/poems_model.dart';
@@ -198,6 +200,43 @@ class ApiService {
       return HashtegModel.fromJson(response.data);
     } catch (e) {
       return null;
+    }
+  }
+
+  /// null — so'rov bajarilmadi (endpoint yo'q yoki tarmoq xatosi).
+  /// Noto'g'ri JSON'li yozuvlar butun ro'yxatni buzmasligi uchun tashlab yuboriladi.
+  Future<List<BattleModel>?> getBattles() async {
+    try {
+      var response = await _dio.get("battles");
+      final result = <BattleModel>[];
+      for (final x in response.data as List) {
+        try {
+          result.add(BattleModel.fromJson(x));
+        } catch (e) {
+          debugPrint("Jang o'tkazib yuborildi (id: ${x is Map ? x['id'] : '?'}): $e");
+        }
+      }
+      return result;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<BattleModel?> getBattleById(int id) async {
+    try {
+      var response = await _dio.get("battles/$id");
+      return BattleModel.fromJson(response.data);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<bool> increaseBattleView(int id) async {
+    try {
+      await _dio.post("battles/$id/view");
+      return true;
+    } catch (e) {
+      return false;
     }
   }
 }

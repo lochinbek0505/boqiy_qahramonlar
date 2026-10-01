@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "id": "stalingrad",
+  "commander": "Ikkinchi jahon urushi",
+  "name": "Stalingrad jangi — «Uran» operatsiyasi",
+  "date": "1942-yil 19-noyabr – 1943-yil 2-fevral",
+  "tactic": "Zaif qanotlarga zarba va chuqur qamrab olish",
+  "summary": "Sovet qo'shinlari shaharda ko'cha janglariga botib qolgan nemis 6-armiyasining zaif qanotlarini yorib o'tib, uni o'rab oldi. 1943-yil fevralida Paulus taslim bo'ldi — urushning burilish nuqtalaridan biri.",
+  "lesson": "Kuchli dushmanga peshonasidan emas, uning eng zaif joyidan — qanotlardagi kam qurollangan ittifoqchi bo'linmalardan zarba berish kerak. Ikki qisqich dushman orqasida birlashib, uni ta'minotdan uzadi.",
+  "aftermath": "Ikkinchi jahon urushining burilish nuqtalaridan biri: Germaniya birinchi marta butun bir armiyasini yo'qotdi, Sharqiy frontda tashabbus Qizil Armiyaga o'tdi.",
+  "sides": {
+    "a": {
+      "name": "SSSR (Qizil Armiya)",
+      "color": "#B0271F"
+    },
+    "b": {
+      "name": "Germaniya va ittifoqchilari",
+      "color": "#4A5A66"
+    }
+  },
+  "winner": "a",
+  "biome": "snow",
+  "modern": true,
+  "location": {
+    "lat": 48.7,
+    "lng": 44.0,
+    "zoom": 7.0,
+    "kmAcross": 250.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Operation_Uranus",
+  "facts": {
+    "place": "Stalingrad (hozirgi Volgograd) va Don daryosi oralig'i, Rossiya",
+    "result": "SSSR g'alabasi; nemis 6-armiyasi qamalda yo'q qilindi",
+    "commandersA": "Jukov, Vasilevskiy; Vatutin, Rokossovskiy, Yeryomenko, Chuykov",
+    "commandersB": "Paulus (6-armiya), Got, Manshteyn",
+    "forcesA": "~1,1 mln (Uran boshida)",
+    "forcesB": "~1 mln (Stalingrad yo'nalishida)",
+    "lossesA": "~1,1 mln (shundan ~480 ming halok) — butun jang",
+    "lossesB": "~750–850 ming o'lgan, yarador va asir — butun jang"
+  },
+  "terrain": [
+    {
+      "kind": "river",
+      "points": [
+        [
+          98,
+          0
+        ],
+        [
+          91,
+          20
+        ],
+        [
+          85,
+          40
+        ],
+        [
+          83,
+          50
+        ],
+        [
+          85,
+          62
+        ],
+        [
+          91,
+          80
+        ],
+        [
+          97,
+          100
+        ]
+      ],
+      "label": "Volga",
+      "size": 7.0
+    },
+    {
+      "kind": "river",
+      "points": [
+        [
+          0,
+          22
+        ],
+        [
+          16,
+          24
+        ],
+        [
+          30,
+          28
+        ],
+        [
+          40,
+          36
+        ],
+        [
+          46,
+          48
+        ],
+        [
+          46,
+          58
+        ],
+        [
+          40,
+          70
+        ],
+        [
+          28,
+          84
+        ],
+        [
+          16,
+          100
+        ]
+      ],
+      "label": "Don daryosi",
+      "size": 4.0
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          80,
+          48
+        ]
+      ],
+      "label": "Stalingrad"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          47,
+          56
+        ]
+      ],
+      "label": "Kalach"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          30,
+          94
+        ]
+      ],
+      "label": "Kotelnikovo"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          18,
+          20
+        ]
+      ],
+      "label": "Serafimovich"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          68,
+          92
+        ]
+      ],
+      "label": "Qalmoq cho'li"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Shahar tuzog'i",
+      "text": "Nemis 6-armiyasi (Paulus) bir necha oydan beri Stalingrad xarobalarida ko'cha janglarida. Chuykovning 62-armiyasi Volga qirg'og'ida qattiq turibdi. 6-armiyaning uzun qanotlarini kam qurollangan Ruminiya armiyalari qo'riqlaydi.",
+      "notes": [
+        {
+          "pos": [
+            74,
+            36
+          ],
+          "text": "Shahar ko'chalaridagi janglar",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Shimoliy qisqich",
+      "text": "19-noyabr: Janubi-g'arbiy va Don frontlari kuchli artilleriya tayyorgarligidan so'ng Ruminiya 3-armiyasining safini yorib o'tdi.",
+      "notes": [
+        {
+          "pos": [
+            16,
+            36
+          ],
+          "text": "19-noyabr: yorib o'tish",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Janubiy qisqich",
+      "text": "20-noyabr: Stalingrad fronti shahar janubida Ruminiya 4-armiyasi safini yorib, g'arbga — Kalach tomon yo'l oldi.",
+      "notes": [
+        {
+          "pos": [
+            72,
+            86
+          ],
+          "text": "20-noyabr: janubdan zarba",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Halqa yopildi",
+      "text": "23-noyabr: ikki qisqich Don bo'yidagi Kalach yonida birlashdi. 6-armiya va 4-tank armiyasining bir qismi (taxminan 250–300 ming kishi) qamalda qoldi.",
+      "notes": [
+        {
+          "pos": [
+            36,
+            64
+          ],
+          "text": "23-noyabr: halqa yopildi",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "«Qishki bo'ron»",
+      "text": "Dekabr: Manshteyn janubi-g'arbdan qamalni yorib kirishga urindi. Nemis tanklari halqaga 50 km gacha yaqinlashdi, lekin 2-gvardiya armiyasi ularni to'xtatdi va orqaga uloqtirdi.",
+      "notes": [
+        {
+          "pos": [
+            30,
+            76
+          ],
+          "text": "«Qishki bo'ron» to'xtatildi",
+          "kind": "weather"
+        }
+      ]
+    },
+    {
+      "title": "Taslim bo'lish",
+      "text": "1943-yil 2-fevral: och va sovuqdan qirilgan 6-armiya qoldiqlari taslim bo'ldi. Taxminan 91 ming kishi, jumladan feldmarshal Paulus asirga olindi.",
+      "notes": [
+        {
+          "pos": [
+            70,
+            58
+          ],
+          "text": "Paulus taslim bo'ldi",
+          "kind": "capture"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Gvardiya minomyotlari («Katyusha»)",
+      "side": "a",
+      "type": "rocketArtillery",
+      "count": 3000,
+      "note": "BM-13 reaktiv qurilmalari yorib o'tishdan oldin dushman safini qisqa, lekin kuchli zalp bilan qopladi.",
+      "positions": [
+        [
+          22,
+          8
+        ],
+        [
+          24,
+          18
+        ],
+        [
+          30,
+          34
+        ],
+        [
+          34,
+          44
+        ],
+        [
+          34,
+          46
+        ],
+        [
+          40,
+          50
+        ]
+      ]
+    },
+    {
+      "label": "62-armiya (Chuykov)",
+      "side": "a",
+      "type": "infantry",
+      "count": 40000,
+      "kind": "rifleman",
+      "positions": [
+        [
+          84,
+          44
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          84,
+          46
+        ]
+      ],
+      "strength": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.6
+      ],
+      "stances": {
+        "0": "defend",
+        "1": "defend",
+        "2": "defend",
+        "3": "defend",
+        "4": "defend"
+      }
+    },
+    {
+      "label": "Janubi-g'arbiy front",
+      "side": "a",
+      "type": "armor",
+      "count": 400000,
+      "positions": [
+        [
+          22,
+          12
+        ],
+        [
+          28,
+          32
+        ],
+        [
+          36,
+          44
+        ],
+        [
+          42,
+          54
+        ],
+        [
+          40,
+          58
+        ],
+        [
+          40,
+          58
+        ]
+      ]
+    },
+    {
+      "label": "Don fronti",
+      "side": "a",
+      "type": "infantry",
+      "count": 300000,
+      "positions": [
+        [
+          54,
+          16
+        ],
+        [
+          52,
+          24
+        ],
+        [
+          54,
+          28
+        ],
+        [
+          58,
+          34
+        ],
+        [
+          60,
+          36
+        ],
+        [
+          66,
+          40
+        ]
+      ]
+    },
+    {
+      "label": "Stalingrad fronti",
+      "side": "a",
+      "type": "armor",
+      "count": 400000,
+      "positions": [
+        [
+          82,
+          74
+        ],
+        [
+          82,
+          74
+        ],
+        [
+          64,
+          72
+        ],
+        [
+          50,
+          60
+        ],
+        [
+          50,
+          66
+        ],
+        [
+          58,
+          58
+        ]
+      ]
+    },
+    {
+      "label": "2-gvardiya armiyasi",
+      "side": "a",
+      "type": "armor",
+      "count": 120000,
+      "positions": [
+        [
+          96,
+          26
+        ],
+        [
+          96,
+          26
+        ],
+        [
+          96,
+          26
+        ],
+        [
+          94,
+          30
+        ],
+        [
+          50,
+          78
+        ],
+        [
+          44,
+          82
+        ]
+      ]
+    },
+    {
+      "label": "6-armiya (Paulus)",
+      "side": "b",
+      "type": "infantry",
+      "count": 250000,
+      "positions": [
+        [
+          74,
+          46
+        ],
+        [
+          74,
+          46
+        ],
+        [
+          72,
+          46
+        ],
+        [
+          70,
+          48
+        ],
+        [
+          70,
+          48
+        ],
+        [
+          74,
+          48
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.15
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "XIV tank korpusi",
+      "side": "b",
+      "type": "armor",
+      "count": 30000,
+      "positions": [
+        [
+          62,
+          34
+        ],
+        [
+          62,
+          34
+        ],
+        [
+          58,
+          40
+        ],
+        [
+          62,
+          44
+        ],
+        [
+          64,
+          46
+        ],
+        [
+          70,
+          52
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.7,
+        0.5,
+        0.1
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "4-tank armiyasi",
+      "side": "b",
+      "type": "armor",
+      "count": 70000,
+      "positions": [
+        [
+          70,
+          64
+        ],
+        [
+          70,
+          64
+        ],
+        [
+          66,
+          66
+        ],
+        [
+          62,
+          58
+        ],
+        [
+          64,
+          54
+        ],
+        [
+          70,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.7,
+        0.5,
+        0.1
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "Ruminiya 3-armiyasi",
+      "side": "b",
+      "type": "infantry",
+      "count": 150000,
+      "positions": [
+        [
+          30,
+          28
+        ],
+        [
+          24,
+          36
+        ],
+        [
+          18,
+          46
+        ],
+        [
+          14,
+          52
+        ],
+        [
+          14,
+          52
+        ],
+        [
+          14,
+          52
+        ]
+      ],
+      "strength": [
+        1.0,
+        0.4,
+        0.2,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "label": "Ruminiya 4-armiyasi",
+      "side": "b",
+      "type": "infantry",
+      "count": 75000,
+      "positions": [
+        [
+          66,
+          80
+        ],
+        [
+          66,
+          80
+        ],
+        [
+          58,
+          88
+        ],
+        [
+          52,
+          92
+        ],
+        [
+          50,
+          94
+        ],
+        [
+          50,
+          94
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.3,
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "label": "Manshteyn (Got guruhi)",
+      "side": "b",
+      "type": "armor",
+      "count": 60000,
+      "positions": [
+        [
+          8,
+          98
+        ],
+        [
+          8,
+          98
+        ],
+        [
+          8,
+          98
+        ],
+        [
+          14,
+          98
+        ],
+        [
+          44,
+          74
+        ],
+        [
+          32,
+          92
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7,
+        0.4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,737 @@
+{
+  "schemaVersion": 1,
+  "id": "tannenberg",
+  "commander": "Birinchi jahon urushi",
+  "name": "Tannenberg jangi",
+  "date": "1914-yil 26–30-avgust",
+  "tactic": "Ikki tomonlama qamrab olish va temir yo'l orqali tezkor qayta joylashuv",
+  "summary": "Germaniya 8-armiyasi (Hindenburg, Lyudendorf) Rossiyaning 2-armiyasini (Samsonov) o'rab olib yo'q qildi. 90 mingdan ortiq rus askari asirga tushdi.",
+  "lesson": "Nemislar shifrlanmagan rus radio xabarlarini tinglab, 1-rus armiyasi yordamga kelmasligini bildilar. Temir yo'l orqali korpuslarni tez ko'chirib, qo'shinining asosiy qismini bitta armiyaga qarshi to'pladilar va uni ikki tomondan qisqichga oldilar.",
+  "aftermath": "Rossiya Sharqiy Prussiyadan chiqarildi, general Samsonov halok bo'ldi. Hindenburg va Lyudendorf Germaniyaning eng nufuzli sarkardalariga aylandi.",
+  "sides": {
+    "a": {
+      "name": "Germaniya",
+      "color": "#3F5566"
+    },
+    "b": {
+      "name": "Rossiya imperiyasi",
+      "color": "#3C7A2E"
+    }
+  },
+  "winner": "a",
+  "biome": "summer",
+  "modern": true,
+  "location": {
+    "lat": 53.5,
+    "lng": 20.13,
+    "zoom": 8.0,
+    "kmAcross": 120.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_Tannenberg",
+  "facts": {
+    "place": "Sharqiy Prussiya, Olshtinek (Tannenberg) yaqini — hozirgi Polsha",
+    "result": "Germaniyaning hal qiluvchi g'alabasi; rus 2-armiyasi yo'q qilindi",
+    "commandersA": "Hindenburg, Lyudendorf; Fransua, Makenzen, Byulov, Sholts",
+    "commandersB": "Samsonov (2-armiya); Rennenkampf (1-armiya)",
+    "forcesA": "~150 000–166 000",
+    "forcesB": "~200 000 (2-armiya)",
+    "lossesA": "~12 000–14 000",
+    "lossesB": "~78 000 o'lgan va yarador, ~92 000 asir"
+  },
+  "terrain": [
+    {
+      "kind": "lake",
+      "points": [
+        [
+          70,
+          40
+        ]
+      ],
+      "size": 4.0
+    },
+    {
+      "kind": "lake",
+      "points": [
+        [
+          77,
+          51
+        ]
+      ],
+      "label": "Mazur ko'llari"
+    },
+    {
+      "kind": "lake",
+      "points": [
+        [
+          72,
+          63
+        ]
+      ],
+      "size": 4.0
+    },
+    {
+      "kind": "lake",
+      "points": [
+        [
+          82,
+          38
+        ]
+      ],
+      "size": 3.5
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          48,
+          50
+        ]
+      ],
+      "size": 8.0
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          58,
+          70
+        ]
+      ],
+      "label": "O'rmonlar"
+    },
+    {
+      "kind": "rail",
+      "points": [
+        [
+          10,
+          2
+        ],
+        [
+          18,
+          30
+        ],
+        [
+          24,
+          56
+        ]
+      ],
+      "label": "temir yo'l"
+    },
+    {
+      "kind": "rail",
+      "points": [
+        [
+          96,
+          12
+        ],
+        [
+          72,
+          22
+        ],
+        [
+          56,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "border",
+      "points": [
+        [
+          0,
+          88
+        ],
+        [
+          30,
+          86
+        ],
+        [
+          60,
+          88
+        ],
+        [
+          100,
+          86
+        ]
+      ],
+      "label": "Germaniya | Rossiya chegarasi"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          38,
+          42
+        ]
+      ],
+      "label": "Tannenberg"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          58,
+          30
+        ]
+      ],
+      "label": "Allenshteyn"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          26,
+          60
+        ]
+      ],
+      "label": "Usdau"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          40,
+          78
+        ]
+      ],
+      "label": "Naydenburg"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          66,
+          82
+        ]
+      ],
+      "label": "Villenberg"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Ikki rus armiyasi",
+      "text": "Ikki rus armiyasi Sharqiy Prussiyaga bostirib kirdi, lekin ularni Mazur ko'llari ajratib turardi. Nemislar rus radiosi shifrsiz uzatgan buyruqlarni tutib oldi.",
+      "notes": [
+        {
+          "pos": [
+            58,
+            80
+          ],
+          "text": "Rus radiosi shifrsiz!",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "Temir yo'l manevri",
+      "text": "Nemislar shimoli-sharqdagi 1-rus armiyasiga qarshi faqat otliq to'siq qoldirdi. Fransua korpusi temir yo'l orqali g'arbiy qanotga, Makenzen va Byulov janubga ko'chirildi. Samsonov armiyasi esa shimolga, markazga qarab bexavotir ilgarilardi.",
+      "notes": [
+        {
+          "pos": [
+            12,
+            32
+          ],
+          "text": "Temir yo'lda korpus ko'chirildi",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "O'ng qanot yemiriladi",
+      "text": "Makenzen va Byulov korpuslari rus VI korpusini tor-mor qilib, chekinishga majbur qildi. Markazda XX nemis korpusi rus hujumini ushlab turdi.",
+      "notes": [
+        {
+          "pos": [
+            80,
+            60
+          ],
+          "text": "VI korpus chekinmoqda",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Chap qanot yemiriladi",
+      "text": "Fransua korpusi Usdau yonida rus I korpusini yorib o'tdi va sharqqa — Naydenburg tomon burildi.",
+      "notes": [
+        {
+          "pos": [
+            14,
+            66
+          ],
+          "text": "Usdau yorib o'tildi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Qisqich yopiladi",
+      "text": "Nemis qisqichlari Villenberg yonida birlashdi. Rus markazidagi korpuslar o'rmonlarda qamalda qoldi. Samsonov halok bo'ldi, 90 mingdan ortiq askar asirga tushdi.",
+      "notes": [
+        {
+          "pos": [
+            60,
+            88
+          ],
+          "text": "Qisqich yopildi",
+          "kind": "trap"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "8-armiya shtabi",
+      "side": "a",
+      "type": "hq",
+      "count": 1000,
+      "positions": [
+        [
+          46,
+          18
+        ],
+        [
+          40,
+          32
+        ],
+        [
+          40,
+          32
+        ],
+        [
+          40,
+          32
+        ],
+        [
+          44,
+          38
+        ]
+      ]
+    },
+    {
+      "label": "XX korpus (Sholts)",
+      "side": "a",
+      "type": "infantry",
+      "count": 35000,
+      "positions": [
+        [
+          38,
+          50
+        ],
+        [
+          38,
+          50
+        ],
+        [
+          38,
+          48
+        ],
+        [
+          38,
+          52
+        ],
+        [
+          42,
+          62
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "label": "I korpus (Fransua)",
+      "side": "a",
+      "type": "infantry",
+      "count": 35000,
+      "positions": [
+        [
+          12,
+          10
+        ],
+        [
+          22,
+          54
+        ],
+        [
+          22,
+          58
+        ],
+        [
+          32,
+          64
+        ],
+        [
+          52,
+          80
+        ]
+      ]
+    },
+    {
+      "label": "XVII korpus (Makenzen)",
+      "side": "a",
+      "type": "infantry",
+      "count": 35000,
+      "positions": [
+        [
+          86,
+          20
+        ],
+        [
+          70,
+          30
+        ],
+        [
+          64,
+          48
+        ],
+        [
+          64,
+          58
+        ],
+        [
+          62,
+          76
+        ]
+      ]
+    },
+    {
+      "label": "I zaxira korpusi (Byulov)",
+      "side": "a",
+      "type": "infantry",
+      "count": 30000,
+      "positions": [
+        [
+          78,
+          12
+        ],
+        [
+          62,
+          24
+        ],
+        [
+          60,
+          42
+        ],
+        [
+          56,
+          52
+        ],
+        [
+          54,
+          64
+        ]
+      ]
+    },
+    {
+      "label": "Fransua og'ir artilleriyasi",
+      "side": "a",
+      "type": "howitzer",
+      "count": 4000,
+      "note": "Usdau yonidagi hujumdan oldin rus pozitsiyalarini kuchli o'qqa tutdi.",
+      "positions": [
+        [
+          8,
+          14
+        ],
+        [
+          16,
+          50
+        ],
+        [
+          17,
+          54
+        ],
+        [
+          22,
+          60
+        ],
+        [
+          36,
+          72
+        ]
+      ]
+    },
+    {
+      "label": "Otliq to'siq",
+      "side": "a",
+      "type": "lightCavalry",
+      "count": 10000,
+      "positions": [
+        [
+          88,
+          28
+        ],
+        [
+          88,
+          26
+        ],
+        [
+          88,
+          26
+        ],
+        [
+          88,
+          26
+        ],
+        [
+          88,
+          26
+        ]
+      ]
+    },
+    {
+      "label": "Samsonov shtabi",
+      "side": "b",
+      "type": "hq",
+      "count": 1000,
+      "positions": [
+        [
+          46,
+          94
+        ],
+        [
+          46,
+          84
+        ],
+        [
+          44,
+          80
+        ],
+        [
+          48,
+          74
+        ],
+        [
+          48,
+          70
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.6,
+        0.1
+      ]
+    },
+    {
+      "label": "I korpus",
+      "side": "b",
+      "type": "infantry",
+      "count": 35000,
+      "positions": [
+        [
+          24,
+          94
+        ],
+        [
+          24,
+          72
+        ],
+        [
+          26,
+          66
+        ],
+        [
+          20,
+          82
+        ],
+        [
+          16,
+          92
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "label": "XXIII korpus",
+      "side": "b",
+      "type": "infantry",
+      "count": 25000,
+      "positions": [
+        [
+          32,
+          92
+        ],
+        [
+          32,
+          66
+        ],
+        [
+          32,
+          62
+        ],
+        [
+          38,
+          66
+        ],
+        [
+          42,
+          70
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.7,
+        0.1
+      ],
+      "stances": {
+        "4": "surrender"
+      }
+    },
+    {
+      "label": "XV korpus",
+      "side": "b",
+      "type": "infantry",
+      "count": 40000,
+      "positions": [
+        [
+          42,
+          92
+        ],
+        [
+          44,
+          60
+        ],
+        [
+          44,
+          56
+        ],
+        [
+          46,
+          62
+        ],
+        [
+          48,
+          64
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.8,
+        0.7,
+        0.1
+      ],
+      "stances": {
+        "4": "surrender"
+      }
+    },
+    {
+      "label": "XIII korpus",
+      "side": "b",
+      "type": "infantry",
+      "count": 40000,
+      "positions": [
+        [
+          52,
+          94
+        ],
+        [
+          54,
+          38
+        ],
+        [
+          52,
+          42
+        ],
+        [
+          50,
+          52
+        ],
+        [
+          46,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.7,
+        0.1
+      ],
+      "stances": {
+        "4": "surrender"
+      }
+    },
+    {
+      "label": "VI korpus",
+      "side": "b",
+      "type": "infantry",
+      "count": 40000,
+      "positions": [
+        [
+          72,
+          94
+        ],
+        [
+          74,
+          64
+        ],
+        [
+          68,
+          54
+        ],
+        [
+          78,
+          74
+        ],
+        [
+          82,
+          90
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.6,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "label": "1-armiya (Rennenkampf)",
+      "side": "b",
+      "type": "infantry",
+      "count": 200000,
+      "countUnit": "askar (jangga kirmadi)",
+      "note": "Yaqin bo'lsa ham, Samsonovga yordamga kelmadi — nemislar buni oldindan bilgan.",
+      "positions": [
+        [
+          94,
+          6
+        ],
+        [
+          92,
+          8
+        ],
+        [
+          92,
+          8
+        ],
+        [
+          90,
+          10
+        ],
+        [
+          90,
+          10
+        ]
+      ]
+    }
+  ]
+}

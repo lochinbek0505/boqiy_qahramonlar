@@ -129,7 +129,7 @@ class FooterWidget extends StatelessWidget {
 
   // 2-qism: Tezkor havolalar (Menyular)
   Widget _buildLinks(bool isMobile) {
-    List<String> links = ["Asosiy", "Maqolalar", "She'rlar", "Shaxslar"];
+    List<String> links = ["Asosiy", "Maqolalar", "Shaxslar", "Janglar", "She'rlar"];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

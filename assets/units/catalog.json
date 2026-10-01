@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "infantry",
+  "name_en": "Infantry / Footman",
+  "name_uz": "Piyoda askar",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/infantry.svg",
+  "source": "https://game-icons.net (delapouite/spartan-helmet.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "swordsman",
+  "name_en": "Swordsman",
+  "name_uz": "Qilichboz",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/swordsman.svg",
+  "source": "https://game-icons.net (cathelineau/swordman.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "spearman",
+  "name_en": "Spearman",
+  "name_uz": "Nayzador",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/spearman.svg",
+  "source": "https://game-icons.net (lorc/barbed-spear.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "pikeman",
+  "name_en": "Pikeman (Phalanx)",
+  "name_uz": "Uzun nayzali askar (Falanga)",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/pikeman.svg",
+  "source": "https://game-icons.net (delapouite/pikeman.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "archer",
+  "name_en": "Archer",
+  "name_uz": "Kamonchi",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/archer.svg",
+  "source": "https://game-icons.net (lorc/bowman.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "crossbowman",
+  "name_en": "Crossbowman",
+  "name_uz": "Arbaletchi",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/crossbowman.svg",
+  "source": "https://game-icons.net (carl-olsen/crossbow.svg)",
+  "author": "carl-olsen"
+ },
+ {
+  "id": "slinger",
+  "name_en": "Slinger",
+  "name_uz": "Palaxmonchi",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/slinger.svg",
+  "source": "https://game-icons.net (delapouite/sling.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "heavy_infantry",
+  "name_en": "Heavy Infantry",
+  "name_uz": "Og'ir zirhli piyoda",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/heavy_infantry.svg",
+  "source": "https://game-icons.net (lorc/spartan.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "light_infantry",
+  "name_en": "Light Infantry / Skirmisher",
+  "name_uz": "Yengil piyoda",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/light_infantry.svg",
+  "source": "https://game-icons.net (delapouite/walking-scout.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "shield_wall",
+  "name_en": "Shield Wall",
+  "name_uz": "Qalqon devori",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/shield_wall.svg",
+  "source": "https://game-icons.net (lorc/arrows-shield.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "axeman",
+  "name_en": "Axeman",
+  "name_uz": "Boltachi",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/axeman.svg",
+  "source": "https://game-icons.net (lorc/battle-axe.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "javelin_thrower",
+  "name_en": "Javelin Thrower",
+  "name_uz": "Nayza otuvchi",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/javelin_thrower.svg",
+  "source": "https://game-icons.net (lorc/thrown-spear.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "musketeer",
+  "name_en": "Musketeer",
+  "name_uz": "Miltiqchi (mushketyor)",
+  "category": "infantry",
+  "era": "historical",
+  "icon": "assets/icons/units/musketeer.svg",
+  "source": "https://game-icons.net (skoll/musket.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "light_cavalry",
+  "name_en": "Light Cavalry",
+  "name_uz": "Yengil otliq",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/light_cavalry.svg",
+  "source": "https://game-icons.net (delapouite/cavalry.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "heavy_cavalry",
+  "name_en": "Heavy Cavalry",
+  "name_uz": "Og'ir otliq",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/heavy_cavalry.svg",
+  "source": "https://game-icons.net (skoll/mounted-knight.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "horse_archer",
+  "name_en": "Horse Archer",
+  "name_uz": "Otliq kamonchi",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/horse_archer.svg",
+  "source": "https://game-icons.net (caro-asercion/cloaked-figure-on-horseback.svg)",
+  "author": "caro-asercion"
+ },
+ {
+  "id": "lancer",
+  "name_en": "Lancer",
+  "name_uz": "Nayzador otliq",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/lancer.svg",
+  "source": "https://game-icons.net (skoll/chess-knight.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "cataphract",
+  "name_en": "Cataphract",
+  "name_uz": "Katafrakt (to'liq zirhli suvoriy)",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/cataphract.svg",
+  "source": "https://game-icons.net (delapouite/black-knight-helm.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "camel_rider",
+  "name_en": "Camel Rider",
+  "name_uz": "Tuyali askar",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/camel_rider.svg",
+  "source": "https://game-icons.net (delapouite/camel.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "scout_rider",
+  "name_en": "Scout Rider",
+  "name_uz": "Razvedkachi otliq (qorovul)",
+  "category": "cavalry",
+  "era": "historical",
+  "icon": "assets/icons/units/scout_rider.svg",
+  "source": "https://game-icons.net (delapouite/horse-head.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "war_elephant",
+  "name_en": "War Elephant",
+  "name_uz": "Jangovar fil",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/war_elephant.svg",
+  "source": "https://game-icons.net (delapouite/elephant.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "chariot",
+  "name_en": "Chariot",
+  "name_uz": "Jang aravasi",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/chariot.svg",
+  "source": "https://game-icons.net (cathelineau/chariot.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "catapult",
+  "name_en": "Catapult",
+  "name_uz": "Katapulta",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/catapult.svg",
+  "source": "https://game-icons.net (heavenly-dog/catapult.svg)",
+  "author": "heavenly-dog"
+ },
+ {
+  "id": "trebuchet",
+  "name_en": "Trebuchet",
+  "name_uz": "Manjaniq",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/trebuchet.svg",
+  "source": "https://game-icons.net (delapouite/trebuchet.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "battering_ram",
+  "name_en": "Battering Ram",
+  "name_uz": "Taran (devor buzgich)",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/battering_ram.svg",
+  "source": "https://game-icons.net (skoll/siege-ram.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "siege_tower",
+  "name_en": "Siege Tower",
+  "name_uz": "Qamal minorasi",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/siege_tower.svg",
+  "source": "https://game-icons.net (delapouite/siege-tower.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "ballista",
+  "name_en": "Ballista",
+  "name_uz": "Ballista",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/ballista.svg",
+  "source": "https://game-icons.net (skoll/ballista.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "cannon",
+  "name_en": "Cannon",
+  "name_uz": "To'p",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/cannon.svg",
+  "source": "https://game-icons.net (lorc/cannon.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "fire_thrower",
+  "name_en": "Fire Thrower",
+  "name_uz": "O't sochuvchi (neft otuvchi)",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/fire_thrower.svg",
+  "source": "https://game-icons.net (lorc/fire-bowl.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "sappers",
+  "name_en": "Sappers",
+  "name_uz": "Lag'imchilar",
+  "category": "siege",
+  "era": "historical",
+  "icon": "assets/icons/units/sappers.svg",
+  "source": "https://game-icons.net (skoll/trench-spade.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "commander",
+  "name_en": "Commander / General",
+  "name_uz": "Sarkarda / Qo'mondon",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/commander.svg",
+  "source": "https://game-icons.net (delapouite/knight-banner.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "ruler",
+  "name_en": "King / Ruler",
+  "name_uz": "Hukmdor",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/ruler.svg",
+  "source": "https://game-icons.net (lorc/crown.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "standard_bearer",
+  "name_en": "Standard Bearer",
+  "name_uz": "Bayroqdor",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/standard_bearer.svg",
+  "source": "https://game-icons.net (delapouite/vertical-banner.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "drummer",
+  "name_en": "Drummer / Signaller",
+  "name_uz": "Nog'orachi / Signalchi",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/drummer.svg",
+  "source": "https://game-icons.net (delapouite/drum.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "bodyguard",
+  "name_en": "Bodyguard",
+  "name_uz": "Xos soqchilar",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/bodyguard.svg",
+  "source": "https://game-icons.net (delapouite/guards.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "messenger",
+  "name_en": "Messenger",
+  "name_uz": "Chopar",
+  "category": "command",
+  "era": "historical",
+  "icon": "assets/icons/units/messenger.svg",
+  "source": "https://game-icons.net (lorc/scroll-unfurled.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "rifleman",
+  "name_en": "Rifleman / Infantry",
+  "name_uz": "Avtomatchi / Piyoda askar",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/rifleman.svg",
+  "source": "https://game-icons.net (skoll/winchester-rifle.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "mech_infantry",
+  "name_en": "Mechanized Infantry",
+  "name_uz": "Motoo'qchi (mexanizatsiyalashgan piyoda)",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/mech_infantry.svg",
+  "source": "https://game-icons.net (skoll/ak47.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "paratrooper",
+  "name_en": "Airborne / Paratrooper",
+  "name_uz": "Desantchi",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/paratrooper.svg",
+  "source": "https://game-icons.net (lorc/parachute.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "special_forces",
+  "name_en": "Special Forces",
+  "name_uz": "Maxsus kuchlar",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/special_forces.svg",
+  "source": "https://game-icons.net (delapouite/spy.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "sniper",
+  "name_en": "Sniper",
+  "name_uz": "Snayper",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/sniper.svg",
+  "source": "https://game-icons.net (delapouite/crosshair.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "machine_gunner",
+  "name_en": "Machine Gunner",
+  "name_uz": "Pulemyotchi",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/machine_gunner.svg",
+  "source": "https://game-icons.net (skoll/machine-gun.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "grenadier",
+  "name_en": "Grenadier",
+  "name_uz": "Granatomyotchi",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/grenadier.svg",
+  "source": "https://game-icons.net (lorc/grenade.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "anti_tank_team",
+  "name_en": "Anti-Tank Team",
+  "name_uz": "Tankka qarshi guruh",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/anti_tank_team.svg",
+  "source": "https://game-icons.net (delapouite/missile-launcher.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "reconnaissance",
+  "name_en": "Reconnaissance",
+  "name_uz": "Razvedka",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/reconnaissance.svg",
+  "source": "https://game-icons.net (delapouite/binoculars.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "marines",
+  "name_en": "Marines",
+  "name_uz": "Dengiz piyodasi",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/marines.svg",
+  "source": "https://game-icons.net (lorc/anchor.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "engineer",
+  "name_en": "Engineer",
+  "name_uz": "Muhandis (sapyor)",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/engineer.svg",
+  "source": "https://game-icons.net (delapouite/monkey-wrench.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "medic",
+  "name_en": "Medic",
+  "name_uz": "Sanitar / Harbiy shifokor",
+  "category": "ground",
+  "era": "modern",
+  "icon": "assets/icons/units/medic.svg",
+  "source": "https://game-icons.net (sbed/medical-pack.svg)",
+  "author": "sbed"
+ },
+ {
+  "id": "main_battle_tank",
+  "name_en": "Main Battle Tank",
+  "name_uz": "Asosiy jangovar tank",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/main_battle_tank.svg",
+  "source": "https://game-icons.net (lorc/battle-tank.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "light_tank",
+  "name_en": "Light Tank",
+  "name_uz": "Yengil tank",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/light_tank.svg",
+  "source": "https://game-icons.net (lorc/tank.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "ifv",
+  "name_en": "Infantry Fighting Vehicle (IFV)",
+  "name_uz": "Piyodalar jangovar mashinasi (PJM)",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/ifv.svg",
+  "source": "https://game-icons.net (sbed/turret.svg)",
+  "author": "sbed"
+ },
+ {
+  "id": "apc",
+  "name_en": "Armored Personnel Carrier (APC)",
+  "name_uz": "Zirhli transportyor (BTR)",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/apc.svg",
+  "source": "https://game-icons.net (skoll/apc.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "armored_recon",
+  "name_en": "Armored Recon Vehicle",
+  "name_uz": "Zirhli razvedka mashinasi",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/armored_recon.svg",
+  "source": "https://game-icons.net (delapouite/jeep.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "military_truck",
+  "name_en": "Military Truck",
+  "name_uz": "Harbiy yuk mashinasi",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/military_truck.svg",
+  "source": "https://game-icons.net (delapouite/truck.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "mine_clearing",
+  "name_en": "Mine Clearing Vehicle",
+  "name_uz": "Minadan tozalash mashinasi",
+  "category": "vehicles",
+  "era": "modern",
+  "icon": "assets/icons/units/mine_clearing.svg",
+  "source": "https://game-icons.net (skoll/tank-tread.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "towed_artillery",
+  "name_en": "Towed Artillery",
+  "name_uz": "Tortma artilleriya",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/towed_artillery.svg",
+  "source": "https://game-icons.net (quoting/field-gun.svg)",
+  "author": "quoting"
+ },
+ {
+  "id": "sp_howitzer",
+  "name_en": "Self-Propelled Howitzer",
+  "name_uz": "O'ziyurar gaubitsa",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/sp_howitzer.svg",
+  "source": "https://game-icons.net (cathelineau/great-war-tank.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "mortar",
+  "name_en": "Mortar",
+  "name_uz": "Minomyot",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/mortar.svg",
+  "source": "https://game-icons.net (quoting/artillery-shell.svg)",
+  "author": "quoting"
+ },
+ {
+  "id": "mlrs",
+  "name_en": "Multiple Rocket Launcher (MLRS)",
+  "name_uz": "Reaktiv yakka otish tizimi (RSZO)",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/mlrs.svg",
+  "source": "https://game-icons.net (lorc/missile-pod.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "ballistic_missile",
+  "name_en": "Ballistic Missile",
+  "name_uz": "Ballistik raketa",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/ballistic_missile.svg",
+  "source": "https://game-icons.net (lorc/rocket.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "atgm",
+  "name_en": "Anti-Tank Missile (ATGM)",
+  "name_uz": "Tankka qarshi boshqariladigan raketa",
+  "category": "artillery",
+  "era": "modern",
+  "icon": "assets/icons/units/atgm.svg",
+  "source": "https://game-icons.net (lorc/incoming-rocket.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "sam",
+  "name_en": "Air Defense System (SAM)",
+  "name_uz": "Zenit-raketa kompleksi",
+  "category": "air_defense",
+  "era": "modern",
+  "icon": "assets/icons/units/sam.svg",
+  "source": "https://game-icons.net (lorc/missile-swarm.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "aa_gun",
+  "name_en": "Anti-Aircraft Gun",
+  "name_uz": "Zenit to'pi",
+  "category": "air_defense",
+  "era": "modern",
+  "icon": "assets/icons/units/aa_gun.svg",
+  "source": "https://game-icons.net (pierre-leducq/anti-aircraft-gun.svg)",
+  "author": "pierre-leducq"
+ },
+ {
+  "id": "manpads",
+  "name_en": "MANPADS",
+  "name_uz": "Ko'chma zenit-raketa kompleksi",
+  "category": "air_defense",
+  "era": "modern",
+  "icon": "assets/icons/units/manpads.svg",
+  "source": "https://game-icons.net (lorc/rocket-flight.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "radar",
+  "name_en": "Radar",
+  "name_uz": "Radar (radiolokatsion stansiya)",
+  "category": "air_defense",
+  "era": "modern",
+  "icon": "assets/icons/units/radar.svg",
+  "source": "https://game-icons.net (lorc/radar-dish.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "fighter_jet",
+  "name_en": "Fighter Jet",
+  "name_uz": "Qiruvchi samolyot",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/fighter_jet.svg",
+  "source": "https://game-icons.net (delapouite/jet-fighter.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "bomber",
+  "name_en": "Bomber",
+  "name_uz": "Bombardimonchi samolyot",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/bomber.svg",
+  "source": "https://game-icons.net (lord-berandas/bomber.svg)",
+  "author": "lord-berandas"
+ },
+ {
+  "id": "attack_aircraft",
+  "name_en": "Attack Aircraft",
+  "name_uz": "Hujumchi samolyot (shturmovik)",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/attack_aircraft.svg",
+  "source": "https://game-icons.net (quoting/biplane.svg)",
+  "author": "quoting"
+ },
+ {
+  "id": "attack_helicopter",
+  "name_en": "Attack Helicopter",
+  "name_uz": "Jangovar vertolyot",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/attack_helicopter.svg",
+  "source": "https://game-icons.net (delapouite/helicopter.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "transport_helicopter",
+  "name_en": "Transport Helicopter",
+  "name_uz": "Transport vertolyoti",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/transport_helicopter.svg",
+  "source": "https://game-icons.net (delapouite/helicopter-tail.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "transport_aircraft",
+  "name_en": "Transport Aircraft",
+  "name_uz": "Transport samolyoti",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/transport_aircraft.svg",
+  "source": "https://game-icons.net (skoll/airplane.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "recon_drone",
+  "name_en": "Reconnaissance Drone (UAV)",
+  "name_uz": "Razvedka droni (uchuvchisiz apparat)",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/recon_drone.svg",
+  "source": "https://game-icons.net (delapouite/delivery-drone.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "attack_drone",
+  "name_en": "Attack Drone",
+  "name_uz": "Zarba beruvchi dron",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/attack_drone.svg",
+  "source": "https://game-icons.net (delapouite/stealth-bomber.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "fpv_drone",
+  "name_en": "FPV / Kamikaze Drone",
+  "name_uz": "FPV / Kamikadze dron",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/fpv_drone.svg",
+  "source": "https://game-icons.net (lorc/supersonic-bullet.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "awacs",
+  "name_en": "AWACS",
+  "name_uz": "Uzoqdan radiolokatsion aniqlash samolyoti",
+  "category": "air",
+  "era": "modern",
+  "icon": "assets/icons/units/awacs.svg",
+  "source": "https://game-icons.net (lorc/radar-sweep.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "aircraft_carrier",
+  "name_en": "Aircraft Carrier",
+  "name_uz": "Avianosets",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/aircraft_carrier.svg",
+  "source": "https://game-icons.net (cathelineau/carrier.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "destroyer",
+  "name_en": "Destroyer",
+  "name_uz": "Esminets",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/destroyer.svg",
+  "source": "https://game-icons.net (cathelineau/battleship.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "frigate",
+  "name_en": "Frigate",
+  "name_uz": "Fregat",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/frigate.svg",
+  "source": "https://game-icons.net (cathelineau/iron-hulled-warship.svg)",
+  "author": "cathelineau"
+ },
+ {
+  "id": "submarine",
+  "name_en": "Submarine",
+  "name_uz": "Suvosti kemasi",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/submarine.svg",
+  "source": "https://game-icons.net (delapouite/submarine.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "patrol_boat",
+  "name_en": "Patrol Boat",
+  "name_uz": "Patrul kateri",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/patrol_boat.svg",
+  "source": "https://game-icons.net (delapouite/speed-boat.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "landing_ship",
+  "name_en": "Landing Ship",
+  "name_uz": "Desant kemasi",
+  "category": "naval",
+  "era": "modern",
+  "icon": "assets/icons/units/landing_ship.svg",
+  "source": "https://game-icons.net (delapouite/cargo-ship.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "headquarters",
+  "name_en": "Headquarters (HQ)",
+  "name_uz": "Shtab",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/headquarters.svg",
+  "source": "https://game-icons.net (delapouite/barracks-tent.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "command_post",
+  "name_en": "Command Post",
+  "name_uz": "Qo'mondonlik punkti",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/command_post.svg",
+  "source": "https://game-icons.net (delapouite/radio-tower.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "logistics",
+  "name_en": "Logistics / Supply",
+  "name_uz": "Ta'minot",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/logistics.svg",
+  "source": "https://game-icons.net (delapouite/cargo-crate.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "field_hospital",
+  "name_en": "Field Hospital",
+  "name_uz": "Dala gospitali",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/field_hospital.svg",
+  "source": "https://game-icons.net (delapouite/hospital.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "communications",
+  "name_en": "Communications",
+  "name_uz": "Aloqa bo'linmasi",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/communications.svg",
+  "source": "https://game-icons.net (delapouite/walkie-talkie.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "electronic_warfare",
+  "name_en": "Electronic Warfare (EW)",
+  "name_uz": "Radioelektron kurash (REK)",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/electronic_warfare.svg",
+  "source": "https://game-icons.net (delapouite/satellite-communication.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "fuel_depot",
+  "name_en": "Fuel Depot",
+  "name_uz": "Yoqilg'i ombori",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/fuel_depot.svg",
+  "source": "https://game-icons.net (delapouite/jerrycan.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "ammo_depot",
+  "name_en": "Ammunition Depot",
+  "name_uz": "O'q-dori ombori",
+  "category": "support",
+  "era": "modern",
+  "icon": "assets/icons/units/ammo_depot.svg",
+  "source": "https://game-icons.net (sbed/ammo-box.svg)",
+  "author": "sbed"
+ },
+ {
+  "id": "attack_arrow",
+  "name_en": "Attack Arrow",
+  "name_uz": "Hujum yo'nalishi",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/attack_arrow.svg",
+  "source": "https://game-icons.net (delapouite/plain-arrow.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "main_effort",
+  "name_en": "Main Effort",
+  "name_uz": "Asosiy zarba",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/main_effort.svg",
+  "source": "https://game-icons.net (lorc/striking-arrows.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "flanking",
+  "name_en": "Flanking Maneuver",
+  "name_uz": "Qanotdan aylanib o'tish",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/flanking.svg",
+  "source": "https://game-icons.net (delapouite/split-arrows.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "encirclement",
+  "name_en": "Encirclement",
+  "name_uz": "Qurshov",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/encirclement.svg",
+  "source": "https://game-icons.net (delapouite/encirclement.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "pincer",
+  "name_en": "Pincer Movement",
+  "name_uz": "Qisqich hujumi",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/pincer.svg",
+  "source": "https://game-icons.net (lorc/pincers.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "feigned_retreat",
+  "name_en": "Feigned Retreat",
+  "name_uz": "Soxta chekinish",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/feigned_retreat.svg",
+  "source": "https://game-icons.net (lorc/return-arrow.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "retreat",
+  "name_en": "Retreat / Withdrawal",
+  "name_uz": "Chekinish",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/retreat.svg",
+  "source": "https://game-icons.net (lorc/back-forth.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "ambush",
+  "name_en": "Ambush",
+  "name_uz": "Pistirma",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/ambush.svg",
+  "source": "https://game-icons.net (delapouite/eye-target.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "defensive_line",
+  "name_en": "Defensive Line",
+  "name_uz": "Mudofaa chizig'i",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/defensive_line.svg",
+  "source": "https://game-icons.net (heavenly-dog/defensive-wall.svg)",
+  "author": "heavenly-dog"
+ },
+ {
+  "id": "trench",
+  "name_en": "Trench",
+  "name_uz": "Xandaq / Okop",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/trench.svg",
+  "source": "https://game-icons.net (skoll/trench-body-armor.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "fortification",
+  "name_en": "Fortification",
+  "name_uz": "Istehkom",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/fortification.svg",
+  "source": "https://game-icons.net (delapouite/military-fort.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "minefield",
+  "name_en": "Minefield",
+  "name_uz": "Minali maydon",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/minefield.svg",
+  "source": "https://game-icons.net (skoll/minefield.svg)",
+  "author": "skoll"
+ },
+ {
+  "id": "obstacle",
+  "name_en": "Obstacle / Barrier",
+  "name_uz": "To'siq",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/obstacle.svg",
+  "source": "https://game-icons.net (delapouite/barricade.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "rally_point",
+  "name_en": "Rally Point",
+  "name_uz": "Yig'ilish nuqtasi",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/rally_point.svg",
+  "source": "https://game-icons.net (delapouite/flag-objective.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "front_line",
+  "name_en": "Front Line",
+  "name_uz": "Front chizig'i",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/front_line.svg",
+  "source": "https://game-icons.net (lorc/crossed-swords.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "reserve",
+  "name_en": "Reserve",
+  "name_uz": "Zaxira",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/reserve.svg",
+  "source": "https://game-icons.net (delapouite/meeple-army.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "objective",
+  "name_en": "Objective",
+  "name_uz": "Nishon / Maqsad",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/objective.svg",
+  "source": "https://game-icons.net (delapouite/convergence-target.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "siege",
+  "name_en": "Siege",
+  "name_uz": "Qamal",
+  "category": "tactical",
+  "era": "both",
+  "icon": "assets/icons/units/siege.svg",
+  "source": "https://game-icons.net (lorc/locked-fortress.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "hill",
+  "name_en": "Hill",
+  "name_uz": "Tepalik",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/hill.svg",
+  "source": "https://game-icons.net (delapouite/hills.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "mountain",
+  "name_en": "Mountain",
+  "name_uz": "Tog'",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/mountain.svg",
+  "source": "https://game-icons.net (lorc/mountains.svg)",
+  "author": "lorc"
+ },
+ {
+  "id": "forest",
+  "name_en": "Forest",
+  "name_uz": "O'rmon",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/forest.svg",
+  "source": "https://game-icons.net (delapouite/forest.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "river",
+  "name_en": "River",
+  "name_uz": "Daryo",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/river.svg",
+  "source": "https://game-icons.net (delapouite/river.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "bridge",
+  "name_en": "Bridge",
+  "name_uz": "Ko'prik",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/bridge.svg",
+  "source": "https://game-icons.net (delapouite/stone-bridge.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "swamp",
+  "name_en": "Swamp",
+  "name_uz": "Botqoq",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/swamp.svg",
+  "source": "https://game-icons.net (delapouite/swamp.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "desert",
+  "name_en": "Desert",
+  "name_uz": "Cho'l",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/desert.svg",
+  "source": "https://game-icons.net (delapouite/desert-camp.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "road",
+  "name_en": "Road",
+  "name_uz": "Yo'l",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/road.svg",
+  "source": "https://game-icons.net (delapouite/road.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "village",
+  "name_en": "Village / Town",
+  "name_uz": "Qishloq / Shahar",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/village.svg",
+  "source": "https://game-icons.net (delapouite/village.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "fortress",
+  "name_en": "Fortress / Castle",
+  "name_uz": "Qal'a",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/fortress.svg",
+  "source": "https://game-icons.net (delapouite/castle.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "camp",
+  "name_en": "Camp",
+  "name_uz": "Lager / Qarorgoh",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/camp.svg",
+  "source": "https://game-icons.net (delapouite/camping-tent.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "airfield",
+  "name_en": "Airfield",
+  "name_uz": "Aerodrom",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/airfield.svg",
+  "source": "https://game-icons.net (delapouite/control-tower.svg)",
+  "author": "delapouite"
+ },
+ {
+  "id": "port",
+  "name_en": "Port",
+  "name_uz": "Port",
+  "category": "terrain",
+  "era": "both",
+  "icon": "assets/icons/units/port.svg",
+  "source": "https://game-icons.net (delapouite/lighthouse.svg)",
+  "author": "delapouite"
+ }
+]

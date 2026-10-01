@@ -1,0 +1,675 @@
+{
+  "schemaVersion": 1,
+  "id": "ankara",
+  "commander": "Amir Temur",
+  "name": "Anqara jangi",
+  "date": "1402-yil 28-iyul",
+  "tactic": "Manevr, suv manbasini egallash va ikki qanotdan qamrab olish",
+  "summary": "Amir Temur Usmonli sultoni Boyazid Yildirim qo'shinini tor-mor qildi. Boyazid asirga olindi, Usmonli davlati o'n yildan ortiq tanazzulga yuz tutdi.",
+  "lesson": "Jang maydonini oldindan tanlash, dushmanni charchatib, suvsiz qoldirish va raqib safidagi ishonchsiz bo'linmalar bilan oldindan kelishib olish — jangni birinchi qilich urilmasidan oldin yutish mumkinligini ko'rsatadi.",
+  "aftermath": "Boyazid asirlikda vafot etdi (1403). Usmonli davlatida o'n yildan ortiq davom etgan taxt uchun o'zaro urushlar boshlandi. Ko'plab tarixchilar bu jang Konstantinopolning qulashini yarim asrga kechiktirgan deb hisoblaydi.",
+  "sides": {
+    "a": {
+      "name": "Temur qo'shini",
+      "color": "#1B7A3E"
+    },
+    "b": {
+      "name": "Usmonlilar (Boyazid I)",
+      "color": "#B3261E"
+    }
+  },
+  "winner": "a",
+  "biome": "dry",
+  "modern": false,
+  "location": {
+    "lat": 40.06,
+    "lng": 32.95,
+    "zoom": 9.0,
+    "kmAcross": 20.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_Ankara",
+  "facts": {
+    "place": "Anqara yaqinidagi Chubuk tekisligi (hozirgi Turkiya)",
+    "result": "Temurning hal qiluvchi g'alabasi, Boyazid asirga olindi",
+    "commandersA": "Amir Temur va temuriy shahzodalar",
+    "commandersB": "Boyazid I, shahzoda Sulaymon, Stefan Lazarevich (serblar)",
+    "forcesA": "~140 000 (baholar turlicha)",
+    "forcesB": "~85 000 (baholar turlicha)",
+    "lossesA": "Aniq emas, taxminan 15–25 ming",
+    "lossesB": "Og'ir, taxminan 15–40 ming"
+  },
+  "terrain": [
+    {
+      "kind": "river",
+      "points": [
+        [
+          85,
+          0
+        ],
+        [
+          82,
+          25
+        ],
+        [
+          86,
+          50
+        ],
+        [
+          81,
+          75
+        ],
+        [
+          85,
+          100
+        ]
+      ],
+      "label": "Chubuk soyi",
+      "size": 3.0
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          38,
+          7
+        ]
+      ],
+      "label": "Anqara"
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          26,
+          53
+        ]
+      ],
+      "label": "Tepalik",
+      "size": 7.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          62,
+          90
+        ]
+      ],
+      "label": "Qirlar",
+      "size": 8.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          92,
+          12
+        ]
+      ]
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          28,
+          95
+        ]
+      ],
+      "label": "← Usmonlilar kelgan yo'l"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Suv tuzog'i",
+      "text": "Boyazid Temurni sharqda kutayotgan paytda, Temur aylanma yo'l bilan Anqara yoniga chiqdi va Usmonlilarning avvalgi lagerini hamda Chubuk soyini egalladi. Soy suvi burib yuborildi. Usmonli qo'shini jazirama issiqda suvsiz orqaga qaytishga majbur bo'ldi.",
+      "notes": [
+        {
+          "pos": [
+            84,
+            30
+          ],
+          "text": "Soy suvi burib yuborildi",
+          "kind": "water"
+        },
+        {
+          "pos": [
+            16,
+            40
+          ],
+          "text": "Charchagan, chanqagan qo'shin",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "Charchagan qo'shin keladi",
+      "text": "Usmonlilar bir necha kunlik tez yurishdan so'ng holdan toygan va chanqagan holda jangga saf tortadi. Temur qo'shini esa dam olgan, markaz oldida jang fillari turibdi.",
+      "notes": [
+        {
+          "pos": [
+            64,
+            58
+          ],
+          "text": "Markaz oldida jang fillari",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "Qanotlardagi to'qnashuv",
+      "text": "Temurning o'ng va chap qanotlari hujumga o'tadi. Serb og'ir otliqlari qattiq qarshi zarba berib, Temur qanotini bir oz orqaga suradi.",
+      "notes": [
+        {
+          "pos": [
+            48,
+            14
+          ],
+          "text": "Serblarning kuchli zarbasi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Tatarlar tomon o'zgartiradi",
+      "text": "Jang qizigan paytda Boyazid safidagi Qora tatarlar va Anadolu beyliklari askarlari (ularning sobiq beklari Temur tomonida edi) Temur tarafiga o'tib ketadi. Usmonli o'ng qanoti yemiriladi.",
+      "notes": [
+        {
+          "pos": [
+            60,
+            78
+          ],
+          "text": "Tatarlar Temur tomoniga o'tdi!",
+          "kind": "betrayal"
+        }
+      ]
+    },
+    {
+      "title": "Qamrab olish",
+      "text": "Temur qanotlari va zaxira otliqlari Usmonli markazini ikki tomondan o'rab oladi. Serblar va shahzoda Sulaymon jang maydonidan chekinadi.",
+      "notes": [
+        {
+          "pos": [
+            20,
+            30
+          ],
+          "text": "Qamal halqasi yopilmoqda",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Yakun",
+      "text": "Boyazid yangicharilari bilan tepalikda kechgacha qarshilik ko'rsatdi, so'ng qochishga urinayotganda asirga olindi. Usmonlilar mag'lub bo'ldi.",
+      "notes": [
+        {
+          "pos": [
+            26,
+            62
+          ],
+          "text": "Boyazid asirga olindi",
+          "kind": "capture"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Amir Temur (zaxira)",
+      "side": "a",
+      "type": "hq",
+      "count": 20000,
+      "kind": "ruler",
+      "note": "Temur zaxirani o'zi boshqardi va uni hal qiluvchi paytda jangga kiritdi.",
+      "positions": [
+        [
+          76,
+          50
+        ],
+        [
+          76,
+          50
+        ],
+        [
+          76,
+          50
+        ],
+        [
+          74,
+          50
+        ],
+        [
+          68,
+          50
+        ],
+        [
+          58,
+          50
+        ]
+      ]
+    },
+    {
+      "label": "Jang fillari",
+      "side": "a",
+      "type": "elephant",
+      "count": 32,
+      "countUnit": "fil",
+      "note": "Hindiston yurishidan keltirilgan fillar (manbalarda 32 ta).",
+      "positions": [
+        [
+          64,
+          50
+        ],
+        [
+          64,
+          50
+        ],
+        [
+          58,
+          50
+        ],
+        [
+          55,
+          50
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          38,
+          50
+        ]
+      ]
+    },
+    {
+      "label": "Markaz",
+      "side": "a",
+      "type": "infantry",
+      "count": 35000,
+      "positions": [
+        [
+          68,
+          40
+        ],
+        [
+          68,
+          40
+        ],
+        [
+          60,
+          40
+        ],
+        [
+          56,
+          40
+        ],
+        [
+          48,
+          42
+        ],
+        [
+          36,
+          44
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.95,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "label": "O'ng qanot",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 30000,
+      "kind": "heavy_cavalry",
+      "positions": [
+        [
+          66,
+          20
+        ],
+        [
+          66,
+          20
+        ],
+        [
+          50,
+          20
+        ],
+        [
+          54,
+          22
+        ],
+        [
+          30,
+          28
+        ],
+        [
+          22,
+          40
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.95,
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "label": "Chap qanot",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 30000,
+      "positions": [
+        [
+          66,
+          80
+        ],
+        [
+          66,
+          80
+        ],
+        [
+          50,
+          80
+        ],
+        [
+          46,
+          78
+        ],
+        [
+          28,
+          70
+        ],
+        [
+          22,
+          62
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.95,
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "label": "Zaxira otliqlari",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 25000,
+      "positions": [
+        [
+          78,
+          66
+        ],
+        [
+          78,
+          66
+        ],
+        [
+          78,
+          66
+        ],
+        [
+          72,
+          66
+        ],
+        [
+          40,
+          84
+        ],
+        [
+          32,
+          70
+        ]
+      ]
+    },
+    {
+      "label": "Boyazid Yildirim",
+      "side": "b",
+      "type": "hq",
+      "count": 5000,
+      "kind": "ruler",
+      "note": "Sulton va uning shaxsiy soqchilari.",
+      "positions": [
+        [
+          4,
+          50
+        ],
+        [
+          22,
+          50
+        ],
+        [
+          22,
+          50
+        ],
+        [
+          22,
+          50
+        ],
+        [
+          24,
+          52
+        ],
+        [
+          26,
+          53
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7,
+        0.2
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "Yangicharilar",
+      "side": "b",
+      "type": "archer",
+      "count": 10000,
+      "kind": "archer",
+      "note": "Usmonlilarning eng intizomli piyodasi — oxirigacha jang qildi.",
+      "positions": [
+        [
+          6,
+          56
+        ],
+        [
+          34,
+          50
+        ],
+        [
+          38,
+          50
+        ],
+        [
+          36,
+          50
+        ],
+        [
+          31,
+          52
+        ],
+        [
+          28,
+          54
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.95,
+        0.9,
+        0.6,
+        0.25
+      ]
+    },
+    {
+      "label": "Serb og'ir otliqlari",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 15000,
+      "kind": "heavy_cavalry",
+      "note": "Stefan Lazarevich boshchiligidagi zirhli ritsarlar.",
+      "positions": [
+        [
+          5,
+          30
+        ],
+        [
+          34,
+          26
+        ],
+        [
+          46,
+          22
+        ],
+        [
+          40,
+          24
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.8,
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "label": "Shahzoda Sulaymon",
+      "side": "b",
+      "type": "cavalry",
+      "count": 20000,
+      "positions": [
+        [
+          5,
+          74
+        ],
+        [
+          34,
+          72
+        ],
+        [
+          42,
+          74
+        ],
+        [
+          36,
+          74
+        ],
+        [
+          18,
+          84
+        ],
+        [
+          4,
+          92
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "label": "Qora tatarlar",
+      "side": "b",
+      "type": "horseArcher",
+      "count": 18000,
+      "note": "Jang o'rtasida Temur tomoniga o'tib ketdi.",
+      "positions": [
+        [
+          8,
+          84
+        ],
+        [
+          36,
+          82
+        ],
+        [
+          42,
+          86
+        ],
+        [
+          58,
+          88
+        ],
+        [
+          54,
+          80
+        ],
+        [
+          40,
+          76
+        ]
+      ],
+      "defectAt": 3
+    },
+    {
+      "label": "Anadolu beyliklari",
+      "side": "b",
+      "type": "lightCavalry",
+      "count": 17000,
+      "note": "Sobiq beklari Temur safida bo'lgani uchun tomon o'zgartirdi.",
+      "positions": [
+        [
+          8,
+          64
+        ],
+        [
+          36,
+          62
+        ],
+        [
+          40,
+          64
+        ],
+        [
+          58,
+          70
+        ],
+        [
+          52,
+          64
+        ],
+        [
+          34,
+          62
+        ]
+      ],
+      "defectAt": 3
+    }
+  ]
+}

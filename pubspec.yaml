@@ -41,6 +41,14 @@ dependencies:
   flutter_riverpod: ^2.6.1
   go_router: ^17.5.0
   flutter_quill: ^11.5.0
+  # Janglar bo'limi (animatsion jang xaritasi) uchun
+  flutter_animate: ^4.5.2
+  fl_chart: ^1.2.0
+  flutter_map: ^8.3.2
+  latlong2: ^0.10.1
+  url_launcher: ^6.3.2
+  flutter_svg: ^2.3.0
+  web: ^1.1.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +78,21 @@ flutter:
    - assets/icons/
    - assets/
    - assets/images/
+   - assets/units/catalog.json
+   - assets/icons/units/
+   - assets/battles/
+
+  fonts:
+    - family: PTSerif
+      fonts:
+        - asset: assets/fonts/PT_Serif-Web-Regular.ttf
+        - asset: assets/fonts/PT_Serif-Web-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/PT_Serif-Web-Italic.ttf
+          style: italic
+    - family: RobotoCondensed
+      fonts:
+        - asset: assets/fonts/RobotoCondensed.ttf
   #   - images/a_dot_ham.jpeg
 
 flutter_launcher_icons:

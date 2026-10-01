@@ -1,9 +1,14 @@
+import 'package:boqiy_qahramonlar/battle/battle_theme.dart';
+import 'package:boqiy_qahramonlar/battle/data/unit_catalog.dart';
+import 'package:boqiy_qahramonlar/battle/screens/glossary_screen.dart';
 import 'package:boqiy_qahramonlar/core/app_theme.dart';
 import 'package:boqiy_qahramonlar/pages/articles_page.dart';
+import 'package:boqiy_qahramonlar/pages/battles_page.dart';
 import 'package:boqiy_qahramonlar/pages/main_page.dart';
 import 'package:boqiy_qahramonlar/pages/peoms_page.dart';
 import 'package:boqiy_qahramonlar/pages/persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_article_page.dart';
+import 'package:boqiy_qahramonlar/pages/read_battle_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_persons_page.dart';
 import 'package:boqiy_qahramonlar/pages/read_poem_page.dart';
 import 'package:boqiy_qahramonlar/provider/theme_provider.dart';
@@ -12,7 +17,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Janglar xaritasidagi qo'shin ikonlari katalogi
+  await UnitCatalog.load();
   runApp(ProviderScope(child: MyApp()));
 }
 
@@ -79,6 +87,31 @@ final GoRouter _router = GoRouter(
           path: 'historys',
           pageBuilder: (BuildContext context, GoRouterState state) {
             return _fadePage(state, PersonsPage());
+          },
+        ),
+        GoRoute(
+          path: 'battles',
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, BattlesPage());
+          },
+        ),
+        GoRoute(
+          path: 'battles/types',
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(state, Theme(data: battleTheme, child: const GlossaryScreen()));
+          },
+        ),
+        GoRoute(
+          path: 'battles/:key',
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return _fadePage(
+              state,
+              ReadBattlePage(
+                battleKey: state.pathParameters['key']!,
+                initialProgress: double.tryParse(state.uri.queryParameters['t'] ?? ''),
+                initialFullscreen: state.uri.queryParameters['fs'] == '1',
+              ),
+            );
           },
         ),
       ],

@@ -14,9 +14,11 @@ void navigateToPage(BuildContext context, int index) {
   } else if (index == 1) {
     context.replace('/article');
   } else if (index == 2) {
-    context.replace('/poems');
-  } else {
     context.replace('/historys');
+  } else if (index == 3) {
+    context.replace('/battles');
+  } else {
+    context.replace('/poems');
   }
 }
 
@@ -29,7 +31,7 @@ class DesctopAppbarWidget extends ConsumerStatefulWidget {
 }
 
 class _DesctopAppbarWidgetState extends ConsumerState<DesctopAppbarWidget> {
-  final List<String> _list = ["ASOSIY", "MAQOLALAR", "SHE'RLAR", "SHAXSLAR"];
+  final List<String> _list = ["ASOSIY", "MAQOLALAR", "SHAXSLAR", "JANGLAR", "SHE'RLAR"];
 
   @override
   Widget build(BuildContext context) {
@@ -248,8 +250,9 @@ class MobileMenuDrawer extends StatelessWidget {
           ),
           _buildDrawerItem(context, "ASOSIY", 0),
           _buildDrawerItem(context, "MAQOLALAR", 1),
-          _buildDrawerItem(context, "SHE'RLAR", 2),
-          _buildDrawerItem(context, "SHAXSLAR", 3),
+          _buildDrawerItem(context, "SHAXSLAR", 2),
+          _buildDrawerItem(context, "JANGLAR", 3),
+          _buildDrawerItem(context, "SHE'RLAR", 4),
         ],
       ),
     );

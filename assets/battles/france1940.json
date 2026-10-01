@@ -1,0 +1,959 @@
+{
+  "schemaVersion": 1,
+  "id": "france1940",
+  "commander": "Ikkinchi jahon urushi",
+  "name": "Fransiya uchun jang — «O'roq zarbasi»",
+  "date": "1940-yil 10–26-may",
+  "tactic": "Blitskrig: Ardenn orqali tank zarbasi va dushmanni ikkiga bo'lish",
+  "summary": "Germaniya Belgiyaga hujum qilib, ittifoqchilarning eng yaxshi qo'shinlarini shimolga tortdi, asosiy tank zarbasini esa «tanklar o'ta olmaydi» deb hisoblangan Ardenn o'rmonlari orqali berdi. Ittifoqchilar ikkiga bo'lindi, Fransiya olti haftada taslim bo'ldi.",
+  "lesson": "Blitskrig — tanklar, motorlashtirilgan piyodalar va aviatsiyaning hamkorligi. Asosiy zarba kutilmagan tor sektorda (Schwerpunkt) beriladi va chuqur yorib o'tib, dushman orqasiga chiqiladi.",
+  "aftermath": "22-iyunda Kompyen sulhi imzolandi: Fransiyaning shimoli bosib olindi, janubida Vishi rejimi tuzildi. Dyunkerkdan qutqarilgan askarlar keyinchalik Britaniya armiyasining tayanchi bo'ldi.",
+  "sides": {
+    "a": {
+      "name": "Germaniya",
+      "color": "#3A3A3A"
+    },
+    "b": {
+      "name": "Fransiya va Britaniya",
+      "color": "#1E5AA8"
+    }
+  },
+  "winner": "a",
+  "biome": "spring",
+  "modern": true,
+  "location": {
+    "lat": 49.9,
+    "lng": 3.6,
+    "zoom": 6.0,
+    "kmAcross": 450.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_France",
+  "facts": {
+    "place": "Niderlandiya, Belgiya va Shimoliy Fransiya",
+    "result": "Germaniya g'alabasi; 22-iyunda Fransiya taslim bo'ldi",
+    "commandersA": "Rundshtedt, Bok, Leeb; Guderian, Rommel, Raynxardt",
+    "commandersB": "Gamelen, keyin Veygan; lord Gort (BEF)",
+    "forcesA": "~3,3 mln askar, ~2 400–2 700 tank",
+    "forcesB": "~3,3 mln askar, tanklar soni ko'proq edi",
+    "lossesA": "~27 000 halok (butun kampaniya)",
+    "lossesB": "~360 000 o'lgan va yarador, ~1,9 mln asir (butun kampaniya)"
+  },
+  "terrain": [
+    {
+      "kind": "lake",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          34,
+          0
+        ],
+        [
+          26,
+          10
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          14,
+          34
+        ],
+        [
+          10,
+          48
+        ],
+        [
+          4,
+          62
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "label": "La-Mansh"
+    },
+    {
+      "kind": "river",
+      "points": [
+        [
+          58,
+          100
+        ],
+        [
+          60,
+          72
+        ],
+        [
+          58,
+          56
+        ],
+        [
+          54,
+          40
+        ],
+        [
+          52,
+          26
+        ],
+        [
+          56,
+          10
+        ],
+        [
+          60,
+          0
+        ]
+      ],
+      "label": "Maas (Mez) daryosi",
+      "size": 3.0
+    },
+    {
+      "kind": "river",
+      "points": [
+        [
+          14,
+          44
+        ],
+        [
+          26,
+          47
+        ],
+        [
+          40,
+          49
+        ]
+      ],
+      "label": "Somma",
+      "size": 2.0
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          74,
+          46
+        ]
+      ],
+      "label": "Ardenn o'rmonlari",
+      "size": 12.0
+    },
+    {
+      "kind": "forest",
+      "points": [
+        [
+          66,
+          52
+        ]
+      ],
+      "size": 7.0
+    },
+    {
+      "kind": "fortLine",
+      "points": [
+        [
+          72,
+          66
+        ],
+        [
+          80,
+          73
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          96,
+          94
+        ]
+      ],
+      "label": "Mujino chizig'i"
+    },
+    {
+      "kind": "border",
+      "points": [
+        [
+          24,
+          18
+        ],
+        [
+          36,
+          28
+        ],
+        [
+          50,
+          34
+        ],
+        [
+          60,
+          46
+        ],
+        [
+          68,
+          56
+        ],
+        [
+          76,
+          62
+        ]
+      ],
+      "label": "Fransiya chegarasi"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          24,
+          16
+        ]
+      ],
+      "label": "Dyunkerk"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          46,
+          18
+        ]
+      ],
+      "label": "Bryussel"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          62,
+          60
+        ]
+      ],
+      "label": "Sedan"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          15,
+          44
+        ]
+      ],
+      "label": "Abbevil"
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          30,
+          88
+        ]
+      ],
+      "label": "Parij"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          46,
+          3
+        ]
+      ],
+      "label": "Niderlandiya ↑"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Kutilgan urush",
+      "text": "Fransiya sharqiy chegarasini kuchli Mujino chizig'i bilan himoyalagan. Ittifoqchilar nemislar 1914-yildagidek Belgiya orqali hujum qiladi, deb kutmoqda.",
+      "notes": [
+        {
+          "pos": [
+            76,
+            84
+          ],
+          "text": "Mujino chizig'i — kuchli istehkom",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "O'lja: Belgiya",
+      "text": "10-may: B armiyalar guruhi Niderlandiya va Belgiyaga bostirib kirdi. Ittifoqchilarning eng yaxshi qo'shinlari (Britaniya korpusi, 1- va 7-fransuz armiyalari) Belgiyaga oldinga yugurdi — aynan nemislar xohlaganidek.",
+      "notes": [
+        {
+          "pos": [
+            44,
+            4
+          ],
+          "text": "O'lja: ittifoqchilar Belgiyaga yugurdi",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Ardenn orqali",
+      "text": "Ayni paytda uchta tank korpusi tor o'rmon yo'llari orqali Ardenndan o'tib, uch kunda Maas daryosiga yetib keldi. Bu yerni zaif fransuz armiyalari qo'riqlardi.",
+      "notes": [
+        {
+          "pos": [
+            80,
+            34
+          ],
+          "text": "«O'tib bo'lmaydigan» o'rmon",
+          "kind": "info"
+        }
+      ]
+    },
+    {
+      "title": "Sedan yorib o'tildi",
+      "text": "13-may: Ju-87 «Shtuka» pikirlovchi bombardimonchilari ko'magida nemislar Maasdan o'tdi. Fransuz 9- va 2-armiyalari safi yorildi.",
+      "notes": [
+        {
+          "pos": [
+            70,
+            64
+          ],
+          "text": "Shtuka zarbasi, Maasdan o'tish",
+          "kind": "air"
+        }
+      ]
+    },
+    {
+      "title": "«O'roq zarbasi»",
+      "text": "Tanklar orqaga qaramay g'arbga, dengiz tomon yugurdi va 20-mayda Abbevilga chiqdi. Shimoldagi ittifoqchilar qo'shini qolgan Fransiyadan butunlay uzib qo'yildi.",
+      "notes": [
+        {
+          "pos": [
+            20,
+            56
+          ],
+          "text": "20-may: dengizga chiqildi",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Dyunkerk",
+      "text": "Qamalda qolgan qo'shinlar Dyunkerkka siqildi. «Dinamo» operatsiyasida 338 mingga yaqin askar dengiz orqali Britaniyaga evakuatsiya qilindi, lekin barcha texnika tashlab ketildi.",
+      "notes": [
+        {
+          "pos": [
+            14,
+            10
+          ],
+          "text": "«Dinamo» evakuatsiyasi",
+          "kind": "water"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "B armiyalar guruhi",
+      "side": "a",
+      "type": "infantry",
+      "count": 600000,
+      "positions": [
+        [
+          78,
+          8
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          58,
+          18
+        ],
+        [
+          52,
+          20
+        ],
+        [
+          46,
+          20
+        ],
+        [
+          38,
+          22
+        ]
+      ]
+    },
+    {
+      "label": "XVI tank korpusi",
+      "side": "a",
+      "type": "armor",
+      "count": 50000,
+      "positions": [
+        [
+          82,
+          18
+        ],
+        [
+          62,
+          22
+        ],
+        [
+          58,
+          26
+        ],
+        [
+          54,
+          28
+        ],
+        [
+          46,
+          28
+        ],
+        [
+          38,
+          28
+        ]
+      ]
+    },
+    {
+      "label": "XIX tank korpusi (Guderian)",
+      "side": "a",
+      "type": "armor",
+      "count": 60000,
+      "positions": [
+        [
+          92,
+          50
+        ],
+        [
+          88,
+          52
+        ],
+        [
+          66,
+          58
+        ],
+        [
+          58,
+          60
+        ],
+        [
+          18,
+          48
+        ],
+        [
+          18,
+          38
+        ]
+      ]
+    },
+    {
+      "label": "XLI tank korpusi (Raynxardt)",
+      "side": "a",
+      "type": "armor",
+      "count": 50000,
+      "positions": [
+        [
+          92,
+          42
+        ],
+        [
+          88,
+          44
+        ],
+        [
+          64,
+          50
+        ],
+        [
+          54,
+          50
+        ],
+        [
+          26,
+          38
+        ],
+        [
+          24,
+          30
+        ]
+      ]
+    },
+    {
+      "label": "XV tank korpusi (Rommel)",
+      "side": "a",
+      "type": "armor",
+      "count": 40000,
+      "positions": [
+        [
+          90,
+          32
+        ],
+        [
+          86,
+          36
+        ],
+        [
+          60,
+          40
+        ],
+        [
+          50,
+          42
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          30,
+          26
+        ]
+      ]
+    },
+    {
+      "label": "Lyuftvaffe (Ju-87)",
+      "side": "a",
+      "type": "air",
+      "count": 340,
+      "countUnit": "samolyot",
+      "note": "Pikirlovchi bombardimonchilar «uchar artilleriya» vazifasini bajardi.",
+      "positions": [
+        [
+          96,
+          62
+        ],
+        [
+          96,
+          62
+        ],
+        [
+          82,
+          58
+        ],
+        [
+          62,
+          55
+        ],
+        [
+          40,
+          42
+        ],
+        [
+          26,
+          20
+        ]
+      ]
+    },
+    {
+      "label": "A guruhi piyodalari",
+      "side": "a",
+      "type": "infantry",
+      "count": 1200000,
+      "positions": [
+        [
+          94,
+          58
+        ],
+        [
+          92,
+          58
+        ],
+        [
+          80,
+          60
+        ],
+        [
+          66,
+          64
+        ],
+        [
+          44,
+          56
+        ],
+        [
+          36,
+          54
+        ]
+      ]
+    },
+    {
+      "label": "C armiyalar guruhi",
+      "side": "a",
+      "type": "infantry",
+      "count": 350000,
+      "positions": [
+        [
+          94,
+          86
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          94,
+          86
+        ]
+      ]
+    },
+    {
+      "label": "Britaniya korpusi (BEF)",
+      "side": "b",
+      "type": "infantry",
+      "count": 390000,
+      "note": "Oxirgi bosqichda Dyunkerkdan dengiz orqali Britaniyaga evakuatsiya qilindi.",
+      "positions": [
+        [
+          32,
+          26
+        ],
+        [
+          46,
+          24
+        ],
+        [
+          46,
+          24
+        ],
+        [
+          44,
+          26
+        ],
+        [
+          32,
+          22
+        ],
+        [
+          24,
+          18
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        0.6
+      ],
+      "leaveAt": 5
+    },
+    {
+      "label": "Fransuz 1-armiyasi",
+      "side": "b",
+      "type": "armor",
+      "count": 250000,
+      "positions": [
+        [
+          40,
+          34
+        ],
+        [
+          52,
+          30
+        ],
+        [
+          52,
+          32
+        ],
+        [
+          48,
+          34
+        ],
+        [
+          34,
+          26
+        ],
+        [
+          28,
+          22
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "label": "Fransuz 7-armiyasi",
+      "side": "b",
+      "type": "infantry",
+      "count": 150000,
+      "positions": [
+        [
+          22,
+          22
+        ],
+        [
+          42,
+          8
+        ],
+        [
+          42,
+          10
+        ],
+        [
+          38,
+          14
+        ],
+        [
+          30,
+          16
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "label": "Fransuz 9-armiyasi",
+      "side": "b",
+      "type": "infantry",
+      "count": 150000,
+      "positions": [
+        [
+          54,
+          44
+        ],
+        [
+          56,
+          44
+        ],
+        [
+          56,
+          46
+        ],
+        [
+          50,
+          50
+        ],
+        [
+          44,
+          52
+        ],
+        [
+          40,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.4,
+        0.1,
+        0.05
+      ]
+    },
+    {
+      "label": "Fransuz 2-armiyasi",
+      "side": "b",
+      "type": "infantry",
+      "count": 150000,
+      "positions": [
+        [
+          64,
+          66
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          62,
+          68
+        ],
+        [
+          58,
+          72
+        ],
+        [
+          56,
+          74
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "label": "RAF qiruvchilari",
+      "side": "b",
+      "type": "fighter",
+      "count": 200,
+      "countUnit": "samolyot",
+      "note": "Britaniya qiruvchilari Dyunkerk ustida Lyuftvaffe bilan jang qildi.",
+      "positions": [
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          26,
+          14
+        ]
+      ],
+      "appearAt": 5
+    },
+    {
+      "label": "«Dinamo» flotiliyasi",
+      "side": "b",
+      "type": "naval",
+      "count": 800,
+      "countUnit": "kema",
+      "note": "Harbiy kemalar va yuzlab fuqarolik qayiqlari — baliqchilar, yaxtalar, paromlar.",
+      "positions": [
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          16,
+          14
+        ]
+      ],
+      "appearAt": 5
+    },
+    {
+      "label": "Mujino garnizonlari",
+      "side": "b",
+      "type": "fortification",
+      "count": 400000,
+      "kind": "fortification",
+      "positions": [
+        [
+          82,
+          78
+        ],
+        [
+          82,
+          78
+        ],
+        [
+          82,
+          78
+        ],
+        [
+          82,
+          78
+        ],
+        [
+          82,
+          78
+        ],
+        [
+          82,
+          78
+        ]
+      ]
+    },
+    {
+      "label": "4-zirhli diviziya (de Goll)",
+      "side": "b",
+      "type": "armor",
+      "count": 10000,
+      "positions": [
+        [
+          36,
+          76
+        ],
+        [
+          36,
+          76
+        ],
+        [
+          36,
+          76
+        ],
+        [
+          40,
+          68
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          36,
+          64
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6,
+        0.5
+      ]
+    }
+  ]
+}

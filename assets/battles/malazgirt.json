@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 1,
+  "id": "malazgirt",
+  "commander": "Alp Arslon",
+  "name": "Malazgirt jangi",
+  "date": "1071-yil 26-avgust",
+  "tactic": "Soxta chekinish, yarim oy va tepaliklardagi pistirma",
+  "summary": "Saljuqiylar sultoni Alp Arslon Vizantiya imperatori Roman IV Diogen qo'shinini kun bo'yi chekinib, tepaliklar orasiga tortdi. Kechqurun imperator orqaga burilganda pistirmadagi qanotlar zarba berdi, orqa qo'riq esa jangni tashlab ketdi. Imperator asirga olindi.",
+  "lesson": "Otliq kamonchilar hech qachon to'liq jangga kirmay, dushmanni charchatib, safini cho'zdi. Eng xavfli payt — og'ir qo'shinning orqaga burilishi: saf buziladi, qanotlar ochiladi. Qo'mondonlar orasidagi ishonchsizlik (Andronik Duka) yengilishni halokatga aylantirdi.",
+  "aftermath": "Imperator Roman IV asirlikda hurmat bilan kutib olindi va sulh tuzib ozod qilindi, ammo Konstantinopolda taxtdan ag'darildi. Vizantiyada o'zaro urushlar boshlanib, Anadolu turkiy qabilalar uchun ochildi — bu keyinchalik Turkiya shakllanishiga yo'l ochgan voqealardan biri.",
+  "sides": {
+    "a": {
+      "name": "Saljuqiylar (Alp Arslon)",
+      "color": "#1E6B57"
+    },
+    "b": {
+      "name": "Vizantiya (Roman IV)",
+      "color": "#6A2C8C"
+    }
+  },
+  "winner": "a",
+  "biome": "dry",
+  "modern": false,
+  "location": {
+    "lat": 39.14,
+    "lng": 42.53,
+    "zoom": 9.0,
+    "kmAcross": 20.0
+  },
+  "wiki": "https://en.wikipedia.org/wiki/Battle_of_Manzikert",
+  "facts": {
+    "place": "Malazgirt (Manzikert) yaqini, Mush viloyati — hozirgi Turkiya",
+    "result": "Saljuqiylarning hal qiluvchi g'alabasi; imperator Roman IV Diogen asirga olindi",
+    "commandersA": "Sulton Alp Arslon",
+    "commandersB": "Imperator Roman IV Diogen; Nikifor Vriyenniy, Teodor Aliat, Andronik Duka",
+    "forcesA": "~20 000–30 000 (asosan otliq kamonchilar; baholar turlicha)",
+    "forcesB": "~40 000–60 000 (katta qismi jangga kirmadi)",
+    "lossesA": "Nisbatan kam",
+    "lossesB": "Aniq emas; bir necha ming halok, ko'plab asir"
+  },
+  "terrain": [
+    {
+      "kind": "hill",
+      "points": [
+        [
+          68,
+          13
+        ]
+      ],
+      "label": "Tepaliklar",
+      "size": 9.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          82,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          68,
+          87
+        ]
+      ],
+      "label": "Tepaliklar",
+      "size": 9.0
+    },
+    {
+      "kind": "hill",
+      "points": [
+        [
+          84,
+          78
+        ]
+      ]
+    },
+    {
+      "kind": "river",
+      "points": [
+        [
+          0,
+          94
+        ],
+        [
+          30,
+          90
+        ],
+        [
+          60,
+          97
+        ],
+        [
+          100,
+          93
+        ]
+      ],
+      "label": "Murod soyi",
+      "size": 2.5
+    },
+    {
+      "kind": "city",
+      "points": [
+        [
+          6,
+          36
+        ]
+      ],
+      "label": "Malazgirt"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          14,
+          46
+        ]
+      ],
+      "label": "Vizantiya lageri"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          16,
+          86
+        ]
+      ],
+      "label": "↓ Axlat (Xilat) tomon"
+    },
+    {
+      "kind": "label",
+      "points": [
+        [
+          94,
+          50
+        ]
+      ],
+      "label": "Sharq →"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Ikkiga bo'lingan qo'shin",
+      "text": "Roman IV qo'shinining katta qismini (Tarxaneiot) Axlat qal'asiga yubordi — bu qism jangga umuman qaytmadi. Qolgan qo'shin Malazgirt yonida saf tortdi. Saljuqiylar sharqda kutmoqda.",
+      "notes": [
+        {
+          "pos": [
+            16,
+            78
+          ],
+          "text": "Qo'shinning bir qismi Axlatga ketdi",
+          "kind": "info"
+        },
+        {
+          "pos": [
+            68,
+            22
+          ],
+          "text": "Tepaliklarda yashiringan qanotlar",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Yollanma uzlar o'tib ketadi",
+      "text": "Vizantiya safidagi uz (o'g'uz) yollanma otliqlari qardosh turklar tomoniga o'tdi. Imperator keng saf bilan sharqqa yurish boshladi, saljuq kamonchilari qanotlarni o'qqa tutdi.",
+      "notes": [
+        {
+          "pos": [
+            52,
+            82
+          ],
+          "text": "Uzlar Saljuqiylar tomoniga o'tdi",
+          "kind": "betrayal"
+        },
+        {
+          "pos": [
+            56,
+            42
+          ],
+          "text": "Kamonchilar qanotlarni o'qqa tutmoqda",
+          "kind": "attack"
+        }
+      ]
+    },
+    {
+      "title": "Soxta chekinish",
+      "text": "Saljuqiylar markazi jangga kirmay, kun bo'yi sharqqa chekindi. Vizantiyaliklar ta'qib qilib, lageridan uzoqlashdi va tepaliklar oralig'iga kirib bordi.",
+      "notes": [
+        {
+          "pos": [
+            80,
+            44
+          ],
+          "text": "Kun bo'yi soxta chekinish",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Burilish va pistirma",
+      "text": "Kechqurun imperator lagerga qaytishni buyurdi. Burilayotgan safda tartib buzildi. Shu payt tepaliklardan yashirin qanotlar chiqib zarba berdi, saljuq markazi ham orqaga burildi. Orqa qo'riq boshlig'i Andronik Duka «imperator halok bo'ldi» degan mish-mish tarqatib, qo'shinini olib ketdi.",
+      "notes": [
+        {
+          "pos": [
+            60,
+            28
+          ],
+          "text": "Pistirmadan zarba!",
+          "kind": "attack"
+        },
+        {
+          "pos": [
+            24,
+            56
+          ],
+          "text": "Orqa qo'riq jangni tashlab ketdi",
+          "kind": "betrayal"
+        }
+      ]
+    },
+    {
+      "title": "Qurshov",
+      "text": "Vizantiya o'ng qanoti tor-mor bo'ldi, markaz halqaga olindi. Imperator oxirigacha jang qildi va yarador bo'ldi.",
+      "notes": [
+        {
+          "pos": [
+            44,
+            64
+          ],
+          "text": "Markaz qurshovda",
+          "kind": "trap"
+        }
+      ]
+    },
+    {
+      "title": "Imperator asirga olindi",
+      "text": "Roman IV asirga olinib, Alp Arslon huzuriga keltirildi. Sulton unga hurmat ko'rsatib, sulh shartlari bilan ozod qildi.",
+      "notes": [
+        {
+          "pos": [
+            58,
+            58
+          ],
+          "text": "Roman IV asirga olindi",
+          "kind": "capture"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "label": "Alp Arslon",
+      "side": "a",
+      "type": "hq",
+      "count": 1000,
+      "kind": "ruler",
+      "note": "Sulton jang oldidan oq kiyim kiyib, kafan o'rniga ekanini aytgan — rivoyat.",
+      "positions": [
+        [
+          88,
+          50
+        ],
+        [
+          88,
+          50
+        ],
+        [
+          93,
+          50
+        ],
+        [
+          90,
+          50
+        ],
+        [
+          78,
+          50
+        ],
+        [
+          66,
+          52
+        ]
+      ]
+    },
+    {
+      "label": "Markaz: otliq kamonchilar",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 7000,
+      "positions": [
+        [
+          68,
+          50
+        ],
+        [
+          62,
+          50
+        ],
+        [
+          82,
+          50
+        ],
+        [
+          66,
+          50
+        ],
+        [
+          56,
+          50
+        ],
+        [
+          56,
+          52
+        ]
+      ],
+      "strength": [
+        1.0,
+        0.97,
+        0.95,
+        0.9,
+        0.88,
+        0.88
+      ]
+    },
+    {
+      "label": "G'ulomlar (og'ir otliq)",
+      "side": "a",
+      "type": "heavyCavalry",
+      "count": 4000,
+      "kind": "bodyguard",
+      "note": "Sultonning shaxsiy og'ir qurollangan otliq gvardiyasi.",
+      "positions": [
+        [
+          78,
+          56
+        ],
+        [
+          78,
+          56
+        ],
+        [
+          90,
+          58
+        ],
+        [
+          76,
+          56
+        ],
+        [
+          58,
+          56
+        ],
+        [
+          60,
+          58
+        ]
+      ]
+    },
+    {
+      "label": "Shimoliy pistirma",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 5000,
+      "positions": [
+        [
+          70,
+          12
+        ],
+        [
+          70,
+          12
+        ],
+        [
+          66,
+          12
+        ],
+        [
+          58,
+          26
+        ],
+        [
+          48,
+          38
+        ],
+        [
+          52,
+          44
+        ]
+      ],
+      "hiddenUntil": 3,
+      "via": {
+        "3": [
+          [
+            66,
+            20
+          ]
+        ]
+      }
+    },
+    {
+      "label": "Janubiy pistirma",
+      "side": "a",
+      "type": "horseArcher",
+      "count": 5000,
+      "positions": [
+        [
+          70,
+          88
+        ],
+        [
+          70,
+          88
+        ],
+        [
+          66,
+          88
+        ],
+        [
+          58,
+          74
+        ],
+        [
+          46,
+          64
+        ],
+        [
+          52,
+          62
+        ]
+      ],
+      "hiddenUntil": 3,
+      "via": {
+        "3": [
+          [
+            66,
+            80
+          ]
+        ]
+      }
+    },
+    {
+      "label": "Uz yollanma otliqlari",
+      "side": "b",
+      "type": "horseArcher",
+      "count": 3000,
+      "note": "O'g'uz yollanmalar — jang oldidan Saljuqiylar tomoniga o'tgan.",
+      "positions": [
+        [
+          30,
+          76
+        ],
+        [
+          60,
+          84
+        ],
+        [
+          64,
+          84
+        ],
+        [
+          58,
+          76
+        ],
+        [
+          46,
+          68
+        ],
+        [
+          48,
+          66
+        ]
+      ],
+      "defectAt": 1
+    },
+    {
+      "label": "Roman IV Diogen",
+      "side": "b",
+      "type": "hq",
+      "count": 1000,
+      "kind": "ruler",
+      "positions": [
+        [
+          22,
+          50
+        ],
+        [
+          38,
+          50
+        ],
+        [
+          58,
+          50
+        ],
+        [
+          54,
+          50
+        ],
+        [
+          52,
+          52
+        ],
+        [
+          56,
+          54
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.3
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "Markaz: katafraktlar",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 12000,
+      "kind": "cataphract",
+      "note": "To'liq zirhli og'ir otliqlar — to'g'ridan-to'g'ri zarbada kuchli, ta'qibda sekin.",
+      "positions": [
+        [
+          28,
+          50
+        ],
+        [
+          44,
+          50
+        ],
+        [
+          64,
+          50
+        ],
+        [
+          58,
+          50
+        ],
+        [
+          52,
+          48
+        ],
+        [
+          52,
+          48
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        1.0,
+        0.85,
+        0.55,
+        0.3
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "Chap qanot (Vriyenniy)",
+      "side": "b",
+      "type": "heavyCavalry",
+      "count": 8000,
+      "positions": [
+        [
+          28,
+          34
+        ],
+        [
+          44,
+          32
+        ],
+        [
+          62,
+          30
+        ],
+        [
+          56,
+          34
+        ],
+        [
+          46,
+          40
+        ],
+        [
+          42,
+          40
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.95,
+        0.75,
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "label": "O'ng qanot (Aliat)",
+      "side": "b",
+      "type": "cavalry",
+      "count": 7000,
+      "positions": [
+        [
+          28,
+          66
+        ],
+        [
+          44,
+          68
+        ],
+        [
+          62,
+          70
+        ],
+        [
+          56,
+          68
+        ],
+        [
+          40,
+          70
+        ],
+        [
+          30,
+          72
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.95,
+        0.6,
+        0.3,
+        0.2
+      ]
+    },
+    {
+      "label": "Skutatlar (piyoda)",
+      "side": "b",
+      "type": "spearman",
+      "count": 8000,
+      "positions": [
+        [
+          22,
+          58
+        ],
+        [
+          38,
+          58
+        ],
+        [
+          54,
+          58
+        ],
+        [
+          50,
+          58
+        ],
+        [
+          48,
+          56
+        ],
+        [
+          48,
+          56
+        ]
+      ],
+      "strength": [
+        1.0,
+        1.0,
+        0.97,
+        0.85,
+        0.55,
+        0.35
+      ],
+      "stances": {
+        "5": "surrender"
+      }
+    },
+    {
+      "label": "Orqa qo'riq (Andronik Duka)",
+      "side": "b",
+      "type": "cavalry",
+      "count": 10000,
+      "note": "Jang hal bo'layotgan paytda imperatorni tashlab, qo'shinini olib ketdi.",
+      "positions": [
+        [
+          14,
+          50
+        ],
+        [
+          28,
+          50
+        ],
+        [
+          44,
+          50
+        ],
+        [
+          22,
+          50
+        ],
+        [
+          4,
+          50
+        ],
+        [
+          4,
+          50
+        ]
+      ],
+      "leaveAt": 4
+    },
+    {
+      "label": "Tarxaneiot qo'shini",
+      "side": "b",
+      "type": "infantry",
+      "count": 20000,
+      "note": "Axlat tomonga yuborilgan katta qism — jangga qaytmadi.",
+      "positions": [
+        [
+          18,
+          78
+        ],
+        [
+          12,
+          98
+        ],
+        [
+          12,
+          98
+        ],
+        [
+          12,
+          98
+        ],
+        [
+          12,
+          98
+        ],
+        [
+          12,
+          98
+        ]
+      ],
+      "leaveAt": 1
+    }
+  ]
+}
